@@ -92,7 +92,18 @@
       for (let i = 0; i < maxSnowflakes; i++) {
         setTimeout(createSnowflake, i * 1000); // Tạo cách nhau 1 giây
       }
-    });
+    // Tích hợp Tawk.to Widget
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+      var s1 = document.createElement("script"),
+        s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = "https://embed.tawk.to/677018df49e2fd8dfeffe1b0/1ig6u2b70";
+      s1.charset = "UTF-8";
+      s1.setAttribute("crossorigin", "*");
+      s0.parentNode.insertBefore(s1, s0);
+    })();
+  });
   </script>
 </body>
 
