@@ -61,37 +61,37 @@
   </div>
 
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Tích hợp Tawk.to Widget
-      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-      (function () {
-        var s1 = document.createElement("script"),
-          s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = "https://embed.tawk.to/677018df49e2fd8dfeffe1b0/1ig6u2b70";
-        s1.charset = "UTF-8";
-        s1.setAttribute("crossorigin", "*");
-        s0.parentNode.insertBefore(s1, s0);
-      })();
-  
-      // Cài đặt thuộc tính sau khi widget tải xong
-      Tawk_API.onLoad = function () {
-        Tawk_API.setAttributes(
-          {
-            name: "Luxury Girl Booking", // Tên hiển thị
-            email: "support@example.com", // Email liên hệ
-            avatar: "https://i.ibb.co/0V95Hjt/photo-2024-12-23-05-38-41-2.jpg", // URL ảnh đại diện
-          },
-          function (error) {
-            if (error) {
-              console.error("Error setting attributes:", error);
-            }
-          }
-        );
-      };
-    });
-  </script>
+  <!-- Mã nhúng Tawk.to -->
+<script>
+  var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+  (function () {
+    var s1 = document.createElement("script"),
+      s0 = document.getElementsByTagName("script")[0];
+    s1.async = true;
+    s1.src = "https://embed.tawk.to/677018df49e2fd8dfeffe1b0/1ig6u2b70"; // Đảm bảo URL này đúng
+    s1.charset = "UTF-8";
+    s1.setAttribute("crossorigin", "*");
+    s0.parentNode.insertBefore(s1, s0);
+  })();
+</script>
+
+<!-- Cài đặt thuộc tính -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    Tawk_API.onLoad = function () {
+      Tawk_API.setAttributes(
+        {
+          name: "Luxury Girl Booking", // Tên khách hiển thị
+          email: "support@example.com", // Email liên hệ
+          avatar: "https://i.ibb.co/0V95Hjt/photo-2024-12-23-05-38-41-2.jpg", // URL ảnh đại diện
+        },
+        function (error) {
+          console.error("Error setting attributes:", error);
+        }
+      );
+    };
+  });
+</script>
   <script>
 
 
