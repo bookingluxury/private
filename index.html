@@ -76,7 +76,7 @@
 
   <script>
 
-
+localStorage.clear();
 
   document.addEventListener("DOMContentLoaded", () => {
       const snowContainer = document.querySelector(".snowflakes");
@@ -1675,28 +1675,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const characterDetails = {
-      "July": {
-        name: "July",
-        status: "Hoạt Động",
-        height: "162 cm",
-        weight: "47 kg",
-        measurements: "V1: 87 - V2: 55 - V3: 91",
-        service: `
-  Cam kết phục vụ tận tình và chuyên nghiệp.
-  Em gái nuột nà, đẹp lung linh tuổi Teen.
-  Mặt xinh như tiểu thư, body sịn 100% không thẩm mỹ.
-  Thơm phức tự nhiên.
-  Phải đích mục sở thị thì mới biết.
-  Đến với bé để cảm nhận cuộc đời nhé!
-`,
 
-        duration: "⏱️ Luôn sẵn sàng",
-        images: [
-        "https://i.ibb.co/s56HByh/photo-17-2024-09-20-08-41-30.jpg","https://i.ibb.co/J5GP9FZ/photo-4-2024-09-20-08-41-30.jpg","https://i.ibb.co/NKn7g62/photo-2-2024-09-20-08-41-30.jpg","https://i.ibb.co/XSvCbdv/photo-5-2024-09-20-08-41-30.jpg","https://i.ibb.co/1MVVxSg/photo-9-2024-09-20-08-41-30.jpg","https://i.ibb.co/d55W38g/photo-15-2024-09-20-08-41-30.jpg","https://i.ibb.co/j6x96Wy/photo-18-2024-09-20-08-41-30.jpg","https://i.ibb.co/jWwdDhF/427795242-1104148964345239-7093685406088560536-n.jpg","https://i.ibb.co/tCKJvGb/photo-2024-09-05-04-54-14.jpg","https://i.ibb.co/Pr3HRMn/photo-2024-09-05-04-54-15-2.jpg",
-    
-          "https://i.ibb.co/b518sDH/Untitled-design-14.png"
-        ]
-      },
     
       "Yumi": {
         name: "Yumi",
@@ -1769,28 +1748,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://i.ibb.co/VHhLXLq/IMG-0966.jpg","https://i.ibb.co/hDjnQSf/IMG-0969.jpg","https://i.ibb.co/nfD8Vr9/IMG-0965.jpg","https://i.ibb.co/MMxLSBv/IMG-0972.jpg","https://i.ibb.co/mBNgzmF/IMG-0967.jpg","https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg",
   "https://i.ibb.co/tXxk2jf/1-HU7-K8-E1-J-7-S6-HVT.jpg"
       ]
-    },
     
     
-    "Mina": {
-        name: "Mina",
-        status: "Hoạt Động",
-        height: "158 cm",
-        measurements: "V1: 86 - V2: 56 - V3: 89",
-      
-        service: `
-  Bé có một dáng người mềm mại, muốn ôm mãi không thôi.
-  Gương mặt dễ thương, ngây thơ đáng yêu.
-  Kết: Bé còn chút ngại ngùng khi nói chuyện, nhưng thái độ lúc lâm trận rất nhiệt tình, chịu khó học hỏi, phối hợp các tư thế.
-`,
-
-        duration: "⏱️ Luôn sẵn sàng",
-        images: [
-          "https://i.ibb.co/FwXRmJV/367708333-959487338453907-5381194647223869853-n.jpg",
-          "https://i.ibb.co/8d3nnBZ/383337930-978863159849658-4641272384526547692-n.jpg","https://i.ibb.co/VJj95PD/381003805-978864963182811-8835941904392445166-n.jpg","https://i.ibb.co/MBpmQqb/407908628-1013974159671891-2417822945034929073-n.jpg","https://i.ibb.co/R67pZxq/423236603-1042520383483935-3619898868584313772-n.jpg","https://i.ibb.co/GQ5wry4/422974615-1042520403483933-1330128733791845372-n.jpg","https://i.ibb.co/JHKvs8V/435702528-1080279893041317-8914284036668817236-n.jpg","https://i.ibb.co/6wmMyqx/449039576-1124677385268234-7665507449582176569-n.jpg","https://i.ibb.co/8gfpCVM/449039576-1124677408601565-3024710156838684119-n.jpg","https://i.ibb.co/RjBPhXC/453315351-1144148666654439-988129998488451481-n.jpg","https://i.ibb.co/PQk7R8G/454324406-1149067806162525-7507744949658804570-n.jpg","https://i.ibb.co/vz1vNVb/456599617-1160972514972054-4029686110250322599-n.jpg","https://i.ibb.co/cQwTPdX/456603795-1160972528305386-3708613599631951145-n.jpg","https://i.ibb.co/k4GVGzH/456694132-1160972558305383-3403657865890027602-n.jpg","https://i.ibb.co/pRW0zKW/459851929-1175238350212137-3962964322160869963-n.jpg",
-          "https://i.ibb.co/v3zfwHK/462685881-1193449008391071-3934223950662475783-n.jpg",
-      
-        ]
+    
       },
       "Amy": {
         name: "Amy",
@@ -5672,30 +5632,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <div class="custom-dropdown">
       <select id="partnerSelect" required>
         <option value="">-- Chọn đối tác --</option>
-        <optgroup label="Hạng S" class="rank-s">
-           <option value="✯ THÚY VI ✯">✯ THÚY VI ✯</option>
-          <option value="❖ THẢO NGUYÊN ❖">❖ THẢO NGUYÊN ❖</option>
-
-        </optgroup>
-        
-        <optgroup label="Hạng A" class="rank-a">
-          <option value="✥ THANH TÚ ✥">✥ THANH TÚ ✥</option>
-          <option value="♔ MINH NGỌC ♔">♔ MINH NGỌC ♔</option>
-      
-          <option value="✤ LAN ANH ✤">✤ LAN ANH ✤</option>
-      
-        </optgroup>
-        <optgroup label="Hạng B" class="rank-b">
-          <option value="Lan Chi ☘">Lan Chi ☘</option>
-  <option value="♡°CẨM TÚ°♡">♡°CẨM TÚ°♡</option>
-  <option value="✦ KHÁNH NHI ✦">✦ KHÁNH NHI ✦</option>
-  <option value="Mai Ly">Mai Ly</option>
-
-        </optgroup>
-        <optgroup label="Hạng C" class="rank-c">
-          <option value="✦ NGỌC TRÂM ✦">✦ NGỌC TRÂM ✦</option>
-  <option value="♢ KIM HẠNH ♢">♢ KIM HẠNH ♢</option>
- 
+       
       </select>
     </div>
     <!-- Nhập thời gian -->
@@ -6005,7 +5942,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '♚ Lâm Vy Baby ♚',  
         '✽ Diệu Thúy ✽',  
         '⚜ Ái Linh Baby ⚜',  
-        '✶ Kaya ✶',  
+        '✶ Thùy Linh ✶',  
         'ManNhi',  
         'Hà My',  
         '★ Nhiên Sakura ★',  
@@ -6022,7 +5959,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '✽ Mei ✽',  
         '✧ Annie ✧',  
         '❤️ Anna ❤️',  
-        'Mina',  
+
         '✿ Luna ✿',  
         '✦ Ngọc Trâm ✦',  
         '♢ Kim Hạnh ♢',  
@@ -6052,32 +5989,26 @@ document.addEventListener('DOMContentLoaded', () => {
         '✥ Phương Trang ✥',  
         '❀ Khả Vi ❀',  
         '✧ Thiên Trúc Baby ✧',  
-        '✭ Thiên Quỳnh Baby ✭',  
+        '✭ Thiên Quỳnh ✭',  
         '✧ Hà Thanh ✧',  
         '✪ Diễm Quỳnh ✪',  
         '⌘ Uyển Chi ⌘'   
     ]   
 };  
-    // Populate dropdown với nhân vật theo xếp hạng  
-    function populatePartnerList() {  
-      const partnerSelect = document.getElementById('partnerSelect');  
-      partnerSelect.innerHTML = '<option value="">-- Chọn đối tác --</option>';  
-      
-      for (const rank in partnersByRank) {  
-        const optGroup = document.createElement('optgroup');  
-        optGroup.label = `Hạng ${rank}`;  
-        optGroup.classList.add(`rank-${rank.toLowerCase()}`);  
-        
-        partnersByRank[rank].forEach(partner => {  
-          const option = document.createElement('option');  
-          option.value = partner;  
-          option.textContent = partner;  
-          optGroup.appendChild(option);  
-        });  
-        
-        partnerSelect.appendChild(optGroup);  
-      }  
-    }  
+// Populate dropdown với nhân vật (không phân chia theo rank)
+function populatePartnerList() {
+  const partnerSelect = document.getElementById('partnerSelect');
+  partnerSelect.innerHTML = '<option value="">-- Chọn đối tác --</option>';
+  
+  // Duyệt qua tất cả các rank và lấy nhân vật
+  Object.values(partnersByRank).flat().forEach(partner => {
+    const option = document.createElement('option');
+    option.value = partner;
+    option.textContent = partner;
+    partnerSelect.appendChild(option);
+  });
+}
+
     
     // Bật vị trí để cập nhật địa điểm  
     function getCurrentLocation() {  
@@ -6815,15 +6746,7 @@ const countries = [
 
 
 const mainCharacters = [  
-  {  
-    name: "July",  
-    age: 22,  
-    measurements: "90-60-90",  
-    rating: "⭐ 4.7",  
-    img: "https://i.ibb.co/s56HByh/photo-17-2024-09-20-08-41-30.jpg",  
-    type: "main",  
-    rank: "A" // Thứ hạng  
-  },  
+  
   {  
     name: "Yumi",  
     age: 22,  
@@ -6851,15 +6774,7 @@ const mainCharacters = [
     type: "main",  
     rank: "B" // Thứ hạng  
   },  
-  {  
-    name: "Mina",  
-    age: 24,  
-    measurements: "86-56-89",  
-    rating: "⭐ 4.9",  
-    img: "https://i.ibb.co/9HyQwy6/462776443-1193449098391062-5602390579257707131-n.jpg",  
-    type: "main",  
-    rank: "B" // Thứ hạng  
-  },  
+ 
   {  
     name: "Amy",  
     age: 22,  
@@ -6867,7 +6782,7 @@ const mainCharacters = [
     rating: "⭐ 4.8",  
     img: "https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg",  
     type: "main",  
-    rank: "A" // Thứ hạng  
+    rank: "S" // Thứ hạng  
   },  
   {  
     name: "Lucy",  
@@ -6876,7 +6791,7 @@ const mainCharacters = [
     rating: "⭐ 4.7",  
     img: "https://i.ibb.co/Dfc46yb/photo-2024-09-05-18-55-27.jpg",  
     type: "main",  
-    rank: "B" // Thứ hạng  
+    rank: "A" // Thứ hạng  
   },  
   {  
     name: "ManNhi",  
@@ -6894,7 +6809,7 @@ const mainCharacters = [
     rating: "⭐ 4.7",  
     img: "https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg",  
     type: "main",  
-    rank: "A" // Thứ hạng  
+    rank: "B" // Thứ hạng  
   },  
   {  
     name: "Chang",  
@@ -6926,8 +6841,7 @@ const mainCharacters = [
 ]; 
 
 
-const secondaryCharacters = [  
-   {name:'Lan Chi ☘',age:23,measurements:'88-58-92',rating:'⭐ 4.8',img:'https://i.ibb.co/0M1x10j/photo-2024-12-22-01-48-23.jpg',rank:'A'},{name:'♡°Cẩm Tú°♡',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/wJKWM15/kieu-anh-dam-nu-lam-tinh-cuc-phe-3313889-original.jpg',rank:'A'},{name:'✦Khánh Nhi✦',age:22,measurements:'89-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XYGH6Mb/photo-2024-12-22-02-00-04.jpg',rank:'B'},{name:'❖Hạ Vy Queen❖',age:23,measurements:'89-59-91',rating:'⭐ 4.8',img:'https://i.ibb.co/3d80hzR/Untitled-design-67.png',rank:'A'},{name:'♛Thảo Vy♛',age:22,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/XXhCCW9/photo-2024-12-22-02-06-35.jpg',rank:'A'},{name:'♡Nhã Uyên♡',age:26,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✧Uyên Saki✧',age:24,measurements:'92-60-93',rating:'⭐ 4.9',img:'https://i.ibb.co/Z2GWH72/photo-2024-12-22-01-48-34.jpg',rank:'S'},{name:'❥Thiên Kim❥',age:22,measurements:'88-58-92',rating:'⭐ 4.6',img:'https://i.ibb.co/mtWdy3h/reup-nhu-y-face-xinh-body-dep-3171531-original.jpg',rank:'B'},{name:'❁Mai Anh❁',age:24,measurements:'92-60-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tZ2gmfQ/Untitled-design-86.png',rank:'B'},{name:'✦Thiên Thảo Kiều✦',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/mXZ0Yzr/photo-2024-12-22-01-25-17.jpg',rank:'A'},{name:'♢Quỳnh Hana♢',age:23,measurements:'89-58-90',rating:'⭐ 4.9',img:'https://i.ibb.co/kxY99jY/photo-2024-12-14-17-41-52.jpg',rank:'A'},{name:'♚Lâm Vy Baby♚',age:24,measurements:'89-60-92',rating:'⭐ 4.3',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✽Diệu Thúy✽',age:25,measurements:'92-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/ccQdPBf/photo-2024-12-22-01-56-58.jpg',rank:'A'},{name:'⚜Ái Linh Baby⚜',age:24,measurements:'91-59-92',rating:'⭐ 4.8',img:'https://i.ibb.co/6H0cvLD/photo-2024-12-22-02-06-38.jpg',rank:'A'},{name:'✶Kaya✶',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/hFdDxhy/Untitled-design-77.png',rank:'B'},{name:'★ Nhiên Sakura ★',age:26,measurements:'91-59-93',rating:'⭐ 4.7',img:'https://i.ibb.co/dmPsFsp/photo-2024-12-22-01-50-42.jpg',rank:'A'},{name:'❉ Anh Thu ❉',age:22,measurements:'90-58-91',rating:'⭐ 4.5',img:'https://i.ibb.co/sbw4PFq/Untitled-design-81.png',rank:'B'},{name:'❋ Huyền Anh ❋',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'B'},{name:'✥ Thanh Tú ✥',age:26,measurements:'90-59-93',rating:'⭐ 4.0',img:'https://i.ibb.co/8z0rJ92/photo-2024-12-22-01-48-47.jpg',rank:'B'},{name:'♔ Minh Ngọc ♔',age:23,measurements:'91-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/ZhfygHw/Untitled-design-75.png',rank:'A'},{name:'✪ Ngọc Huyền ✪',age:23,measurements:'89-59-91',rating:'⭐ 4.1',img:'https://i.ibb.co/qyFCdFn/photo-2024-12-22-01-48-44.jpg',rank:'B'},{name:'✧ Linh Lan ✧',age:22,measurements:'90-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/1bThHZ4/hotgirl-minh-anh-2k1-xinh-suggar-baby-tuyet-hang-moi-vao-nghe-3282055-original.jpg',rank:'A'},{name:'✶ Trúc Lam Baby ✶',age:22,measurements:'90-60-92',rating:'⭐ 4.2',img:'https://i.ibb.co/Wt8QJHc/photo-2024-12-22-02-06-48.jpg',rank:'B'},{name:'❋ Thiên An ❋',age:25,measurements:'92-61-95',rating:'⭐ 4.0',img:'https://i.ibb.co/McF1y1z/Untitled-design-80.png',rank:'B'},{name:'❀ Quỳnh An ❀',age:24,measurements:'93-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/k29ms5p/Untitled-design-71.png',rank:'A'},{name:'✤ Mỹ Linh ✤',age:24,measurements:'91-60-93',rating:'⭐ 4.3',img:'https://i.ibb.co/HKVpxJd/photo-2024-12-22-01-56-50.jpg',rank:'A'},{name:'♡ Lâm Anh ♡',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/KV55Wbk/photo-2024-12-22-01-25-13.jpg',rank:'A'},{name:'✯ Thúy Vi ✯',age:25,measurements:'92-61-94',rating:'⭐ 4.3',img:'https://i.ibb.co/r50wYM9/photo-2024-12-22-01-45-32.jpg',rank:'A'},{name:'✧ Thiên Trúc Baby ✧',age:24,measurements:'89-60-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XVH7QNd/Untitled-design-57.png',rank:'A'},{name:'✿ Uyên Châu ✿',age:23,measurements:'91-59-93',rating:'⭐ 4.3',img:'https://i.ibb.co/Fzd5Qg8/Untitled-design-68.png',rank:'A'},{name:'❥ Nhật Linh ❥',age:23,measurements:'91-61-93',rating:'⭐ 4.4',img:'https://i.ibb.co/qD8R1pN/427446647-1098436921490983-1080917778984417527-n.jpg',rank:'A'},{name:'✽ Rina ✽',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/2dzy8Hv/Untitled-design-66.png',rank:'A'},{name:'✦ Kim Anh ✦',age:22,measurements:'90-60-92',rating:'⭐ 4.4',img:'https://i.ibb.co/DY5bG4t/photo-2024-12-22-01-56-44.jpg',rank:'A'},{name:'✤ Lan Anh ✤',age:22,measurements:'90-58-92',rating:'⭐ 4.4',img:'https://i.ibb.co/ThJGBpG/Untitled-design-84.png',rank:'A'},{name:'❖ Thảo Nguyên ❖',age:23,measurements:'88-59-91',rating:'⭐ 4.5',img:'https://i.ibb.co/41rRRjB/photo-2024-12-22-01-57-01.jpg',rank:'A'},{name:'✧ Lina ✧',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/kGHnkM4/Untitled-design-62.png',rank:'B'},{name:'✨ Như Ý ✨',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tqY7WTK/photo-2024-12-22-02-07-16.jpg',rank:'A'},{name:'♛ Thùy Trang ♛',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/YL1dp4S/Untitled-design-76.png',rank:'B'},{name:'❂ Minh Ánh ❂',age:24,measurements:'91-59-92',rating:'⭐ 4.6',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'A'},{name:'⚜ Ayu ⚜',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/f1KFDHm/re-up-kha-di-mat-xinh-veu-dep-mong-to-trym-khit-3305036-original.jpg',rank:'A'},{name:'✪ Linh Nhi ✪',age:25,measurements:'91-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/0XbmnpS/Untitled-design-82.png',rank:'S'},{name:'✽ Mei ✽',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/3fTqGNk/photo-2024-12-22-02-06-21.jpg',rank:'A'},{name:'✧ Annie ✧',age:26,measurements:'91-61-94',rating:'⭐ 4.1',img:'https://i.ibb.co/Rh7Mgsb/re-up-ha-vy-em-gai-xinh-chuan-hot-girl-gia-chat-3212722-original.jpg',rank:'B'},{name:'❤️ Anna ❤️',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/ZYYkJdb/photo-2024-12-22-02-06-04.jpg',rank:'A'},{name:'✿ Luna ✿',age:23,measurements:'89-59-91',rating:'⭐ 4.3',img:'https://i.ibb.co/gPbwd9Y/Untitled-design-73.png',rank:'A'},{name:'✦ Ngọc Trâm ✦',age:22,measurements:'90-60-93',rating:'⭐ 4.7',img:'https://i.ibb.co/SvR4LSw/Untitled-design-61.png',rank:'A'},{name:'♢ Kim Hạnh ♢',age:24,measurements:'90-60-92',rating:'⭐ 4.5',img:'https://i.ibb.co/1fCMxtQ/photo-2024-12-22-02-05-46.jpg',rank:'A'},{name:'✸ Tiểu My ✸',age:25,measurements:'91-61-94',rating:'⭐ 4.4',img:'https://i.ibb.co/GQKV9yp/reup-bao-anh-2k2-hot-body-nong-bong-goi-tinh-vu-mong-cang-3313328-original.jpg',rank:'A'},{name:'✶ Thiên Trang ✶',age:26,measurements:'92-61-94',rating:'⭐ 4.8',img:'https://i.ibb.co/BG3r0qZ/photo-2024-12-22-01-24-49.jpg',rank:'B'},{name:'✦ Akira ✦',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/ZMCspC5/photo-2024-12-22-01-25-30.jpg',rank:'B'},{name:'♢ Rina ♢',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/1XZGqb9/photo-2024-12-22-02-05-34.jpg',rank:'A'},{name:'✸ Ngọc Lan ✸',age:23,measurements:'88-59-90',rating:'⭐ 4.1',img:'https://i.ibb.co/HT0Nwb5/photo-2024-12-22-01-56-55.jpg',rank:'B'},{name:'❂ Lưu Ngọc ❂',age:26,measurements:'91-61-93',rating:'⭐ 4.0',img:'https://i.ibb.co/sWY5brC/photo-2024-12-22-01-48-41.jpg',rank:'B'},{name:'✥ Phương Trang ✥',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/5WdcZFd/photo-2024-12-22-02-06-13.jpg',rank:'B'},{name:'❀ Khả Vi ❀',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZPg3Ls/Untitled-design-78.png',rank:'B'},{name:'♡ Yuri ♡',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/3C87zds/Untitled-design-69.png',rank:'B'},{name:'❋ Mỹ An ❋',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/bL1Q0Vn/photo-2024-12-25-14-28-56.jpg',rank:'B'},{name:'✭ Thiên Quỳnh Baby ✭',age:23,measurements:'90-60-92',rating:'⭐ 4.1',img:'https://i.ibb.co/3S8WQ28/photo-2024-12-22-01-25-40.jpg',rank:'B'},{name:'✧ Hà Thanh ✧',age:24,measurements:'88-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/fHRwCM7/photo-2024-12-22-01-45-58.jpg',rank:'B'},{name:'❋ Trúc An ❋',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/686wgPf/anh-thu-nguc-rell-hang-that-100-chat-luong-hang-a-3275858-original.jpg',rank:'S'},{name:'✶ Trà My ✶',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/VmWtXJm/Untitled-design-53.png',rank:'B'},{name:'❁ Mỹ Duyên ❁',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/tLqFXs7/82dd3be7b5d672d1a0cbe14aacc075b9-thumb-small.webp',rank:'B'},{name:'★ Phương Mai ★',age:22,measurements:'88-58-91',rating:'⭐ 4.1',img:'https://i.ibb.co/1RkKx4T/photo-2024-12-22-01-50-58.jpg',rank:'B'},{name:'✸ Vân Nhi ✸',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/jD4dhT8/Untitled-design-64.png',rank:'S'},{name:'✾ Hồng nhung ✾',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/RH02jKV/Untitled-design-85.png',rank:'B'},{name:'❖ Emi ❖',age:25,measurements:'92-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/X3vhqGM/reup-1m72-ha-anh-nguoi-mau-minh-day-dzu-bu-lam-tinh-cuc-da-3212434-original.jpg',rank:'B'},{name:'✦ Nhu quỳnh ✦',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/vLw3rXt/photo-2024-12-22-01-59-49.jpg',rank:'B'},{name:'✪ Khánh huyền ✪',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/YLLT3qC/photo-2024-12-15-14-11-40.jpg',rank:'B'},{name:'❀ Hana ❀',age:23,measurements:'88-58-91',rating:'⭐ 4.2',img:'https://i.ibb.co/zrZ42Jk/Untitled-design-74.png',rank:'B'},{name:'⚜ Nami ⚜',age:22,measurements:'89-58-91',rating:'⭐ 4.0',img:'https://i.ibb.co/VV84hTf/photo-2024-12-25-11-57-56-2.jpg',rank:'B'},{name:'✨ Yuki ✨',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6vK23xc/photo-2024-12-22-01-56-47.jpg',rank:'B'},{name:'☾ Tố nhu ☾',age:26,measurements:'93-61-94',rating:'⭐ 4.9',img:'https://i.ibb.co/z7jjg2b/Untitled-design-60.png',rank:'S'},{name:'✪ Linh hồng ✪',age:23,measurements:'88-58-92',rating:'⭐ 4.5',img:'https://i.ibb.co/4jWNswd/photo-2024-12-17-19-25-05.jpg',rank:'A'},{name:'✾ Minh tú ✾',age:24,measurements:'89-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/rHTv3sh/photo-2024-12-23-05-38-10.jpg',rank:'B'},{name:'❖ Hải yến ❖',age:25,measurements:'90-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/WvNX2TY/photo-2024-12-23-20-35-43.jpg',rank:'A'},{name:'✿ Bảo anh ✿',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZYsMxS/photo-2024-12-23-20-37-31.jpg',rank:'B'},{name:'✦ Tú anh ✦',age:23,measurements:'89-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/8sgjh1D/photo-2024-12-26-12-40-19.jpg',rank:'B'},{name:'✪ Diễm quỵnh ✪',age:24,measurements:'88-59-92',rating:'⭐ 4.1',img:'https://i.ibb.co/7SpVtdG/photo-2024-12-27-04-43-07.jpg',rank:'B'},{name:'❀ Phương ly ❀',age:23,measurements:'90-60-93',rating:'⭐ 4.6',img:'https://i.ibb.co/26sy3KX/photo-2024-12-27-04-45-53.jpg',rank:'A'},{name:'⚜ Trần kiều ⚜',age:22,measurements:'87-56-90',rating:'⭐ 4.3',img:'https://i.ibb.co/k1Cfy0r/photo-2024-12-27-04-46-25.jpg',rank:'B'},{name:'⌘ Uyển chi ⌘',age:24,measurements:'89-58-90',rating:'⭐ 4.8',img:'https://i.ibb.co/42HGKKK/Untitled-design-83.png',rank:'S'}];
+const secondaryCharacters=[{name:'Lan Chi ☘',age:23,measurements:'88-58-92',rating:'⭐ 4.8',img:'https://i.ibb.co/0M1x10j/photo-2024-12-22-01-48-23.jpg',rank:'A'},{name:'♡°Cẩm Tú°♡',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/wJKWM15/kieu-anh-dam-nu-lam-tinh-cuc-phe-3313889-original.jpg',rank:'A'},{name:'✦Khánh Nhi✦',age:22,measurements:'89-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XYGH6Mb/photo-2024-12-22-02-00-04.jpg',rank:'B'},{name:'❖Hạ Vy Queen❖',age:23,measurements:'89-59-91',rating:'⭐ 4.8',img:'https://i.ibb.co/3d80hzR/Untitled-design-67.png',rank:'A'},{name:'♛Thảo Vy♛',age:22,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/XXhCCW9/photo-2024-12-22-02-06-35.jpg',rank:'A'},{name:'♡Nhã Uyên♡',age:26,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✧Uyên Saki✧',age:24,measurements:'92-60-93',rating:'⭐ 4.9',img:'https://i.ibb.co/Z2GWH72/photo-2024-12-22-01-48-34.jpg',rank:'B'},{name:'❥Thiên Kim❥',age:22,measurements:'88-58-92',rating:'⭐ 4.6',img:'https://i.ibb.co/mtWdy3h/reup-nhu-y-face-xinh-body-dep-3171531-original.jpg',rank:'B'},{name:'❁Mai Anh❁',age:24,measurements:'92-60-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tZ2gmfQ/Untitled-design-86.png',rank:'B'},{name:'✦Thiên Thảo Kiều✦',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/mXZ0Yzr/photo-2024-12-22-01-25-17.jpg',rank:'A'},{name:'♢Quỳnh Hana♢',age:23,measurements:'89-58-90',rating:'⭐ 4.9',img:'https://i.ibb.co/kxY99jY/photo-2024-12-14-17-41-52.jpg',rank:'A'},{name:'♚Lâm Vy Baby♚',age:24,measurements:'89-60-92',rating:'⭐ 4.3',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✽Diệu Thúy✽',age:25,measurements:'92-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/ccQdPBf/photo-2024-12-22-01-56-58.jpg',rank:'A'},{name:'⚜Ái Linh Baby⚜',age:24,measurements:'91-59-92',rating:'⭐ 4.8',img:'https://i.ibb.co/6H0cvLD/photo-2024-12-22-02-06-38.jpg',rank:'A'},{name:'✶Thùy Linh✶',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/6Dg8MBw/photo-2024-11-17-06-42-10.jpg',rank:'B'},{name:'★ Nhiên Sakura ★',age:26,measurements:'91-59-93',rating:'⭐ 4.7',img:'https://i.ibb.co/dmPsFsp/photo-2024-12-22-01-50-42.jpg',rank:'A'},{name:'❉ Anh Thu ❉',age:22,measurements:'90-58-91',rating:'⭐ 4.5',img:'https://i.ibb.co/sbw4PFq/Untitled-design-81.png',rank:'B'},{name:'❋ Huyền Anh ❋',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'B'},{name:'✥ Thanh Tú ✥',age:26,measurements:'90-59-93',rating:'⭐ 4.0',img:'https://i.ibb.co/8z0rJ92/photo-2024-12-22-01-48-47.jpg',rank:'B'},{name:'♔ Minh Ngọc ♔',age:23,measurements:'91-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/ZhfygHw/Untitled-design-75.png',rank:'A'},{name:'✪ Ngọc Huyền ✪',age:23,measurements:'89-59-91',rating:'⭐ 4.1',img:'https://i.ibb.co/qyFCdFn/photo-2024-12-22-01-48-44.jpg',rank:'B'},{name:'✧ Linh Lan ✧',age:22,measurements:'90-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/1bThHZ4/hotgirl-minh-anh-2k1-xinh-suggar-baby-tuyet-hang-moi-vao-nghe-3282055-original.jpg',rank:'A'},{name:'✶ Trúc Lam Baby ✶',age:22,measurements:'90-60-92',rating:'⭐ 4.2',img:'https://i.ibb.co/Wt8QJHc/photo-2024-12-22-02-06-48.jpg',rank:'B'},{name:'❋ Thiên An ❋',age:25,measurements:'92-61-95',rating:'⭐ 4.0',img:'https://i.ibb.co/McF1y1z/Untitled-design-80.png',rank:'B'},{name:'❀ Quỳnh An ❀',age:24,measurements:'93-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/k29ms5p/Untitled-design-71.png',rank:'A'},{name:'✤ Mỹ Linh ✤',age:24,measurements:'91-60-93',rating:'⭐ 4.3',img:'https://i.ibb.co/HKVpxJd/photo-2024-12-22-01-56-50.jpg',rank:'A'},{name:'♡ Lâm Anh ♡',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/KV55Wbk/photo-2024-12-22-01-25-13.jpg',rank:'A'},{name:'✯ Thúy Vi ✯',age:25,measurements:'92-61-94',rating:'⭐ 4.3',img:'https://i.ibb.co/r50wYM9/photo-2024-12-22-01-45-32.jpg',rank:'A'},{name:'✧ Thiên Trúc Baby ✧',age:24,measurements:'89-60-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XVH7QNd/Untitled-design-57.png',rank:'A'},{name:'✿ Uyên Châu ✿',age:23,measurements:'91-59-93',rating:'⭐ 4.3',img:'https://i.ibb.co/Fzd5Qg8/Untitled-design-68.png',rank:'A'},{name:'❥ Nhật Linh ❥',age:23,measurements:'91-61-93',rating:'⭐ 4.4',img:'https://i.ibb.co/qD8R1pN/427446647-1098436921490983-1080917778984417527-n.jpg',rank:'A'},{name:'✽ Rina ✽',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/2dzy8Hv/Untitled-design-66.png',rank:'A'},{name:'✦ Kim Anh ✦',age:22,measurements:'90-60-92',rating:'⭐ 4.4',img:'https://i.ibb.co/DY5bG4t/photo-2024-12-22-01-56-44.jpg',rank:'A'},{name:'✤ Lan Anh ✤',age:22,measurements:'90-58-92',rating:'⭐ 4.4',img:'https://i.ibb.co/ThJGBpG/Untitled-design-84.png',rank:'A'},{name:'❖ Thảo Nguyên ❖',age:23,measurements:'88-59-91',rating:'⭐ 4.5',img:'https://i.ibb.co/41rRRjB/photo-2024-12-22-01-57-01.jpg',rank:'A'},{name:'✧ Lina ✧',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/kGHnkM4/Untitled-design-62.png',rank:'B'},{name:'✨ Như Ý ✨',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tqY7WTK/photo-2024-12-22-02-07-16.jpg',rank:'A'},{name:'♛ Thùy Trang ♛',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/YL1dp4S/Untitled-design-76.png',rank:'B'},{name:'❂ Minh Ánh ❂',age:24,measurements:'91-59-92',rating:'⭐ 4.6',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'A'},{name:'⚜ Ayu ⚜',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/f1KFDHm/re-up-kha-di-mat-xinh-veu-dep-mong-to-trym-khit-3305036-original.jpg',rank:'A'},{name:'✪ Linh Nhi ✪',age:25,measurements:'91-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/0XbmnpS/Untitled-design-82.png',rank:'S'},{name:'✽ Mei ✽',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/3fTqGNk/photo-2024-12-22-02-06-21.jpg',rank:'A'},{name:'✧ Annie ✧',age:26,measurements:'91-61-94',rating:'⭐ 4.1',img:'https://i.ibb.co/Rh7Mgsb/re-up-ha-vy-em-gai-xinh-chuan-hot-girl-gia-chat-3212722-original.jpg',rank:'B'},{name:'❤️ Anna ❤️',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/ZYYkJdb/photo-2024-12-22-02-06-04.jpg',rank:'A'},{name:'✿ Luna ✿',age:23,measurements:'89-59-91',rating:'⭐ 4.3',img:'https://i.ibb.co/gPbwd9Y/Untitled-design-73.png',rank:'A'},{name:'✦ Ngọc Trâm ✦',age:22,measurements:'90-60-93',rating:'⭐ 4.7',img:'https://i.ibb.co/SvR4LSw/Untitled-design-61.png',rank:'A'},{name:'♢ Kim Hạnh ♢',age:24,measurements:'90-60-92',rating:'⭐ 4.5',img:'https://i.ibb.co/1fCMxtQ/photo-2024-12-22-02-05-46.jpg',rank:'A'},{name:'✸ Tiểu My ✸',age:25,measurements:'91-61-94',rating:'⭐ 4.4',img:'https://i.ibb.co/GQKV9yp/reup-bao-anh-2k2-hot-body-nong-bong-goi-tinh-vu-mong-cang-3313328-original.jpg',rank:'A'},{name:'✶ Thiên Trang ✶',age:26,measurements:'92-61-94',rating:'⭐ 4.8',img:'https://i.ibb.co/BG3r0qZ/photo-2024-12-22-01-24-49.jpg',rank:'B'},{name:'✦ Akira ✦',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/ZMCspC5/photo-2024-12-22-01-25-30.jpg',rank:'B'},{name:'♢ Rina ♢',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/1XZGqb9/photo-2024-12-22-02-05-34.jpg',rank:'A'},{name:'✸ Ngọc Lan ✸',age:23,measurements:'88-59-90',rating:'⭐ 4.1',img:'https://i.ibb.co/HT0Nwb5/photo-2024-12-22-01-56-55.jpg',rank:'B'},{name:'❂ Lưu Ngọc ❂',age:26,measurements:'91-61-93',rating:'⭐ 4.0',img:'https://i.ibb.co/sWY5brC/photo-2024-12-22-01-48-41.jpg',rank:'B'},{name:'✥ Phương Trang ✥',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/5WdcZFd/photo-2024-12-22-02-06-13.jpg',rank:'B'},{name:'❀ Khả Vi ❀',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZPg3Ls/Untitled-design-78.png',rank:'B'},{name:'♡ Yuri ♡',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/3C87zds/Untitled-design-69.png',rank:'B'},{name:'❋ Mỹ An ❋',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/bL1Q0Vn/photo-2024-12-25-14-28-56.jpg',rank:'B'},{name:'✭ Thiên Quỳnh ✭',age:23,measurements:'90-60-92',rating:'⭐ 4.1',img:'https://i.ibb.co/3S8WQ28/photo-2024-12-22-01-25-40.jpg',rank:'B'},{name:'✧ Hà Thanh ✧',age:24,measurements:'88-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/fHRwCM7/photo-2024-12-22-01-45-58.jpg',rank:'B'},{name:'❋ Trúc An ❋',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/686wgPf/anh-thu-nguc-rell-hang-that-100-chat-luong-hang-a-3275858-original.jpg',rank:'S'},{name:'✶ Trà My ✶',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/VmWtXJm/Untitled-design-53.png',rank:'B'},{name:'❁ Mỹ Duyên ❁',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/tLqFXs7/82dd3be7b5d672d1a0cbe14aacc075b9-thumb-small.webp',rank:'B'},{name:'★ Phương Mai ★',age:22,measurements:'88-58-91',rating:'⭐ 4.1',img:'https://i.ibb.co/1RkKx4T/photo-2024-12-22-01-50-58.jpg',rank:'B'},{name:'✸ Vân Nhi ✸',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/jD4dhT8/Untitled-design-64.png',rank:'S'},{name:'✾ Hồng nhung ✾',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/RH02jKV/Untitled-design-85.png',rank:'B'},{name:'❖ Emi ❖',age:25,measurements:'92-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/X3vhqGM/reup-1m72-ha-anh-nguoi-mau-minh-day-dzu-bu-lam-tinh-cuc-da-3212434-original.jpg',rank:'B'},{name:'✦ Nhu quỳnh ✦',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/vLw3rXt/photo-2024-12-22-01-59-49.jpg',rank:'B'},{name:'✪ Khánh huyền ✪',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/YLLT3qC/photo-2024-12-15-14-11-40.jpg',rank:'B'},{name:'❀ Hana ❀',age:23,measurements:'88-58-91',rating:'⭐ 4.2',img:'https://i.ibb.co/zrZ42Jk/Untitled-design-74.png',rank:'B'},{name:'⚜ Nami ⚜',age:22,measurements:'89-58-91',rating:'⭐ 4.0',img:'https://i.ibb.co/VV84hTf/photo-2024-12-25-11-57-56-2.jpg',rank:'B'},{name:'✨ Yuki ✨',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6vK23xc/photo-2024-12-22-01-56-47.jpg',rank:'B'},{name:'☾ Tố nhu ☾',age:26,measurements:'93-61-94',rating:'⭐ 4.9',img:'https://i.ibb.co/z7jjg2b/Untitled-design-60.png',rank:'S'},{name:'✪ Linh hồng ✪',age:23,measurements:'88-58-92',rating:'⭐ 4.5',img:'https://i.ibb.co/4jWNswd/photo-2024-12-17-19-25-05.jpg',rank:'A'},{name:'✾ Minh tú ✾',age:24,measurements:'89-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/rHTv3sh/photo-2024-12-23-05-38-10.jpg',rank:'B'},{name:'❖ Hải yến ❖',age:25,measurements:'90-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/WvNX2TY/photo-2024-12-23-20-35-43.jpg',rank:'S'},{name:'✿ Bảo anh ✿',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZYsMxS/photo-2024-12-23-20-37-31.jpg',rank:'B'},{name:'✦ Tú anh ✦',age:23,measurements:'89-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/8sgjh1D/photo-2024-12-26-12-40-19.jpg',rank:'B'},{name:'✪ Diễm quỳnh ✪',age:24,measurements:'88-59-92',rating:'⭐ 4.1',img:'https://i.ibb.co/7SpVtdG/photo-2024-12-27-04-43-07.jpg',rank:'B'},{name:'❀ Phương ly ❀',age:23,measurements:'90-60-93',rating:'⭐ 4.6',img:'https://i.ibb.co/26sy3KX/photo-2024-12-27-04-45-53.jpg',rank:'S'},{name:'⚜ Trần kiều ⚜',age:22,measurements:'87-56-90',rating:'⭐ 4.3',img:'https://i.ibb.co/k1Cfy0r/photo-2024-12-27-04-46-25.jpg',rank:'S'},{name:'⌘ Uyển chi ⌘',age:24,measurements:'89-58-90',rating:'⭐ 4.8',img:'https://i.ibb.co/42HGKKK/Untitled-design-83.png',rank:'S'}];
 
 
 function generateRandomRating(min = 4.0, max = 4.7) {
@@ -9235,7 +9149,7 @@ const reserveRankings = [
         likes: 2120,
         change: 1.0,
         ratings: 42,
-        avatar: "https://i.ibb.co/2qdgLRR/150275488-webp.webp",
+        avatar: "httphttps://i.ibb.co/bmn6qbX/photo-1-23-06-2024-15-01-33-thumb.jpg",
         rating: 4,
         birthYear: 2000,
         height: "162cm",
