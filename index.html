@@ -59,6 +59,39 @@
 <body>
   <div class="snowflakes">
   </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Tích hợp Tawk.to Widget
+      var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/677018df49e2fd8dfeffe1b0/1ig6u2b70";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+  
+      // Cài đặt thuộc tính sau khi widget tải xong
+      Tawk_API.onLoad = function () {
+        Tawk_API.setAttributes(
+          {
+            name: "Luxury Girl Booking", // Tên hiển thị
+            email: "support@example.com", // Email liên hệ
+            avatar: "https://i.ibb.co/0V95Hjt/photo-2024-12-23-05-38-41-2.jpg", // URL ảnh đại diện
+          },
+          function (error) {
+            if (error) {
+              console.error("Error setting attributes:", error);
+            }
+          }
+        );
+      };
+    });
+  </script>
   <script>
 
 
@@ -92,18 +125,7 @@
       for (let i = 0; i < maxSnowflakes; i++) {
         setTimeout(createSnowflake, i * 1000); // Tạo cách nhau 1 giây
       }
-    // Tích hợp Tawk.to Widget
-    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-    (function () {
-      var s1 = document.createElement("script"),
-        s0 = document.getElementsByTagName("script")[0];
-      s1.async = true;
-      s1.src = "https://embed.tawk.to/677018df49e2fd8dfeffe1b0/1ig6u2b70";
-      s1.charset = "UTF-8";
-      s1.setAttribute("crossorigin", "*");
-      s0.parentNode.insertBefore(s1, s0);
-    })();
-  });
+    });
   </script>
 </body>
 
@@ -8387,7 +8409,7 @@ h3 {
 
 .give-heart-btn {
     display: inline-block;
-    padding: 8px 14px;
+    padding: 6px 12px;
     background: linear-gradient(135deg, #6a0dad, #b74cd9); /* Màu gradient từ tím đến tím sáng */
     color: #ffffff; /* Màu chữ trắng */
     font-weight: bold;
@@ -8730,10 +8752,10 @@ h3 {
 }
 .ranking-name {
     font-family: 'Arial', sans-serif; /* Thay Montserrat bằng font tự nhiên hơn */
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     color: #f3f3f3;
-    padding: 5px 10px;
+    padding: 4px 8px;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.6); /* Nền tối mờ */
     box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.05);
