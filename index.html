@@ -19,9 +19,7 @@
     <div class="snowflake">❄</div>
   </div>
   <style>
-  #lc-container .livechat-powered {
-    display: none !important;
-}
+
 
        /* Container chứa hạt tuyết */
        .snowflakes {
@@ -56,6 +54,9 @@
           opacity: 0;
         }
       }
+
+
+      
   </style>
 </head>
 
@@ -65,6 +66,10 @@
 
 <!-- Start of LiveChat (www.livechat.com) code -->
 <script>
+
+
+
+
   window.__lc = window.__lc || {};
   window.__lc.license = 18963027;
   window.__lc.integration_name = "manual_channels";
@@ -76,7 +81,7 @@
 
   <script>
 
-localStorage.clear();
+
 
   document.addEventListener("DOMContentLoaded", () => {
       const snowContainer = document.querySelector(".snowflakes");
@@ -117,7 +122,7 @@ localStorage.clear();
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Modal Vị Trí</title>
   <style>
     /* Toàn màn hình modal */
@@ -240,8 +245,8 @@ localStorage.clear();
   <!-- Modal -->
   <div id="locationModal" class="custom-modal">
     <div class="custom-modal-content">
-      <h2>📍 Bật Vị Trí</h2>
-      <p>Chúng tôi cần truy cập vị trí của bạn để cung cấp dịch vụ chính xác nhất.</p>
+      <h2>📍 Truy cập ngay</h2>
+      <p>Hệ thống truy cập vị trí để cung cấp dịch vụ chính xác nhất cho bạn.</p>
       <button class="modal-button" onclick="requestLocation()">Cho phép</button>
     </div>
   </div>
@@ -1347,7 +1352,7 @@ h2:hover::before {
   max-width: 100%; /* Chiều rộng tối đa không vượt quá modal */
   max-height: 100%; /* Chiều cao tối đa không vượt quá modal */
   border-radius: 10px; /* Bo góc hình ảnh */
-  object-fit: contain; /* Đảm bảo ảnh không bị méo */
+
 }
 
 /* Hiệu ứng mờ dần */
@@ -1607,9 +1612,97 @@ h2:hover::before {
       <!-- Thêm mới ở cuối -->
       <a href="#" onclick="refreshPage()">
         <i class="fas fa-sync-alt"></i>Load lại trang</a>
-    </div>
+      
+      </div>
  
-   <div id="characterSection" class="wide-section"><h2 class="suggestion-title"><img src="https://i.ibb.co/1mJnvFy/gif1.gif" alt="Đề Xuất Gần Bạn Nhất" class="ultra-wide-image"></h2><div class="character-list"><div class="recommendation-item" onclick="displayCharacterDetails('July')"><img src="https://i.ibb.co/s56HByh/photo-17-2024-09-20-08-41-30.jpg" alt="July"><p><strong>July</strong></p><p>Tuổi: 22</p><p>Số đo: 90-60-90</p><p>⭐ 4.7</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Yumi')"><img src="https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg" alt="Yumi"><p><strong>Yumi</strong></p><p>Tuổi: 22</p><p>Số đo: 90-56-90</p><p>⭐ 4.6</p><p>Rank: S</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Hà Huyền')"><img src="https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg" alt="Hà Huyền"><p><strong>Hà Huyền</strong></p><p>Tuổi: 21</p><p>Số đo: 86-58-90</p><p>⭐ 4.8</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Maily')"><img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Maily"><p><strong>Maily</strong></p><p>Tuổi: 23</p><p>Số đo: 88-58-86</p><p>⭐ 4.7</p><p>Rank: B</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Mina')"><img src="https://i.ibb.co/9HyQwy6/462776443-1193449098391062-5602390579257707131-n.jpg" alt="Mina"><p><strong>Mina</strong></p><p>Tuổi: 24</p><p>Số đo: 86-56-89</p><p>⭐ 4.9</p><p>Rank: B</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Amy')"><img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy"><p><strong>Amy</strong></p><p>Tuổi: 22</p><p>Số đo: 91-61-94</p><p>⭐ 4.8</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Lucy')"><img src="https://i.ibb.co/Dfc46yb/photo-2024-09-05-18-55-27.jpg" alt="Lucy"><p><strong>Lucy</strong></p><p>Tuổi: 25</p><p>Số đo: 87-57-89</p><p>⭐ 4.7</p><p>Rank: B</p></div><div class="recommendation-item" onclick="displayCharacterDetails('ManNhi')"><img src="https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg" alt="ManNhi"><p><strong>ManNhi</strong></p><p>Tuổi: 22</p><p>Số đo: 91-58-92</p><p>⭐ 4.6</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')"><img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh"><p><strong>Quỳnh Anh</strong></p><p>Tuổi: 23</p><p>Số đo: 87-57-89</p><p>⭐ 4.7</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Chang')"><img src="https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg" alt="Chang"><p><strong>Chang</strong></p><p>Tuổi: 24</p><p>Số đo: 89-60-93</p><p>⭐ 4.8</p><p>Rank: S</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Yuna')"><img src="https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg" alt="Yuna"><p><strong>Yuna</strong></p><p>Tuổi: 24</p><p>Số đo: 90-60-93</p><p>⭐ 4.6</p><p>Rank: S</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Hà My')"><img src="https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg" alt="Hà My"><p><strong>Hà My</strong></p><p>Tuổi: 23</p><p>Số đo: 89-59-91</p><p>⭐ 4.7</p><p>Rank: B</p></div></div></div><div id="characterSection" class="wide-section"><h2 class="suggestion-title"><img src="https://i.ibb.co/1mJnvFy/gif1.gif" alt="Đề Xuất Gần Bạn Nhất" class="ultra-wide-image"></h2><div class="character-list"><div class="recommendation-item" onclick="displayCharacterDetails('July')"><img src="https://i.ibb.co/s56HByh/photo-17-2024-09-20-08-41-30.jpg" alt="July"><p><strong>July</strong></p><p>Tuổi: 22</p><p>Số đo: 90-60-90</p><p>⭐ 4.7</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Yumi')"><img src="https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg" alt="Yumi"><p><strong>Yumi</strong></p><p>Tuổi: 22</p><p>Số đo: 90-56-90</p><p>⭐ 4.6</p><p>Rank: S</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Hà Huyền')"><img src="https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg" alt="Hà Huyền"><p><strong>Hà Huyền</strong></p><p>Tuổi: 21</p><p>Số đo: 86-58-90</p><p>⭐ 4.8</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Maily')"><img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Maily"><p><strong>Maily</strong></p><p>Tuổi: 23</p><p>Số đo: 88-58-86</p><p>⭐ 4.7</p><p>Rank: B</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Mina')"><img src="https://i.ibb.co/9HyQwy6/462776443-1193449098391062-5602390579257707131-n.jpg" alt="Mina"><p><strong>Mina</strong></p><p>Tuổi: 24</p><p>Số đo: 86-56-89</p><p>⭐ 4.9</p><p>Rank: B</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Amy')"><img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy"><p><strong>Amy</strong></p><p>Tuổi: 22</p><p>Số đo: 91-61-94</p><p>⭐ 4.8</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Lucy')"><img src="https://i.ibb.co/Dfc46yb/photo-2024-09-05-18-55-27.jpg" alt="Lucy"><p><strong>Lucy</strong></p><p>Tuổi: 25</p><p>Số đo: 87-57-89</p><p>⭐ 4.7</p><p>Rank: B</p></div><div class="recommendation-item" onclick="displayCharacterDetails('ManNhi')"><img src="https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg" alt="ManNhi"><p><strong>ManNhi</strong></p><p>Tuổi: 22</p><p>Số đo: 91-58-92</p><p>⭐ 4.6</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')"><img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh"><p><strong>Quỳnh Anh</strong></p><p>Tuổi: 23</p><p>Số đo: 87-57-89</p><p>⭐ 4.7</p><p>Rank: A</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Chang')"><img src="https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg" alt="Chang"><p><strong>Chang</strong></p><p>Tuổi: 24</p><p>Số đo: 89-60-93</p><p>⭐ 4.8</p><p>Rank: S</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Yuna')"><img src="https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg" alt="Yuna"><p><strong>Yuna</strong></p><p>Tuổi: 24</p><p>Số đo: 90-60-93</p><p>⭐ 4.6</p><p>Rank: S</p></div><div class="recommendation-item" onclick="displayCharacterDetails('Hà My')"><img src="https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg" alt="Hà My"><p><strong>Hà My</strong></p><p>Tuổi: 23</p><p>Số đo: 89-59-91</p><p>⭐ 4.7</p><p>Rank: B</p></div></div></div>
+   <div id="characterSection" class="wide-section"><h2 class="suggestion-title"><img <div id="characterSection" class="wide-section">
+    <h2 class="suggestion-title">
+      <img src="https://i.ibb.co/1mJnvFy/gif1.gif" alt="Đề Xuất Gần Bạn Nhất" class="ultra-wide-image">
+    </h2>
+    <div class="character-list">
+      <div class="recommendation-item" onclick="displayCharacterDetails('Yumi')">
+        <img src="https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg" alt="Yumi">
+        <p><strong>Yumi</strong></p>
+        <p>Tuổi: 22</p>
+        <p>Số đo: 90-56-90</p>
+        <p>⭐ 4.6</p>
+        <p>Rank: S</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Hà Huyền')">
+        <img src="https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg" alt="Hà Huyền">
+        <p><strong>Hà Huyền</strong></p>
+        <p>Tuổi: 21</p>
+        <p>Số đo: 86-58-90</p>
+        <p>⭐ 4.8</p>
+        <p>Rank: A</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Maily')">
+        <img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Maily">
+        <p><strong>Maily</strong></p>
+        <p>Tuổi: 23</p>
+        <p>Số đo: 88-58-86</p>
+        <p>⭐ 4.7</p>
+        <p>Rank: B</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Amy')">
+        <img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy">
+        <p><strong>Amy</strong></p>
+        <p>Tuổi: 22</p>
+        <p>Số đo: 91-61-94</p>
+        <p>⭐ 4.8</p>
+        <p>Rank: A</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Lucy')">
+        <img src="https://i.ibb.co/Dfc46yb/photo-2024-09-05-18-55-27.jpg" alt="Lucy">
+        <p><strong>Lucy</strong></p>
+        <p>Tuổi: 25</p>
+        <p>Số đo: 87-57-89</p>
+        <p>⭐ 4.7</p>
+        <p>Rank: B</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('ManNhi')">
+        <img src="https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg" alt="ManNhi">
+        <p><strong>ManNhi</strong></p>
+        <p>Tuổi: 22</p>
+        <p>Số đo: 91-58-92</p>
+        <p>⭐ 4.6</p>
+        <p>Rank: A</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')">
+        <img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh">
+        <p><strong>Quỳnh Anh</strong></p>
+        <p>Tuổi: 23</p>
+        <p>Số đo: 87-57-89</p>
+        <p>⭐ 4.7</p>
+        <p>Rank: A</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Chang')">
+        <img src="https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg" alt="Chang">
+        <p><strong>Chang</strong></p>
+        <p>Tuổi: 24</p>
+        <p>Số đo: 89-60-93</p>
+        <p>⭐ 4.8</p>
+        <p>Rank: S</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Yuna')">
+        <img src="https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg" alt="Yuna">
+        <p><strong>Yuna</strong></p>
+        <p>Tuổi: 24</p>
+        <p>Số đo: 90-60-93</p>
+        <p>⭐ 4.6</p>
+        <p>Rank: S</p>
+      </div>
+      <div class="recommendation-item" onclick="displayCharacterDetails('Hà My')">
+        <img src="https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg" alt="Hà My">
+        <p><strong>Hà My</strong></p>
+        <p>Tuổi: 23</p>
+        <p>Số đo: 89-59-91</p>
+        <p>⭐ 4.7</p>
+        <p>Rank: B</p>
+      </div>
+    </div>
+  </div>
+  
           
          
         
@@ -1899,6 +1992,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
     
+
+
+
     
     function resetImageGallery() {
     imageGallery.innerHTML = '';
@@ -2093,7 +2189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Thư viện Girl Xinh</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -2411,7 +2507,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Live 18+ Section</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -3652,7 +3748,7 @@ iframe {
   left: 0;
   width: 100vw;        /* Chiều rộng bằng viewport */
   height: 100vh;       /* Chiều cao bằng viewport */
-  background: rgba(0, 0, 0, 0.95); /* Tăng độ tối */
+  background: rgba(0, 0, 0, 0.97); /* Tăng độ tối */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4026,6 +4122,8 @@ iframe {
   </head>
 
   <body>
+
+    
     <!-- Phần Live Stream -->
     <div class="content" id="live18Section" style="display: none;">
       <div class="section-title">
@@ -4036,6 +4134,8 @@ iframe {
         <button id="btn-find" class="new-btn" title="Tìm kiếm">
           <i class="fas fa-search"></i>Tìm kiếm</button>
       </div>
+
+
       <div class="live-grid">
         <div class="live-row">
           <!-- Thẻ mới với iframe -->
@@ -4069,19 +4169,19 @@ iframe {
             </button>
           </div>
           <div class="live-card" onclick="showLiveStream('https://i.ibb.co/VWwZccP/live-streaming-symbol-set-online-broadcast-icon-the-concept-of-live-streaming-for-selling-on-social.webp')">
-            <span class="status offline">● Offline</span>
-            <img src="https://i.ibb.co/G0ZX8cH/04f7ca7ce8b7a9ea51e3b94ee4dde545-thumb-small.jpg" alt="Streamer 4">
-            <div class="card-info">
-              <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam Flag" class="flag">
-              <span class="name">Khánh Nhi</span>
-              <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite(this)">
-                <i class="fas fa-heart"></i>
-              </button>
-            </div>
+            <span class="status online">● Online</span>
+        <img src="https://i.ibb.co/7NrNXw7/taoanhdep-lam-net-anh-94654.jpg" alt="Streamer 4">
+        <div class="card-info">
+          <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam Flag" class="flag">
+          <span class="name">Khánh Nhi</span>
+          <button class="favorite-btn" onclick="event.stopPropagation(); toggleFavorite(this)">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
           </div>
           <div class="live-card" onclick="showLiveStream('https://i.ibb.co/VWwZccP/live-streaming-symbol-set-online-broadcast-icon-the-concept-of-live-streaming-for-selling-on-social.webp')">
             <span class="status offline">● Offline</span>
-            <img src="https://i.ibb.co/XtMMLrJ/814882bd900b91a32819677e2d5b94a3-thumb-small.webp" alt="Streamer 5">
+            <img src="https://i.ibb.co/VJ91w8Y/1493029915-149302451622341-anh-10.jpg" alt="Streamer 5">
             <div class="card-info">
               <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam Flag" class="flag">
               <span class="name">Bé Mây</span>
@@ -4152,7 +4252,7 @@ iframe {
         <div class="live-row">
           <div class="live-card" onclick="showLiveStream('https://i.ibb.co/VWwZccP/live-streaming-symbol-set-online-broadcast-icon-the-concept-of-live-streaming-for-selling-on-social.webp')">
             <span class="status offline">● Offline</span>
-            <img src="https://i.ibb.co/TRDKZ51/163925064-webp.webp" alt="Streamer 11">
+            <img src="https://i.ibb.co/znLtRhk/taoanhdep-lam-net-anh-39927.jpg" alt="Streamer 11">
             <div class="card-info">
               <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam Flag" class="flag">
               <span class="name">Aria</span>
@@ -4163,7 +4263,7 @@ iframe {
           </div>
           <div class="live-card" onclick="showLiveStream('https://i.ibb.co/VWwZccP/live-streaming-symbol-set-online-broadcast-icon-the-concept-of-live-streaming-for-selling-on-social.webp')">
             <span class="status offline">● Offline</span>
-            <img src="https://i.ibb.co/vs3GPKc/134198227-webp.webp" alt="Streamer 12">
+            <img src="https://i.ibb.co/v1FrytR/taoanhdep-lam-net-anh-91125.jpg" alt="Streamer 12">
             <div class="card-info">
               <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam Flag" class="flag">
               <span class="name">Kim Anh</span>
@@ -4243,7 +4343,7 @@ iframe {
           </div>
           <div class="live-card" onclick="showLiveStream('https://i.ibb.co/VWwZccP/live-streaming-symbol-set-online-broadcast-icon-the-concept-of-live-streaming-for-selling-on-social.webp')">
             <span class="status online">● Online</span>
-            <img src="https://i.ibb.co/2qdgLRR/150275488-webp.webp" alt="Streamer 19">
+            <img src="https://i.ibb.co/dQfs1MR/photo-1-16136972389091030663303.jpg" alt="Streamer 19">
             <div class="card-info">
               <img src="https://flagcdn.com/w40/vn.png" alt="Vietnam Flag" class="flag">
               <span class="name">Tuyết Nhi</span>
@@ -4582,7 +4682,7 @@ iframe {
   function updateViewersCount() {
     const viewersCountElement = document.getElementById('viewers-count');
     // Giả lập số lượng người xem ngẫu nhiên từ 100 đến 200
-    const randomViewers = Math.floor(Math.random() * (200 - 100 + 1)) + 100;
+    const randomViewers = Math.floor(Math.random() * (100 - 50 + 1)) + 50;
     viewersCountElement.textContent = `🔴 ${randomViewers} đang xem`;
   }
   
@@ -4773,69 +4873,89 @@ function showGiftNotification(donorName, giftImage, giftName) {
   
   
   
-       // Hiển thị mục Live 18+
-       function showLive18Plus() {
-        document.getElementById('live18Section').style.display = 'block';
-        document.getElementById('liveStreamWrapper').style.display = 'none';
-      }
-  
-      function showLiveStream(url, idolName) {
-  const liveFrame = document.getElementById('liveFrame');
-
-  // Xóa URL cũ để tránh lỗi cache
-  liveFrame.src = '';
-
-  try {
-    // Xử lý URL Google Drive
-    if (url.includes('drive.google.com')) {
-      const videoIdMatch = url.match(/\/d\/(.*?)\//);
-      if (videoIdMatch) {
-        const videoId = videoIdMatch[1];
-        liveFrame.src = `https://drive.google.com/file/d/${videoId}/preview`;
-      } else {
-        throw new Error('Invalid Google Drive URL.');
-      }
-    }
-    // Xử lý URL YouTube để tự động phát
-    else if (url.includes('youtube.com') || url.includes('youtu.be')) {
-      const videoIdMatch = url.match(/(?:v=|youtu\.be\/|\/embed\/)([a-zA-Z0-9_-]+)/);
-      if (videoIdMatch) {
-        const videoId = videoIdMatch[1];
-        liveFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0`;
-      } else {
-        throw new Error('Invalid YouTube URL.');
-      }
-    }
-    // Xử lý URL Vimeo để tự động phát
-    else if (url.includes('vimeo.com')) {
-      const videoId = url.split('/').pop();
-      if (videoId) {
-        liveFrame.src = `https://player.vimeo.com/video/${videoId}?autoplay=1&muted=0`;
-      } else {
-        throw new Error('Invalid Vimeo URL.');
-      }
-    }
-    // Trường hợp URL khác
-    else {
-      liveFrame.src = url;
-    }
-
-    // Hiển thị live stream wrapper
-    document.getElementById('liveStreamWrapper').style.display = 'flex';
-
-    // Hiển thị nút Gửi Quà khi xem live
-    const giftButton = document.getElementById('btn-gift');
-    if (giftButton) {
-      giftButton.style.display = 'inline-block';
-      giftButton.dataset.idolName = idolName || 'Unknown';
-    }
-  } catch (error) {
-    console.error(error.message);
-    alert('Cannot load the live stream. Please check the URL.');
-  }
+// Hàm hiển thị mục Live 18+
+function showLive18Plus() {
+    document.getElementById('live18Section').style.display = 'block';
+    document.getElementById('liveStreamWrapper').style.display = 'none';
 }
 
-  // Hàm hiển thị "Live Stream"
+function showLiveStream(url, idolName) {
+    const liveFrame = document.getElementById('liveFrame');
+    const liveStreamWrapper = document.getElementById('liveStreamWrapper');
+    const localStorageKey = `liveStreamTime_${idolName}`;
+
+    // Lấy thời gian lưu trước đó từ LocalStorage
+    const savedTime = localStorage.getItem(localStorageKey) || 0;
+
+    // Kiểm tra và xử lý URL để thêm thời gian bắt đầu
+    let newUrl = url;
+    if (url.includes('cloudflarestream.com')) {
+        const updatedUrl = new URL(url);
+        updatedUrl.searchParams.set('t', savedTime); // Thêm tham số thời gian
+        newUrl = updatedUrl.toString();
+    } else if (url.includes('youtube.com') || url.includes('youtu.be')) {
+        const videoIdMatch = url.match(/(?:v=|youtu\.be\/|\/embed\/)([a-zA-Z0-9_-]+)/);
+        if (videoIdMatch) {
+            const videoId = videoIdMatch[1];
+            newUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${savedTime}`;
+        }
+    }
+
+    // Gán URL vào iframe
+    liveFrame.src = newUrl;
+
+    // Lưu trạng thái thời gian phát mỗi giây
+    liveFrame.onload = () => {
+        try {
+            const video = liveFrame.contentWindow.document.querySelector('video');
+            if (video) {
+                video.addEventListener('timeupdate', () => {
+                    localStorage.setItem(localStorageKey, Math.floor(video.currentTime));
+                });
+            } else {
+                console.warn('Không thể tìm thấy phần tử video trong iframe.');
+            }
+        } catch (e) {
+            console.warn('Không thể gắn sự kiện timeupdate:', e);
+        }
+    };
+
+    // Hiển thị Live Stream Wrapper
+    liveStreamWrapper.style.display = 'flex';
+}
+
+// Khi người dùng thoát hoặc tải lại trang
+window.addEventListener('beforeunload', () => {
+    const liveFrame = document.getElementById('liveFrame');
+    if (liveFrame.src) {
+        try {
+            const idolName = liveFrame.getAttribute('data-idol-name') || 'unknown';
+            const localStorageKey = `liveStreamTime_${idolName}`;
+            const video = liveFrame.contentWindow.document.querySelector('video');
+            if (video) {
+                localStorage.setItem(localStorageKey, Math.floor(video.currentTime));
+            }
+        } catch (e) {
+            console.warn('Không thể lưu trạng thái video:', e);
+        }
+    }
+});
+
+function closeLiveStream() {
+  const liveStreamWrapper = document.getElementById('liveStreamWrapper');
+  const liveFrame = document.getElementById('liveFrame');
+
+  // Ẩn phần Live Stream
+  liveStreamWrapper.style.display = 'none';
+
+  // Xóa URL trong iframe để dừng phát
+  liveFrame.src = '';
+}
+
+
+
+
+// Hàm hiển thị "Live Stream"
 function showLiveStreamSection() {
     const liveSection = document.getElementById('live18Section');
     hideAllSections(); // Ẩn các phần khác
@@ -4852,13 +4972,14 @@ function closeLiveStreamSection() {
     }
 }
 
-// Ẩn tất cả các phần khác
+// Hàm ẩn tất cả các phần khác
 function hideAllSections() {
     const sections = document.querySelectorAll('.content-section');
     sections.forEach(section => {
         section.style.display = 'none'; // Ẩn tất cả các phần có class "content-section"
     });
 }
+
 
 // Gắn sự kiện cho nút menu
 document.addEventListener('DOMContentLoaded', () => {
@@ -5698,10 +5819,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 .modal-content {
 
-  padding: 20px 30px;
+  
   border-radius: 10px;
-  max-width: 350px;
-  width: 90%;
+ 
   color: #ffffff;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   animation: fadeIn 0.3s ease;
@@ -5933,7 +6053,6 @@ document.addEventListener('DOMContentLoaded', () => {
         '♡ Nhã Uyên ♡',  
         '✧ Uyen Saki ✧',  
         '❥Thiên Kim❥',  
-        'July',  
         'Quỳnh Anh',  
         '❁ Mai Anh ❁',  
         '✦ Thiên Thảo Kiều ✦',  
@@ -6151,9 +6270,8 @@ function populatePartnerList() {
   <!-- Thêm mới sau Ảnh 18+ -->
   <a href="#" onclick="showLive18Plus()">
     <i class="fas fa-play-circle"></i>Live 18+ Section</a>
-  <!-- Thêm mới ở cuối -->
-</div>
-
+    
+  </div>
 
 
 <!DOCTYPE html>
@@ -6841,7 +6959,655 @@ const mainCharacters = [
 ]; 
 
 
-const secondaryCharacters=[{name:'Lan Chi ☘',age:23,measurements:'88-58-92',rating:'⭐ 4.8',img:'https://i.ibb.co/0M1x10j/photo-2024-12-22-01-48-23.jpg',rank:'A'},{name:'♡°Cẩm Tú°♡',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/wJKWM15/kieu-anh-dam-nu-lam-tinh-cuc-phe-3313889-original.jpg',rank:'A'},{name:'✦Khánh Nhi✦',age:22,measurements:'89-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XYGH6Mb/photo-2024-12-22-02-00-04.jpg',rank:'B'},{name:'❖Hạ Vy Queen❖',age:23,measurements:'89-59-91',rating:'⭐ 4.8',img:'https://i.ibb.co/3d80hzR/Untitled-design-67.png',rank:'A'},{name:'♛Thảo Vy♛',age:22,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/XXhCCW9/photo-2024-12-22-02-06-35.jpg',rank:'A'},{name:'♡Nhã Uyên♡',age:26,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✧Uyên Saki✧',age:24,measurements:'92-60-93',rating:'⭐ 4.9',img:'https://i.ibb.co/Z2GWH72/photo-2024-12-22-01-48-34.jpg',rank:'B'},{name:'❥Thiên Kim❥',age:22,measurements:'88-58-92',rating:'⭐ 4.6',img:'https://i.ibb.co/mtWdy3h/reup-nhu-y-face-xinh-body-dep-3171531-original.jpg',rank:'B'},{name:'❁Mai Anh❁',age:24,measurements:'92-60-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tZ2gmfQ/Untitled-design-86.png',rank:'B'},{name:'✦Thiên Thảo Kiều✦',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/mXZ0Yzr/photo-2024-12-22-01-25-17.jpg',rank:'A'},{name:'♢Quỳnh Hana♢',age:23,measurements:'89-58-90',rating:'⭐ 4.9',img:'https://i.ibb.co/kxY99jY/photo-2024-12-14-17-41-52.jpg',rank:'A'},{name:'♚Lâm Vy Baby♚',age:24,measurements:'89-60-92',rating:'⭐ 4.3',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✽Diệu Thúy✽',age:25,measurements:'92-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/ccQdPBf/photo-2024-12-22-01-56-58.jpg',rank:'A'},{name:'⚜Ái Linh Baby⚜',age:24,measurements:'91-59-92',rating:'⭐ 4.8',img:'https://i.ibb.co/6H0cvLD/photo-2024-12-22-02-06-38.jpg',rank:'A'},{name:'✶Thùy Linh✶',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/6Dg8MBw/photo-2024-11-17-06-42-10.jpg',rank:'B'},{name:'★ Nhiên Sakura ★',age:26,measurements:'91-59-93',rating:'⭐ 4.7',img:'https://i.ibb.co/dmPsFsp/photo-2024-12-22-01-50-42.jpg',rank:'A'},{name:'❉ Anh Thu ❉',age:22,measurements:'90-58-91',rating:'⭐ 4.5',img:'https://i.ibb.co/sbw4PFq/Untitled-design-81.png',rank:'B'},{name:'❋ Huyền Anh ❋',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'B'},{name:'✥ Thanh Tú ✥',age:26,measurements:'90-59-93',rating:'⭐ 4.0',img:'https://i.ibb.co/8z0rJ92/photo-2024-12-22-01-48-47.jpg',rank:'B'},{name:'♔ Minh Ngọc ♔',age:23,measurements:'91-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/ZhfygHw/Untitled-design-75.png',rank:'A'},{name:'✪ Ngọc Huyền ✪',age:23,measurements:'89-59-91',rating:'⭐ 4.1',img:'https://i.ibb.co/qyFCdFn/photo-2024-12-22-01-48-44.jpg',rank:'B'},{name:'✧ Linh Lan ✧',age:22,measurements:'90-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/1bThHZ4/hotgirl-minh-anh-2k1-xinh-suggar-baby-tuyet-hang-moi-vao-nghe-3282055-original.jpg',rank:'A'},{name:'✶ Trúc Lam Baby ✶',age:22,measurements:'90-60-92',rating:'⭐ 4.2',img:'https://i.ibb.co/Wt8QJHc/photo-2024-12-22-02-06-48.jpg',rank:'B'},{name:'❋ Thiên An ❋',age:25,measurements:'92-61-95',rating:'⭐ 4.0',img:'https://i.ibb.co/McF1y1z/Untitled-design-80.png',rank:'B'},{name:'❀ Quỳnh An ❀',age:24,measurements:'93-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/k29ms5p/Untitled-design-71.png',rank:'A'},{name:'✤ Mỹ Linh ✤',age:24,measurements:'91-60-93',rating:'⭐ 4.3',img:'https://i.ibb.co/HKVpxJd/photo-2024-12-22-01-56-50.jpg',rank:'A'},{name:'♡ Lâm Anh ♡',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/KV55Wbk/photo-2024-12-22-01-25-13.jpg',rank:'A'},{name:'✯ Thúy Vi ✯',age:25,measurements:'92-61-94',rating:'⭐ 4.3',img:'https://i.ibb.co/r50wYM9/photo-2024-12-22-01-45-32.jpg',rank:'A'},{name:'✧ Thiên Trúc Baby ✧',age:24,measurements:'89-60-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XVH7QNd/Untitled-design-57.png',rank:'A'},{name:'✿ Uyên Châu ✿',age:23,measurements:'91-59-93',rating:'⭐ 4.3',img:'https://i.ibb.co/Fzd5Qg8/Untitled-design-68.png',rank:'A'},{name:'❥ Nhật Linh ❥',age:23,measurements:'91-61-93',rating:'⭐ 4.4',img:'https://i.ibb.co/qD8R1pN/427446647-1098436921490983-1080917778984417527-n.jpg',rank:'A'},{name:'✽ Rina ✽',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/2dzy8Hv/Untitled-design-66.png',rank:'A'},{name:'✦ Kim Anh ✦',age:22,measurements:'90-60-92',rating:'⭐ 4.4',img:'https://i.ibb.co/DY5bG4t/photo-2024-12-22-01-56-44.jpg',rank:'A'},{name:'✤ Lan Anh ✤',age:22,measurements:'90-58-92',rating:'⭐ 4.4',img:'https://i.ibb.co/ThJGBpG/Untitled-design-84.png',rank:'A'},{name:'❖ Thảo Nguyên ❖',age:23,measurements:'88-59-91',rating:'⭐ 4.5',img:'https://i.ibb.co/41rRRjB/photo-2024-12-22-01-57-01.jpg',rank:'A'},{name:'✧ Lina ✧',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/kGHnkM4/Untitled-design-62.png',rank:'B'},{name:'✨ Như Ý ✨',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tqY7WTK/photo-2024-12-22-02-07-16.jpg',rank:'A'},{name:'♛ Thùy Trang ♛',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/YL1dp4S/Untitled-design-76.png',rank:'B'},{name:'❂ Minh Ánh ❂',age:24,measurements:'91-59-92',rating:'⭐ 4.6',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'A'},{name:'⚜ Ayu ⚜',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/f1KFDHm/re-up-kha-di-mat-xinh-veu-dep-mong-to-trym-khit-3305036-original.jpg',rank:'A'},{name:'✪ Linh Nhi ✪',age:25,measurements:'91-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/0XbmnpS/Untitled-design-82.png',rank:'S'},{name:'✽ Mei ✽',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/3fTqGNk/photo-2024-12-22-02-06-21.jpg',rank:'A'},{name:'✧ Annie ✧',age:26,measurements:'91-61-94',rating:'⭐ 4.1',img:'https://i.ibb.co/Rh7Mgsb/re-up-ha-vy-em-gai-xinh-chuan-hot-girl-gia-chat-3212722-original.jpg',rank:'B'},{name:'❤️ Anna ❤️',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/ZYYkJdb/photo-2024-12-22-02-06-04.jpg',rank:'A'},{name:'✿ Luna ✿',age:23,measurements:'89-59-91',rating:'⭐ 4.3',img:'https://i.ibb.co/gPbwd9Y/Untitled-design-73.png',rank:'A'},{name:'✦ Ngọc Trâm ✦',age:22,measurements:'90-60-93',rating:'⭐ 4.7',img:'https://i.ibb.co/SvR4LSw/Untitled-design-61.png',rank:'A'},{name:'♢ Kim Hạnh ♢',age:24,measurements:'90-60-92',rating:'⭐ 4.5',img:'https://i.ibb.co/1fCMxtQ/photo-2024-12-22-02-05-46.jpg',rank:'A'},{name:'✸ Tiểu My ✸',age:25,measurements:'91-61-94',rating:'⭐ 4.4',img:'https://i.ibb.co/GQKV9yp/reup-bao-anh-2k2-hot-body-nong-bong-goi-tinh-vu-mong-cang-3313328-original.jpg',rank:'A'},{name:'✶ Thiên Trang ✶',age:26,measurements:'92-61-94',rating:'⭐ 4.8',img:'https://i.ibb.co/BG3r0qZ/photo-2024-12-22-01-24-49.jpg',rank:'B'},{name:'✦ Akira ✦',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/ZMCspC5/photo-2024-12-22-01-25-30.jpg',rank:'B'},{name:'♢ Rina ♢',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/1XZGqb9/photo-2024-12-22-02-05-34.jpg',rank:'A'},{name:'✸ Ngọc Lan ✸',age:23,measurements:'88-59-90',rating:'⭐ 4.1',img:'https://i.ibb.co/HT0Nwb5/photo-2024-12-22-01-56-55.jpg',rank:'B'},{name:'❂ Lưu Ngọc ❂',age:26,measurements:'91-61-93',rating:'⭐ 4.0',img:'https://i.ibb.co/sWY5brC/photo-2024-12-22-01-48-41.jpg',rank:'B'},{name:'✥ Phương Trang ✥',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/5WdcZFd/photo-2024-12-22-02-06-13.jpg',rank:'B'},{name:'❀ Khả Vi ❀',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZPg3Ls/Untitled-design-78.png',rank:'B'},{name:'♡ Yuri ♡',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/3C87zds/Untitled-design-69.png',rank:'B'},{name:'❋ Mỹ An ❋',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/bL1Q0Vn/photo-2024-12-25-14-28-56.jpg',rank:'B'},{name:'✭ Thiên Quỳnh ✭',age:23,measurements:'90-60-92',rating:'⭐ 4.1',img:'https://i.ibb.co/3S8WQ28/photo-2024-12-22-01-25-40.jpg',rank:'B'},{name:'✧ Hà Thanh ✧',age:24,measurements:'88-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/fHRwCM7/photo-2024-12-22-01-45-58.jpg',rank:'B'},{name:'❋ Trúc An ❋',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/686wgPf/anh-thu-nguc-rell-hang-that-100-chat-luong-hang-a-3275858-original.jpg',rank:'S'},{name:'✶ Trà My ✶',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/VmWtXJm/Untitled-design-53.png',rank:'B'},{name:'❁ Mỹ Duyên ❁',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/tLqFXs7/82dd3be7b5d672d1a0cbe14aacc075b9-thumb-small.webp',rank:'B'},{name:'★ Phương Mai ★',age:22,measurements:'88-58-91',rating:'⭐ 4.1',img:'https://i.ibb.co/1RkKx4T/photo-2024-12-22-01-50-58.jpg',rank:'B'},{name:'✸ Vân Nhi ✸',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/jD4dhT8/Untitled-design-64.png',rank:'S'},{name:'✾ Hồng nhung ✾',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/RH02jKV/Untitled-design-85.png',rank:'B'},{name:'❖ Emi ❖',age:25,measurements:'92-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/X3vhqGM/reup-1m72-ha-anh-nguoi-mau-minh-day-dzu-bu-lam-tinh-cuc-da-3212434-original.jpg',rank:'B'},{name:'✦ Nhu quỳnh ✦',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/vLw3rXt/photo-2024-12-22-01-59-49.jpg',rank:'B'},{name:'✪ Khánh huyền ✪',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/YLLT3qC/photo-2024-12-15-14-11-40.jpg',rank:'B'},{name:'❀ Hana ❀',age:23,measurements:'88-58-91',rating:'⭐ 4.2',img:'https://i.ibb.co/zrZ42Jk/Untitled-design-74.png',rank:'B'},{name:'⚜ Nami ⚜',age:22,measurements:'89-58-91',rating:'⭐ 4.0',img:'https://i.ibb.co/VV84hTf/photo-2024-12-25-11-57-56-2.jpg',rank:'B'},{name:'✨ Yuki ✨',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6vK23xc/photo-2024-12-22-01-56-47.jpg',rank:'B'},{name:'☾ Tố nhu ☾',age:26,measurements:'93-61-94',rating:'⭐ 4.9',img:'https://i.ibb.co/z7jjg2b/Untitled-design-60.png',rank:'S'},{name:'✪ Linh hồng ✪',age:23,measurements:'88-58-92',rating:'⭐ 4.5',img:'https://i.ibb.co/4jWNswd/photo-2024-12-17-19-25-05.jpg',rank:'A'},{name:'✾ Minh tú ✾',age:24,measurements:'89-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/rHTv3sh/photo-2024-12-23-05-38-10.jpg',rank:'B'},{name:'❖ Hải yến ❖',age:25,measurements:'90-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/WvNX2TY/photo-2024-12-23-20-35-43.jpg',rank:'S'},{name:'✿ Bảo anh ✿',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZYsMxS/photo-2024-12-23-20-37-31.jpg',rank:'B'},{name:'✦ Tú anh ✦',age:23,measurements:'89-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/8sgjh1D/photo-2024-12-26-12-40-19.jpg',rank:'B'},{name:'✪ Diễm quỳnh ✪',age:24,measurements:'88-59-92',rating:'⭐ 4.1',img:'https://i.ibb.co/7SpVtdG/photo-2024-12-27-04-43-07.jpg',rank:'B'},{name:'❀ Phương ly ❀',age:23,measurements:'90-60-93',rating:'⭐ 4.6',img:'https://i.ibb.co/26sy3KX/photo-2024-12-27-04-45-53.jpg',rank:'S'},{name:'⚜ Trần kiều ⚜',age:22,measurements:'87-56-90',rating:'⭐ 4.3',img:'https://i.ibb.co/k1Cfy0r/photo-2024-12-27-04-46-25.jpg',rank:'S'},{name:'⌘ Uyển chi ⌘',age:24,measurements:'89-58-90',rating:'⭐ 4.8',img:'https://i.ibb.co/42HGKKK/Untitled-design-83.png',rank:'S'}];
+const secondaryCharacters = [  
+{
+    name: 'Lan Chi ☘',
+    age: 23,
+    measurements: '88-58-92',
+    rating: '⭐ 4.8',
+    img: 'https://i.ibb.co/0M1x10j/photo-2024-12-22-01-48-23.jpg',
+    rank: 'A'
+},
+{
+    name: '♡°Cẩm Tú°♡',
+    age: 24,
+    measurements: '90-60-92',
+    rating: '⭐ 4.8',
+    img: 'https://i.ibb.co/wJKWM15/kieu-anh-dam-nu-lam-tinh-cuc-phe-3313889-original.jpg',
+    rank: 'A'
+},
+{
+    name: '✦Khánh Nhi✦',
+    age: 22,
+    measurements: '89-58-91',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/XYGH6Mb/photo-2024-12-22-02-00-04.jpg',
+    rank: 'B'
+},
+{
+    name: '❖Hạ Vy Queen❖',
+    age: 23,
+    measurements: '89-59-91',
+    rating: '⭐ 4.8',
+    img: 'https://i.ibb.co/3d80hzR/Untitled-design-67.png',
+    rank: 'A'
+},
+{
+    name: '♛Thảo Vy♛',
+    age: 22,
+    measurements: '90-60-90',
+    rating: '⭐ 4.7',
+    img: 'https://i.ibb.co/XXhCCW9/photo-2024-12-22-02-06-35.jpg',
+    rank: 'A'
+},
+{
+    name: '♡Nhã Uyên♡',
+    age: 26,
+    measurements: '90-60-90',
+    rating: '⭐ 4.7',
+    img: 'https://i.ibb.co/rw4WL21/Untitled-design-58.png',
+    rank: 'B'
+},
+{
+    name: '✧Uyên Saki✧',
+    age: 24,
+    measurements: '92-60-93',
+    rating: '⭐ 4.9',
+    img: 'https://i.ibb.co/Z2GWH72/photo-2024-12-22-01-48-34.jpg',
+    rank: 'B'
+},
+{
+    name: '❥Thiên Kim❥',
+    age: 22,
+    measurements: '88-58-92',
+    rating: '⭐ 4.6',
+    img: 'https://i.ibb.co/mtWdy3h/reup-nhu-y-face-xinh-body-dep-3171531-original.jpg',
+    rank: 'B'
+},
+{
+    name: '❁Mai Anh❁',
+    age: 24,
+    measurements: '92-60-94',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/tZ2gmfQ/Untitled-design-86.png',
+    rank: 'B'
+},
+{
+    name: '✦Thiên Thảo Kiều✦',
+    age: 24,
+    measurements: '90-60-92',
+    rating: '⭐ 4.8',
+    img: 'https://i.ibb.co/mXZ0Yzr/photo-2024-12-22-01-25-17.jpg',
+    rank: 'A'
+},
+{
+    name: '♢Quỳnh Hana♢',
+    age: 23,
+    measurements: '89-58-90',
+    rating: '⭐ 4.9',
+    img: 'https://i.ibb.co/kxY99jY/photo-2024-12-14-17-41-52.jpg',
+    rank: 'A'
+},
+{
+    name: '♚Lâm Vy Baby♚',
+    age: 24,
+    measurements: '89-60-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/rw4WL21/Untitled-design-58.png',
+    rank: 'B'
+},
+{
+    name: '✽Diệu Thúy✽',
+    age: 25,
+    measurements: '92-60-94',
+    rating: '⭐ 4.9',
+    img: 'https://i.ibb.co/ccQdPBf/photo-2024-12-22-01-56-58.jpg',
+    rank: 'A'
+},
+{
+    name: '⚜Ái Linh Baby⚜',
+    age: 24,
+    measurements: '91-59-92',
+    rating: '⭐ 4.8',
+    img: 'https://i.ibb.co/6H0cvLD/photo-2024-12-22-02-06-38.jpg',
+    rank: 'A'
+},
+{
+    name: '✶Thùy Linh✶',
+    age: 25,
+    measurements: '91-61-94',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/6Dg8MBw/photo-2024-11-17-06-42-10.jpg',
+    rank: 'B'
+},
+{
+    name: '★ Nhiên Sakura ★',
+    age: 26,
+    measurements: '91-59-93',
+    rating: '⭐ 4.7',
+    img: 'https://i.ibb.co/dmPsFsp/photo-2024-12-22-01-50-42.jpg',
+    rank: 'A'
+},
+{
+    name: '❉ Anh Thu ❉',
+    age: 22,
+    measurements: '90-58-91',
+    rating: '⭐ 4.5',
+    img: 'https://i.ibb.co/sbw4PFq/Untitled-design-81.png',
+    rank: 'B'
+},
+{
+    name: '❋ Huyền Anh ❋',
+    age: 22,
+    measurements: '88-57-91',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',
+    rank: 'B'
+},
+{
+    name: '✥ Thanh Tú ✥',
+    age: 26,
+    measurements: '90-59-93',
+    rating: '⭐ 4.0',
+    img: 'https://i.ibb.co/8z0rJ92/photo-2024-12-22-01-48-47.jpg',
+    rank: 'B'
+},
+{
+    name: '♔ Minh Ngọc ♔',
+    age: 23,
+    measurements: '91-59-92',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/ZhfygHw/Untitled-design-75.png',
+    rank: 'A'
+},
+{
+    name: '✪ Ngọc Huyền ✪',
+    age: 23,
+    measurements: '89-59-91',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/qyFCdFn/photo-2024-12-22-01-48-44.jpg',
+    rank: 'B'
+},
+{
+    name: '✧ Linh Lan ✧',
+    age: 22,
+    measurements: '90-58-91',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/1bThHZ4/hotgirl-minh-anh-2k1-xinh-suggar-baby-tuyet-hang-moi-vao-nghe-3282055-original.jpg',
+    rank: 'A'
+},
+{
+    name: '✶ Trúc Lam Baby ✶',
+    age: 22,
+    measurements: '90-60-92',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/Wt8QJHc/photo-2024-12-22-02-06-48.jpg',
+    rank: 'B'
+},
+{
+    name: '❋ Thiên An ❋',
+    age: 25,
+    measurements: '92-61-95',
+    rating: '⭐ 4.0',
+    img: 'https://i.ibb.co/McF1y1z/Untitled-design-80.png',
+    rank: 'B'
+},
+{
+    name: '❀ Quỳnh An ❀',
+    age: 24,
+    measurements: '93-60-94',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/k29ms5p/Untitled-design-71.png',
+    rank: 'A'
+},
+{
+    name: '✤ Mỹ Linh ✤',
+    age: 24,
+    measurements: '91-60-93',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/HKVpxJd/photo-2024-12-22-01-56-50.jpg',
+    rank: 'A'
+},
+{
+    name: '♡ Lâm Anh ♡',
+    age: 23,
+    measurements: '89-59-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/KV55Wbk/photo-2024-12-22-01-25-13.jpg',
+    rank: 'A'
+},
+{
+    name: '✯ Thúy Vi ✯',
+    age: 25,
+    measurements: '92-61-94',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/r50wYM9/photo-2024-12-22-01-45-32.jpg',
+    rank: 'A'
+},
+{
+    name: '✧ Thiên Trúc Baby ✧',
+    age: 24,
+    measurements: '89-60-91',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/XVH7QNd/Untitled-design-57.png',
+    rank: 'A'
+},
+{
+    name: '✿ Uyên Châu ✿',
+    age: 23,
+    measurements: '91-59-93',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/Fzd5Qg8/Untitled-design-68.png',
+    rank: 'A'
+},
+{
+    name: '❥ Nhật Linh ❥',
+    age: 23,
+    measurements: '91-61-93',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/qD8R1pN/427446647-1098436921490983-1080917778984417527-n.jpg',
+    rank: 'A'
+},
+{
+    name: '✽ Rina ✽',
+    age: 24,
+    measurements: '90-60-93',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/2dzy8Hv/Untitled-design-66.png',
+    rank: 'A'
+},
+{
+    name: '✦ Kim Anh ✦',
+    age: 22,
+    measurements: '90-60-92',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/DY5bG4t/photo-2024-12-22-01-56-44.jpg',
+    rank: 'A'
+},
+{
+    name: '✤ Lan Anh ✤',
+    age: 22,
+    measurements: '90-58-92',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/ThJGBpG/Untitled-design-84.png',
+    rank: 'A'
+},
+{
+    name: '❖ Thảo Nguyên ❖',
+    age: 23,
+    measurements: '88-59-91',
+    rating: '⭐ 4.5',
+    img: 'https://i.ibb.co/41rRRjB/photo-2024-12-22-01-57-01.jpg',
+    rank: 'A'
+},
+{
+    name: '✧ Lina ✧',
+    age: 22,
+    measurements: '88-57-91',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/kGHnkM4/Untitled-design-62.png',
+    rank: 'B'
+},
+{
+    name: '✨ Như Ý ✨',
+    age: 25,
+    measurements: '91-61-94',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/tqY7WTK/photo-2024-12-22-02-07-16.jpg',
+    rank: 'A'
+},
+{
+    name: '♛ Thùy Trang ♛',
+    age: 22,
+    measurements: '88-57-91',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/YL1dp4S/Untitled-design-76.png',
+    rank: 'B'
+},
+{
+    name: '❂ Minh Ánh ❂',
+    age: 24,
+    measurements: '91-59-92',
+    rating: '⭐ 4.6',
+    img: 'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',
+    rank: 'A'
+},
+{
+    name: '⚜ Ayu ⚜',
+    age: 24,
+    measurements: '90-60-93',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/f1KFDHm/re-up-kha-di-mat-xinh-veu-dep-mong-to-trym-khit-3305036-original.jpg',
+    rank: 'A'
+},
+{
+    name: '✪ Linh Nhi ✪',
+    age: 25,
+    measurements: '91-60-94',
+    rating: '⭐ 4.9',
+    img: 'https://i.ibb.co/0XbmnpS/Untitled-design-82.png',
+    rank: 'S'
+},
+{
+    name: '✽ Mei ✽',
+    age: 25,
+    measurements: '91-61-94',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/3fTqGNk/photo-2024-12-22-02-06-21.jpg',
+    rank: 'A'
+},
+{
+    name: '✧ Annie ✧',
+    age: 26,
+    measurements: '91-61-94',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/Rh7Mgsb/re-up-ha-vy-em-gai-xinh-chuan-hot-girl-gia-chat-3212722-original.jpg',
+    rank: 'B'
+},
+{
+    name: '❤️ Anna ❤️',
+    age: 24,
+    measurements: '90-60-93',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/ZYYkJdb/photo-2024-12-22-02-06-04.jpg',
+    rank: 'A'
+},
+{
+    name: '✿ Luna ✿',
+    age: 23,
+    measurements: '89-59-91',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/gPbwd9Y/Untitled-design-73.png',
+    rank: 'A'
+},
+{
+    name: '✦ Ngọc Trâm ✦',
+    age: 22,
+    measurements: '90-60-93',
+    rating: '⭐ 4.7',
+    img: 'https://i.ibb.co/SvR4LSw/Untitled-design-61.png',
+    rank: 'A'
+},
+{
+    name: '♢ Kim Hạnh ♢',
+    age: 24,
+    measurements: '90-60-92',
+    rating: '⭐ 4.5',
+    img: 'https://i.ibb.co/1fCMxtQ/photo-2024-12-22-02-05-46.jpg',
+    rank: 'A'
+},
+{
+    name: '✸ Tiểu My ✸',
+    age: 25,
+    measurements: '91-61-94',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/GQKV9yp/reup-bao-anh-2k2-hot-body-nong-bong-goi-tinh-vu-mong-cang-3313328-original.jpg',
+    rank: 'A'
+},
+{
+    name: '✶ Thiên Trang ✶',
+    age: 26,
+    measurements: '92-61-94',
+    rating: '⭐ 4.8',
+    img: 'https://i.ibb.co/BG3r0qZ/photo-2024-12-22-01-24-49.jpg',
+    rank: 'B'
+},
+{
+    name: '✦ Akira ✦',
+    age: 25,
+    measurements: '91-61-94',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/ZMCspC5/photo-2024-12-22-01-25-30.jpg',
+    rank: 'B'
+},
+{
+    name: '♢ Rina ♢',
+    age: 23,
+    measurements: '89-59-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/1XZGqb9/photo-2024-12-22-02-05-34.jpg',
+    rank: 'A'
+},
+{
+    name: '✸ Ngọc Lan ✸',
+    age: 23,
+    measurements: '88-59-90',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/HT0Nwb5/photo-2024-12-22-01-56-55.jpg',
+    rank: 'B'
+},
+{
+    name: '❂ Lưu Ngọc ❂',
+    age: 26,
+    measurements: '91-61-93',
+    rating: '⭐ 4.0',
+    img: 'https://i.ibb.co/sWY5brC/photo-2024-12-22-01-48-41.jpg',
+    rank: 'B'
+},
+{
+    name: '✥ Phương Trang ✥',
+    age: 24,
+    measurements: '90-60-93',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/5WdcZFd/photo-2024-12-22-02-06-13.jpg',
+    rank: 'B'
+},
+{
+    name: '❀ Khả Vi ❀',
+    age: 23,
+    measurements: '89-59-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/6ZPg3Ls/Untitled-design-78.png',
+    rank: 'B'
+},
+{
+    name: '♡ Yuri ♡',
+    age: 24,
+    measurements: '90-60-93',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/3C87zds/Untitled-design-69.png',
+    rank: 'B'
+},
+{
+    name: '❋ Mỹ An ❋',
+    age: 25,
+    measurements: '91-61-94',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/bL1Q0Vn/photo-2024-12-25-14-28-56.jpg',
+    rank: 'B'
+},
+{
+    name: '✭ Thiên Quỳnh ✭',
+    age: 23,
+    measurements: '90-60-92',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/3S8WQ28/photo-2024-12-22-01-25-40.jpg',
+    rank: 'B'
+},
+{
+    name: '✧ Hà Thanh ✧',
+    age: 24,
+    measurements: '88-57-91',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/fHRwCM7/photo-2024-12-22-01-45-58.jpg',
+    rank: 'B'
+},
+{
+    name: '❋ Trúc An ❋',
+    age: 22,
+    measurements: '89-59-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/686wgPf/anh-thu-nguc-rell-hang-that-100-chat-luong-hang-a-3275858-original.jpg',
+    rank: 'S'
+},
+{
+    name: '✶ Trà My ✶',
+    age: 24,
+    measurements: '90-60-93',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/VmWtXJm/Untitled-design-53.png',
+    rank: 'B'
+},
+{
+    name: '❁ Mỹ Duyên ❁',
+    age: 23,
+    measurements: '89-59-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/tLqFXs7/82dd3be7b5d672d1a0cbe14aacc075b9-thumb-small.webp',
+    rank: 'B'
+},
+{
+    name: '★ Phương Mai ★',
+    age: 22,
+    measurements: '88-58-91',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/1RkKx4T/photo-2024-12-22-01-50-58.jpg',
+    rank: 'B'
+},
+{
+    name: '✸ Vân Nhi ✸',
+    age: 22,
+    measurements: '88-57-91',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/jD4dhT8/Untitled-design-64.png',
+    rank: 'S'
+},
+{
+    name: '✾ Hồng nhung ✾',
+    age: 22,
+    measurements: '87-58-90',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/RH02jKV/Untitled-design-85.png',
+    rank: 'B'
+},
+{
+    name: '❖ Emi ❖',
+    age: 25,
+    measurements: '92-61-94',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/X3vhqGM/reup-1m72-ha-anh-nguoi-mau-minh-day-dzu-bu-lam-tinh-cuc-da-3212434-original.jpg',
+    rank: 'B'
+},
+{
+    name: '✦ Nhu quỳnh ✦',
+    age: 22,
+    measurements: '88-57-91',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/vLw3rXt/photo-2024-12-22-01-59-49.jpg',
+    rank: 'B'
+},
+{
+    name: '✪ Khánh huyền ✪',
+    age: 23,
+    measurements: '89-59-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/YLLT3qC/photo-2024-12-15-14-11-40.jpg',
+    rank: 'B'
+},
+{
+    name: '❀ Hana ❀',
+    age: 23,
+    measurements: '88-58-91',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/zrZ42Jk/Untitled-design-74.png',
+    rank: 'B'
+},
+{
+    name: '⚜ Nami ⚜',
+    age: 22,
+    measurements: '89-58-91',
+    rating: '⭐ 4.0',
+    img: 'https://i.ibb.co/VV84hTf/photo-2024-12-25-11-57-56-2.jpg',
+    rank: 'B'
+},
+{
+    name: '✨ Yuki ✨',
+    age: 22,
+    measurements: '89-59-92',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/6vK23xc/photo-2024-12-22-01-56-47.jpg',
+    rank: 'B'
+},
+{
+    name: '☾ Tố nhu ☾',
+    age: 26,
+    measurements: '93-61-94',
+    rating: '⭐ 4.9',
+    img: 'https://i.ibb.co/z7jjg2b/Untitled-design-60.png',
+    rank: 'S'
+},
+{
+    name: '✪ Linh hồng ✪',
+    age: 23,
+    measurements: '88-58-92',
+    rating: '⭐ 4.5',
+    img: 'https://i.ibb.co/4jWNswd/photo-2024-12-17-19-25-05.jpg',
+    rank: 'A'
+},
+{
+    name: '✾ Minh tú ✾',
+    age: 24,
+    measurements: '89-59-92',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/rHTv3sh/photo-2024-12-23-05-38-10.jpg',
+    rank: 'B'
+},
+{
+    name: '❖ Hải yến ❖',
+    age: 25,
+    measurements: '90-60-94',
+    rating: '⭐ 4.4',
+    img: 'https://i.ibb.co/WvNX2TY/photo-2024-12-23-20-35-43.jpg',
+    rank: 'S'
+},
+{
+    name: '✿ Bảo anh ✿',
+    age: 22,
+    measurements: '87-58-90',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/6ZYsMxS/photo-2024-12-23-20-37-31.jpg',
+    rank: 'B'
+},
+{
+    name: '✦ Tú anh ✦',
+    age: 23,
+    measurements: '89-57-91',
+    rating: '⭐ 4.2',
+    img: 'https://i.ibb.co/8sgjh1D/photo-2024-12-26-12-40-19.jpg',
+    rank: 'B'
+},
+{
+    name: '✪ Diễm quỳnh ✪',
+    age: 24,
+    measurements: '88-59-92',
+    rating: '⭐ 4.1',
+    img: 'https://i.ibb.co/7SpVtdG/photo-2024-12-27-04-43-07.jpg',
+    rank: 'B'
+},
+{
+    name: '❀ Phương ly ❀',
+    age: 23,
+    measurements: '90-60-93',
+    rating: '⭐ 4.6',
+    img: 'https://i.ibb.co/26sy3KX/photo-2024-12-27-04-45-53.jpg',
+    rank: 'S'
+},
+{
+    name: '⚜ Trần kiều ⚜',
+    age: 22,
+    measurements: '87-56-90',
+    rating: '⭐ 4.3',
+    img: 'https://i.ibb.co/k1Cfy0r/photo-2024-12-27-04-46-25.jpg',
+    rank: 'S'
+},
+{
+    name: '⌘ Uyển chi ⌘',
+    age: 24,
+    measurements: '89-58-90',
+    rating: '⭐ 4.8',
+    img: 'https://i.ibb.co/42HGKKK/Untitled-design-83.png',
+    rank: 'S'
+}];
 
 
 function generateRandomRating(min = 4.0, max = 4.7) {
@@ -7756,7 +8522,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="styles.css">
   <title>Video 18+</title>
 </head>
@@ -8198,8 +8964,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <title>Bảng Xếp Hạng</title>
 
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <body>
    <div class="ranking-container">
@@ -8247,7 +9012,8 @@ document.addEventListener('DOMContentLoaded', () => {
   </body>
   <style>
 body {
-	font-family: 'Roboto', 'Montserrat', sans-serif;
+  font-family: 'Poppins', sans-serif;
+
 	margin: 0;
 	padding: 0;
 	font-size: 14px;
@@ -8409,7 +9175,7 @@ h3 {
 	height: 120px;
 	border-radius: 50%;
 	border: 4px solid#ff66b2;
-	margin-bottom: 20px;
+	margin-top: 20px;
 	box-shadow: 0 0 20px rgba(255, 102, 178, 0.8)
 }
 
@@ -8476,6 +9242,7 @@ h3 {
 	align-items: center;
 	justify-content: center;
 	text-shadow: 0 0 15px rgba(74, 105, 189, 0.6)
+  font-family: 'Poppins', sans-serif; /* Áp dụng font chữ Poppins */
 }
 
 .ranking-header::before {
@@ -9149,7 +9916,7 @@ const reserveRankings = [
         likes: 2120,
         change: 1.0,
         ratings: 42,
-        avatar: "httphttps://i.ibb.co/bmn6qbX/photo-1-23-06-2024-15-01-33-thumb.jpg",
+        avatar: "https://i.ibb.co/dQfs1MR/photo-1-16136972389091030663303.jpg",
         rating: 4,
         birthYear: 2000,
         height: "162cm",
@@ -9693,6 +10460,9 @@ document.addEventListener("DOMContentLoaded", () => {
 </body>
 
 </html>
+
+
+
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -10329,6 +11099,16 @@ body {
   const profileImage = document.getElementById('profileImage');
   const profileName = document.querySelector('.profile-name strong');
   const chatIcon = document.getElementById('chatIcon');
+  const selectedCharacter = JSON.parse(localStorage.getItem("selectedCharacter"));
+  if (selectedCharacter && selectedCharacter.name !== name) {
+    alert(`Bạn chỉ có thể trò chuyện với nhân vật ${selectedCharacter.name} trong phiên này.`);
+    return;
+  }
+
+  // Lưu nhân vật đã chọn vào localStorage nếu chưa có
+  if (!selectedCharacter) {
+    localStorage.setItem("selectedCharacter", JSON.stringify({ name, avatar: avatarUrl }));
+  }
 
     // Tìm nhân vật từ rankings và reserveRankings
     currentCharacter = [...rankings, ...reserveRankings].find(char => char.name === name);
@@ -10408,6 +11188,14 @@ expandButton.addEventListener("click", () => {
 function getTimeZoneFromCoordinates(latitude, longitude) {
   if (latitude >= 24.396308 && latitude <= 26.462082 && longitude >= 124.6262 && longitude <= 131.8700) {
     return "Asia/Seoul"; // Hàn Quốc
+  } else if (latitude >= 30 && latitude <= 45 && longitude >= 129 && longitude <= 146) {
+    return "Asia/Tokyo"; // Nhật Bản
+  } else if (latitude >= -44 && latitude <= -10 && longitude >= 113 && longitude <= 154) {
+    return "Australia/Sydney"; // Úc
+  } else if (latitude >= 10 && latitude <= 15 && longitude >= 98 && longitude <= 105) {
+    return "Asia/Bangkok"; // Thái Lan
+  } else if (latitude >= 10.5 && latitude <= 14 && longitude >= 102 && longitude <= 107) {
+    return "Asia/Phnom_Penh"; // Campuchia
   } else if (latitude >= 10 && latitude <= 20 && longitude >= 100 && longitude <= 110) {
     return "Asia/Ho_Chi_Minh"; // Việt Nam
   } else if (latitude >= 30 && latitude <= 40 && longitude >= -120 && longitude <= -110) {
@@ -10428,14 +11216,38 @@ function getTimeByLocation(latitude, longitude) {
   return new Date().toLocaleTimeString("vi-VN", options);
 }
 
+let pendingMessages = []; // Lưu trữ tin nhắn chưa được bot phản hồi
+
+
+// Bộ lọc tin nhắn spam hoặc không hợp lệ
+const spamKeywords = ["...", "ok", "??", "zzz", "ahihi"];
+function isSpamMessage(message) {
+  const trimmedMessage = message.trim().toLowerCase();
+  return (
+    trimmedMessage === "" || 
+    trimmedMessage.length < 3 || 
+    spamKeywords.includes(trimmedMessage)
+  );
+}
+
 // Hàm gửi tin nhắn khi nhấn nút "Gửi"
 sendButton.addEventListener("click", async () => {
   const messageText = userInput.value.trim();
 
+  // Kiểm tra tin nhắn rỗng hoặc không hợp lệ
   if (!messageText) {
     showError("Vui lòng nhập tin nhắn trước khi gửi!");
     return;
   }
+
+  if (isSpamMessage(messageText)) {
+    showError("Tin nhắn của bạn không hợp lệ hoặc quá ngắn!");
+    userInput.value = ""; // Xóa nội dung input
+    return;
+  }
+
+  // Lưu tin nhắn vào danh sách chờ phản hồi
+  pendingMessages.push(messageText);
 
   // Lấy tọa độ từ localStorage
   const userLocation = JSON.parse(localStorage.getItem('userLocation'));
@@ -10465,6 +11277,12 @@ sendButton.addEventListener("click", async () => {
   chatContent.scrollTop = chatContent.scrollHeight;
   userInput.value = "";
 
+   // Nếu có nhiều tin nhắn chờ, không gửi ngay
+   if (pendingMessages.length > 1) {
+    return;
+  }
+
+
   // Chuyển trạng thái "Đã xem" sau 10 giây
   setTimeout(() => {
     const statusElement = userMessage.querySelector(".message-status");
@@ -10475,7 +11293,7 @@ sendButton.addEventListener("click", async () => {
   }, 10000);
 
   // Hiển thị dấu 3 chấm khi bot trả lời
-  const initialDelay = Math.random() * 5000 + 5000; // Delay ngẫu nhiên 5-10 giây
+  const initialDelay = Math.random() * 30000 + 30000; // Delay ngẫu nhiên 5-10 giây
   console.log(`⏳ Đợi ${Math.floor(initialDelay / 1000)} giây trước khi soạn tin...`);
 
   setTimeout(async () => {
@@ -10504,6 +11322,11 @@ sendButton.addEventListener("click", async () => {
     botTypingIndicator.remove(); // Xóa hiệu ứng typing
 
     try {
+
+       // Gộp các tin nhắn chưa được trả lời
+      const combinedMessage = pendingMessages.join(" | ");
+      pendingMessages = []; // Xóa danh sách chờ sau khi gửi
+
       const reply = await sendMessageToGPT(currentCharacter.name, messageText); // Gửi yêu cầu GPT
 
       // Hiển thị phản hồi từ bot
@@ -10542,6 +11365,7 @@ userInput.addEventListener("keypress", (e) => {
     sendButton.click();
   }
 });
+
   // Vô hiệu hóa chuột phải
   document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
@@ -10553,7 +11377,6 @@ userInput.addEventListener("keypress", (e) => {
       e.preventDefault();
     }
   });
-
   </script>
 </body>
 
