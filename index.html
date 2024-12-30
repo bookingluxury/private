@@ -997,7 +997,7 @@ h2 {
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
-	padding: 13px 25px;
+
 	border-radius: 10px;
 	text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
 	display: inline-block;
@@ -1580,23 +1580,31 @@ h2:hover::before {
 
 .message-button {
     margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    padding: 10px 18px; /* Kích thước lớn hơn */
+    background: linear-gradient(135deg, #b74cd9, #6a0dad); /* Thêm gradient nổi bật */
+    color: rgb(0, 0, 0);
+    font-weight: bold; /* Chữ đậm hơn */
     border: none;
-    border-radius: 5px;
+    border-radius: 25px; /* Góc bo tròn mềm mại hơn */
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px; /* Chữ to hơn */
+    transition: all 0.3s ease-in-out; /* Hiệu ứng chuyển mượt */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
 }
 
 .message-button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #b74cd9, #ad9cff); /* Màu gradient khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn */
 }
+
 .message-button:disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
+    background: #d3d3d3; /* Màu nền khi bị vô hiệu hóa */
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none; /* Không có bóng */
 }
+
 
     </style>
   </head>
@@ -1701,10 +1709,8 @@ h2:hover::before {
             <p>Số đo: 91-58-92</p>
             <p>⭐ 4.6</p>
             <p>Rank: A</p>
-            <button id="button-QuynhAnh" class="message-button" 
-            onclick="event.stopPropagation(); sendMessage('Quỳnh Anh', this)">
-            Gửi tin nhắn
-        </button>
+            <button id="button-ManNhi" class="message-button" onclick="event.stopPropagation(); sendMessage('ManNhi')">Gửi tin nhắn</button>
+
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')">
             <img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh">
@@ -1713,7 +1719,7 @@ h2:hover::before {
             <p>Số đo: 87-57-89</p>
             <p>⭐ 4.7</p>
             <p>Rank: A</p>
-            <button id="button-ManNhi" class="message-button" onclick="event.stopPropagation(); sendMessage('ManNhi')">Gửi tin nhắn</button>
+            <button id="button-Quỳnh Anh" class="message-button" onclick="event.stopPropagation(); sendMessage('Quỳnh Anh')">Gửi tin nhắn</button>
 
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Chang')">
@@ -1727,7 +1733,7 @@ h2:hover::before {
 
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Yuna')">
-            <img src="https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg" alt="Yuna">
+            <img src="https://i.ibb.co/9v0vWz3/Snaptik-app-74425646241191232083.jpg" alt="Yuna">
             <p><strong>Yuna</strong></p>
             <p>Tuổi: 23</p>
             <p>Số đo: 90-60-93</p>
@@ -1913,7 +1919,7 @@ function resetAllButtons() {
       label: "Gửi tin nhắn",
       action: "sendMessage('Mai Ly')"
     },
-    telegramLink: "https://t.me/maily483"
+    telegramLink: "https://t.me/mailyyeu"
   },
       "Amy": {
         name: "Amy",
@@ -1930,6 +1936,18 @@ function resetAllButtons() {
 
         duration: "⏱️ Luôn sẵn sàng",
         images: [
+        "https://i.ibb.co/WyFnYqt/455605389-18348803104140467-2590655126736969659-n.jpg",
+"https://i.ibb.co/6XK6SvV/456085375-18348803095140467-6074590406024650938-n.jpg",
+"https://i.ibb.co/gr0jxGq/456111299-18348803026140467-918336652170975872-n.jpg",
+"https://i.ibb.co/S3yLy53/457010042-18349835002140467-3109941067529334008-n.jpg",
+"https://i.ibb.co/tCcf44n/458582670-18351805885140467-5431615184126338470-n-1.jpg",
+"https://i.ibb.co/gvbV1FL/458999710-18351805918140467-3681218955545122594-n.jpg",
+"https://i.ibb.co/yf3M01B/Save-The-Video-App-352099025-647892750549549-441644500249335350-n.jpg",
+"https://i.ibb.co/1McDK5X/Save-The-Video-App-352292485-3096119740693174-397958537558860668-n.jpg",
+"https://i.ibb.co/19HkZG9/Save-The-Video-App-454497603-18347425192140467-8846998446746041431-n.jpg",
+"https://i.ibb.co/n1GbkLr/Save-The-Video-App-454564779-18347425165140467-8323930334737558718-n.jpg",
+"https://i.ibb.co/SPBJzyK/Save-The-Video-App-460848459-18353633794140467-7809520398883794805-n.jpg",
+"https://i.ibb.co/6FHr2DG/Save-The-Video-App-460940407-18353633791140467-5379316180192784353-n.jpg",
           "https://i.ibb.co/kyZvwKj/416836167-18319225438140467-3211025461518436963-n.jpg",
  "https://i.ibb.co/9ZXWTQX/416969166-18319225423140467-5603286920183519950-n.jpg","https://i.ibb.co/s2m0rsv/417020711-18319225441140467-7148758048589178387-n.jpg","https://i.ibb.co/4YtwyfY/456111299-18348803026140467-918336652170975872-n.jpg","https://i.ibb.co/YDJgwCy/456486586-18349431616140467-8591061972536888890-n.jpg","https://i.ibb.co/Lnb8HBx/456487412-18349431598140467-3082900273994637775-n.jpg","https://i.ibb.co/fM5PQvL/456510459-18349431607140467-6369908208813540895-n-1.jpg","https://i.ibb.co/6mzZM8Q/461445056-18354338752140467-7919709787529616807-n.jpg","https://i.ibb.co/mNqj9xN/461857515-18355249507140467-2837449301235508990-n.jpg","https://i.ibb.co/JxmyVYv/461940571-18355249525140467-6145041215129117621-n.jpg","https://i.ibb.co/LSn3zXs/462269119-18355973512140467-6139831667677658778-n.jpg","https://i.ibb.co/ZfXBvz9/Instagram-highlights-stories-17977193060735719-1.jpg","https://i.ibb.co/DC7XjKx/Instagram-highlights-stories-17977193060735719.jpg","https://i.ibb.co/mhgWXqs/photo-2024-10-07-21-11-41.jpg","https://i.ibb.co/Y0JWRhC/Save-The-Video-App-363500522-229433956233642-5587940116585302164-n.jpg","https://i.ibb.co/jRY8smp/Save-The-Video-App-364263036-261824383267329-9143166390948101533-n.jpg","https://i.ibb.co/ckmnW8N/Save-The-Video-App-364341204-799791968556585-7807479463862832425-n.jpg","https://i.ibb.co/rkdrpnH/Save-The-Video-App-365548000-852986726249697-4742178861420926061-n-1.jpg","https://i.ibb.co/YBf0cht/Save-The-Video-App-454564779-18347425165140467-8323930334737558718-n.jpg","https://i.ibb.co/F47gvZD/Save-The-Video-App-460575704-18353366170140467-6835324141600346990-n.jpg","https://i.ibb.co/D7fL2NC/Save-The-Video-App-460658080-18353366155140467-162377102346118466-n.jpg","https://i.ibb.co/G7Bvcmh/Save-The-Video-App-460727619-18353366233140467-4855929002437452289-n.jpg","https://i.ibb.co/qC25hk4/Save-The-Video-App-460747569-18353366179140467-7718809086127651176-n.jpg","https://i.ibb.co/9bx6cXC/Save-The-Video-App-460802633-18353366224140467-4748650278288112717-n.jpg","https://i.ibb.co/FYrQXZJ/Save-The-Video-App-460804670-18353366194140467-1092024016528287386-n.jpg","https://i.ibb.co/pXj1Nzg/Save-The-Video-App-460832718-18353633767140467-8137333835235299238-n.jpg","https://i.ibb.co/TPtvK9j/photo-9-2024-09-20-09-04-21.jpg","https://i.ibb.co/KwrbgQf/photo-2024-12-11-23-00-59.jpg","https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg",
           "https://i.ibb.co/HNy9j12/photo-2024-12-11-23-00-53.jpg"
@@ -1954,6 +1972,7 @@ function resetAllButtons() {
 
         duration: "⏱️ Luôn sẵn sàng",
         images: [
+          
         "https://i.ibb.co/0VMQHNm/taoanhdep-lam-net-anh-32923.jpg",
 "https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg",
 "https://i.ibb.co/mRMhPPJ/taoanhdep-lam-net-anh-31209.jpg",
@@ -1963,7 +1982,6 @@ function resetAllButtons() {
 "https://i.ibb.co/3ySHbZG/467230191-1253918285818686-361563123323444382-n.jpg",
 "https://i.ibb.co/9Gnhd0B/467340886-1253918512485330-2937789930869431523-n.jpg",
 "https://i.ibb.co/5xb62wf/470052780-1274462077097640-6210759457174402732-n-1.jpg",
-"https://i.ibb.co/3vxsf8s/469780109-1274462087097639-337058499512322833-n-1.jpg",
 "https://i.ibb.co/k8stmyZ/471615714-1286178365926011-4746604888228047489-n.jpg",
 "https://i.ibb.co/JKgFJHp/471263914-1286178382592676-965400728677297348-n.jpg",
 "https://i.ibb.co/WkzTS59/471261178-1286178455926002-4101563328347043321-n.jpg",
@@ -2069,6 +2087,11 @@ function resetAllButtons() {
 
         duration: "⏱️ Luôn sẵn sàng",
         images: [
+        "https://i.ibb.co/9v0vWz3/Snaptik-app-74425646241191232083.jpg",
+  "https://i.ibb.co/rvjvkgL/Snaptik-app-74425646241191232084.jpg",
+  "https://i.ibb.co/nCx4wx4/Snaptik-app-74425646241191232085.jpg",
+  "https://i.ibb.co/PFQPQs0/Snaptik-app-74425646241191232086.jpg",
+  "https://i.ibb.co/VMcJV9C/Snaptik-app-74425646241191232082.jpg",
         "https://i.ibb.co/42sMhrh/photo-2024-12-22-16-12-37.jpg",
 "https://i.ibb.co/gwmQkch/photo-2024-12-22-16-12-43.jpg", "https://i.ibb.co/mJgzwph/photo-2024-12-22-16-12-47.jpg", "https://i.ibb.co/mNPhWhw/photo-2024-12-22-16-12-50.jpg", "https://i.ibb.co/HpZV0jx/photo-2024-12-22-16-12-40.jpg", "https://i.ibb.co/S7J7SCB/photo-2024-12-22-16-12-57.jpg", "https://i.ibb.co/QFdVP7w/photo-2024-12-22-16-13-00.jpg", "https://i.ibb.co/sJZZNWc/photo-2024-12-22-16-13-03.jpg", "https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg", "https://i.ibb.co/4KtzWYt/photo-2024-12-22-16-13-14.jpg", "https://i.ibb.co/KX0Qk26/photo-2024-12-22-16-13-17.jpg", "https://i.ibb.co/QYNGhxq/photo-2024-12-22-16-13-21.jpg", "https://i.ibb.co/k4zYSJH/photo-2024-12-22-16-13-25.jpg", "https://i.ibb.co/3WRNpm1/photo-2024-12-22-16-13-28.jpg", "https://i.ibb.co/wsHzTCp/photo-2024-12-22-16-13-30.jpg", "https://i.ibb.co/BtJ7XRH/photo-2024-12-22-16-13-38.jpg", "https://i.ibb.co/bvBxf9K/photo-2024-12-22-16-13-41.jpg", "https://i.ibb.co/MfPs25T/photo-2024-12-22-16-13-43.jpg", "https://i.ibb.co/KG53Y14/photo-2024-12-22-16-13-46.jpg", "https://i.ibb.co/XYRQPrv/photo-2024-12-22-16-13-49.jpg",
 "https://i.ibb.co/M88YMBM/photo-2024-12-22-16-13-53.jpg"
@@ -5970,8 +5993,8 @@ document.addEventListener('DOMContentLoaded', () => {
           
 
       <p class="help-note">
-        <a href="https://direct.lc.chat/18963027/" target="_blank" style="color: #ffcc00; text-decoration: none;">
-          Lấy mã đặt lịch tại đây nếu chưa có.
+        <a href="https://direct.lc.chat/18963027/" target="_blank" style="color: #ffffff; text-decoration: none;">
+          Bấm vào đây để được hướng dẫn lấy mã đặt lịch nếu chưa có!
         </a>
       </p>
   
@@ -6128,7 +6151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 .spinner {
   margin: 20px auto;
   border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid #00e676;
+  border-top: 4px solid #6a0dad;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -6571,20 +6594,11 @@ function populatePartnerList() {
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <body>
-    <div id="locationSpinner">
-      <div class="location-spinner"></div>
-  </div>
-  
+
 
 <!-- Thông báo giới hạn khu vực -->
 <div id="areaRestrictionMessage" class="message" style="display: none;">
-  <div class="message-content">
-    <i class="fas fa-exclamation-circle"></i>
-    <div>
-      <h3>Bạn bị giới hạn khu vực</h3>
-      <p>Rất tiếc, bạn không thể xem thông tin của bé trong khu vực này.</p>
-    </div>
-  </div>
+  <p>Rất tiếc, Ngoài khu vực hiển thị</p>
 </div>
 
 <div id="regionContent" class="content-section" style="display: none;">
@@ -6639,48 +6653,38 @@ function populatePartnerList() {
 
   
   
-          /* CSS Thông báo chung */
-          .message {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              position: fixed;
-              top: 20%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-             
-              color: #000000;
-              padding: 20px;
-              border-radius: 12px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-              z-index: 9999;
-              font-family: 'Poppins', sans-serif;
-              font-size: 16px;
-              font-weight: 600;
-          }
-  
-          .message-content {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-          }
-  
-          .message i {
-              font-size: 36px;
-          }
-  
-          .message h3 {
-              margin: 0;
-              font-size: 20px;
-              font-weight: bold;
-              color: #000000;
-          }
-  
-          .message p {
-              margin: 5px 0 0;
-              font-size: 16px;
-              color: #000000;
-          }
+.message {
+      display: none;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 0, 0, 0.9);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
+      text-align: center;
+    }
+    .message-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .message-content i {
+      font-size: 36px;
+    }
+    .message h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .message p {
+      margin: 5px 0 0;
+      font-size: 16px;
+    }
   
         
   
@@ -6980,8 +6984,12 @@ function populatePartnerList() {
   transform: scale(1.2);
 }
 
+
   </style>
   <script>
+
+
+
 const countries = [
   {
     name: "Cambodia",
@@ -7178,7 +7186,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg",  
     type: "main",  
     rank: "B",  
-    telegramLink: "https://t.me/mailycute"  
+    telegramLink: "https://t.me/mailyyeu"  
   },  
   {  
     name: "Amy",  
@@ -7235,7 +7243,7 @@ const mainCharacters = [
     age: 23,  
     measurements: "90-60-93",  
     rating: "⭐ 4.6",  
-    img: "https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg",  
+    img: "https://i.ibb.co/9v0vWz3/Snaptik-app-74425646241191232083.jpg",  
     type: "main",  
     rank: "S",  
     telegramLink: "https://t.me/yuna2k0"  
@@ -7253,655 +7261,7 @@ const mainCharacters = [
 ];
 
 
-const secondaryCharacters = [  
-{
-    name: 'Lan Chi ☘',
-    age: 23,
-    measurements: '88-58-92',
-    rating: '⭐ 4.8',
-    img: 'https://i.ibb.co/0M1x10j/photo-2024-12-22-01-48-23.jpg',
-    rank: 'A'
-},
-{
-    name: '♡°Cẩm Tú°♡',
-    age: 24,
-    measurements: '90-60-92',
-    rating: '⭐ 4.8',
-    img: 'https://i.ibb.co/wJKWM15/kieu-anh-dam-nu-lam-tinh-cuc-phe-3313889-original.jpg',
-    rank: 'A'
-},
-{
-    name: '✦Khánh Nhi✦',
-    age: 22,
-    measurements: '89-58-91',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/XYGH6Mb/photo-2024-12-22-02-00-04.jpg',
-    rank: 'B'
-},
-{
-    name: '❖Hạ Vy Queen❖',
-    age: 23,
-    measurements: '89-59-91',
-    rating: '⭐ 4.8',
-    img: 'https://i.ibb.co/3d80hzR/Untitled-design-67.png',
-    rank: 'A'
-},
-{
-    name: '♛Thảo Vy♛',
-    age: 22,
-    measurements: '90-60-90',
-    rating: '⭐ 4.7',
-    img: 'https://i.ibb.co/XXhCCW9/photo-2024-12-22-02-06-35.jpg',
-    rank: 'A'
-},
-{
-    name: '♡Nhã Uyên♡',
-    age: 26,
-    measurements: '90-60-90',
-    rating: '⭐ 4.7',
-    img: 'https://i.ibb.co/rw4WL21/Untitled-design-58.png',
-    rank: 'B'
-},
-{
-    name: '✧Uyên Saki✧',
-    age: 24,
-    measurements: '92-60-93',
-    rating: '⭐ 4.9',
-    img: 'https://i.ibb.co/Z2GWH72/photo-2024-12-22-01-48-34.jpg',
-    rank: 'B'
-},
-{
-    name: '❥Thiên Kim❥',
-    age: 22,
-    measurements: '88-58-92',
-    rating: '⭐ 4.6',
-    img: 'https://i.ibb.co/mtWdy3h/reup-nhu-y-face-xinh-body-dep-3171531-original.jpg',
-    rank: 'B'
-},
-{
-    name: '❁Mai Anh❁',
-    age: 24,
-    measurements: '92-60-94',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/tZ2gmfQ/Untitled-design-86.png',
-    rank: 'B'
-},
-{
-    name: '✦Thiên Thảo Kiều✦',
-    age: 24,
-    measurements: '90-60-92',
-    rating: '⭐ 4.8',
-    img: 'https://i.ibb.co/mXZ0Yzr/photo-2024-12-22-01-25-17.jpg',
-    rank: 'A'
-},
-{
-    name: '♢Quỳnh Hana♢',
-    age: 23,
-    measurements: '89-58-90',
-    rating: '⭐ 4.9',
-    img: 'https://i.ibb.co/kxY99jY/photo-2024-12-14-17-41-52.jpg',
-    rank: 'A'
-},
-{
-    name: '♚Lâm Vy Baby♚',
-    age: 24,
-    measurements: '89-60-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/rw4WL21/Untitled-design-58.png',
-    rank: 'B'
-},
-{
-    name: '✽Diệu Thúy✽',
-    age: 25,
-    measurements: '92-60-94',
-    rating: '⭐ 4.9',
-    img: 'https://i.ibb.co/ccQdPBf/photo-2024-12-22-01-56-58.jpg',
-    rank: 'A'
-},
-{
-    name: '⚜Ái Linh Baby⚜',
-    age: 24,
-    measurements: '91-59-92',
-    rating: '⭐ 4.8',
-    img: 'https://i.ibb.co/6H0cvLD/photo-2024-12-22-02-06-38.jpg',
-    rank: 'A'
-},
-{
-    name: '✶Thùy Linh✶',
-    age: 25,
-    measurements: '91-61-94',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/6Dg8MBw/photo-2024-11-17-06-42-10.jpg',
-    rank: 'B'
-},
-{
-    name: '★ Nhiên Sakura ★',
-    age: 26,
-    measurements: '91-59-93',
-    rating: '⭐ 4.7',
-    img: 'https://i.ibb.co/dmPsFsp/photo-2024-12-22-01-50-42.jpg',
-    rank: 'A'
-},
-{
-    name: '❉ Anh Thu ❉',
-    age: 22,
-    measurements: '90-58-91',
-    rating: '⭐ 4.5',
-    img: 'https://i.ibb.co/sbw4PFq/Untitled-design-81.png',
-    rank: 'B'
-},
-{
-    name: '❋ Huyền Anh ❋',
-    age: 22,
-    measurements: '88-57-91',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',
-    rank: 'B'
-},
-{
-    name: '✥ Thanh Tú ✥',
-    age: 26,
-    measurements: '90-59-93',
-    rating: '⭐ 4.0',
-    img: 'https://i.ibb.co/8z0rJ92/photo-2024-12-22-01-48-47.jpg',
-    rank: 'B'
-},
-{
-    name: '♔ Minh Ngọc ♔',
-    age: 23,
-    measurements: '91-59-92',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/ZhfygHw/Untitled-design-75.png',
-    rank: 'A'
-},
-{
-    name: '✪ Ngọc Huyền ✪',
-    age: 23,
-    measurements: '89-59-91',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/qyFCdFn/photo-2024-12-22-01-48-44.jpg',
-    rank: 'B'
-},
-{
-    name: '✧ Linh Lan ✧',
-    age: 22,
-    measurements: '90-58-91',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/1bThHZ4/hotgirl-minh-anh-2k1-xinh-suggar-baby-tuyet-hang-moi-vao-nghe-3282055-original.jpg',
-    rank: 'A'
-},
-{
-    name: '✶ Trúc Lam Baby ✶',
-    age: 22,
-    measurements: '90-60-92',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/Wt8QJHc/photo-2024-12-22-02-06-48.jpg',
-    rank: 'B'
-},
-{
-    name: '❋ Thiên An ❋',
-    age: 25,
-    measurements: '92-61-95',
-    rating: '⭐ 4.0',
-    img: 'https://i.ibb.co/McF1y1z/Untitled-design-80.png',
-    rank: 'B'
-},
-{
-    name: '❀ Quỳnh An ❀',
-    age: 24,
-    measurements: '93-60-94',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/k29ms5p/Untitled-design-71.png',
-    rank: 'A'
-},
-{
-    name: '✤ Mỹ Linh ✤',
-    age: 24,
-    measurements: '91-60-93',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/HKVpxJd/photo-2024-12-22-01-56-50.jpg',
-    rank: 'A'
-},
-{
-    name: '♡ Lâm Anh ♡',
-    age: 23,
-    measurements: '89-59-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/KV55Wbk/photo-2024-12-22-01-25-13.jpg',
-    rank: 'A'
-},
-{
-    name: '✯ Thúy Vi ✯',
-    age: 25,
-    measurements: '92-61-94',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/r50wYM9/photo-2024-12-22-01-45-32.jpg',
-    rank: 'A'
-},
-{
-    name: '✧ Thiên Trúc Baby ✧',
-    age: 24,
-    measurements: '89-60-91',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/XVH7QNd/Untitled-design-57.png',
-    rank: 'A'
-},
-{
-    name: '✿ Uyên Châu ✿',
-    age: 23,
-    measurements: '91-59-93',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/Fzd5Qg8/Untitled-design-68.png',
-    rank: 'A'
-},
-{
-    name: '❥ Nhật Linh ❥',
-    age: 23,
-    measurements: '91-61-93',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/qD8R1pN/427446647-1098436921490983-1080917778984417527-n.jpg',
-    rank: 'A'
-},
-{
-    name: '✽ Rina ✽',
-    age: 24,
-    measurements: '90-60-93',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/2dzy8Hv/Untitled-design-66.png',
-    rank: 'A'
-},
-{
-    name: '✦ Kim Anh ✦',
-    age: 22,
-    measurements: '90-60-92',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/DY5bG4t/photo-2024-12-22-01-56-44.jpg',
-    rank: 'A'
-},
-{
-    name: '✤ Lan Anh ✤',
-    age: 22,
-    measurements: '90-58-92',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/ThJGBpG/Untitled-design-84.png',
-    rank: 'A'
-},
-{
-    name: '❖ Thảo Nguyên ❖',
-    age: 23,
-    measurements: '88-59-91',
-    rating: '⭐ 4.5',
-    img: 'https://i.ibb.co/41rRRjB/photo-2024-12-22-01-57-01.jpg',
-    rank: 'A'
-},
-{
-    name: '✧ Lina ✧',
-    age: 22,
-    measurements: '88-57-91',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/kGHnkM4/Untitled-design-62.png',
-    rank: 'B'
-},
-{
-    name: '✨ Như Ý ✨',
-    age: 25,
-    measurements: '91-61-94',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/tqY7WTK/photo-2024-12-22-02-07-16.jpg',
-    rank: 'A'
-},
-{
-    name: '♛ Thùy Trang ♛',
-    age: 22,
-    measurements: '88-57-91',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/YL1dp4S/Untitled-design-76.png',
-    rank: 'B'
-},
-{
-    name: '❂ Minh Ánh ❂',
-    age: 24,
-    measurements: '91-59-92',
-    rating: '⭐ 4.6',
-    img: 'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',
-    rank: 'A'
-},
-{
-    name: '⚜ Ayu ⚜',
-    age: 24,
-    measurements: '90-60-93',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/f1KFDHm/re-up-kha-di-mat-xinh-veu-dep-mong-to-trym-khit-3305036-original.jpg',
-    rank: 'A'
-},
-{
-    name: '✪ Linh Nhi ✪',
-    age: 25,
-    measurements: '91-60-94',
-    rating: '⭐ 4.9',
-    img: 'https://i.ibb.co/0XbmnpS/Untitled-design-82.png',
-    rank: 'S'
-},
-{
-    name: '✽ Mei ✽',
-    age: 25,
-    measurements: '91-61-94',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/3fTqGNk/photo-2024-12-22-02-06-21.jpg',
-    rank: 'A'
-},
-{
-    name: '✧ Annie ✧',
-    age: 26,
-    measurements: '91-61-94',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/Rh7Mgsb/re-up-ha-vy-em-gai-xinh-chuan-hot-girl-gia-chat-3212722-original.jpg',
-    rank: 'B'
-},
-{
-    name: '❤️ Anna ❤️',
-    age: 24,
-    measurements: '90-60-93',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/ZYYkJdb/photo-2024-12-22-02-06-04.jpg',
-    rank: 'A'
-},
-{
-    name: '✿ Luna ✿',
-    age: 23,
-    measurements: '89-59-91',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/gPbwd9Y/Untitled-design-73.png',
-    rank: 'A'
-},
-{
-    name: '✦ Ngọc Trâm ✦',
-    age: 22,
-    measurements: '90-60-93',
-    rating: '⭐ 4.7',
-    img: 'https://i.ibb.co/SvR4LSw/Untitled-design-61.png',
-    rank: 'A'
-},
-{
-    name: '♢ Kim Hạnh ♢',
-    age: 24,
-    measurements: '90-60-92',
-    rating: '⭐ 4.5',
-    img: 'https://i.ibb.co/1fCMxtQ/photo-2024-12-22-02-05-46.jpg',
-    rank: 'A'
-},
-{
-    name: '✸ Tiểu My ✸',
-    age: 25,
-    measurements: '91-61-94',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/GQKV9yp/reup-bao-anh-2k2-hot-body-nong-bong-goi-tinh-vu-mong-cang-3313328-original.jpg',
-    rank: 'A'
-},
-{
-    name: '✶ Thiên Trang ✶',
-    age: 26,
-    measurements: '92-61-94',
-    rating: '⭐ 4.8',
-    img: 'https://i.ibb.co/BG3r0qZ/photo-2024-12-22-01-24-49.jpg',
-    rank: 'B'
-},
-{
-    name: '✦ Akira ✦',
-    age: 25,
-    measurements: '91-61-94',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/ZMCspC5/photo-2024-12-22-01-25-30.jpg',
-    rank: 'B'
-},
-{
-    name: '♢ Rina ♢',
-    age: 23,
-    measurements: '89-59-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/1XZGqb9/photo-2024-12-22-02-05-34.jpg',
-    rank: 'A'
-},
-{
-    name: '✸ Ngọc Lan ✸',
-    age: 23,
-    measurements: '88-59-90',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/HT0Nwb5/photo-2024-12-22-01-56-55.jpg',
-    rank: 'B'
-},
-{
-    name: '❂ Lưu Ngọc ❂',
-    age: 26,
-    measurements: '91-61-93',
-    rating: '⭐ 4.0',
-    img: 'https://i.ibb.co/sWY5brC/photo-2024-12-22-01-48-41.jpg',
-    rank: 'B'
-},
-{
-    name: '✥ Phương Trang ✥',
-    age: 24,
-    measurements: '90-60-93',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/5WdcZFd/photo-2024-12-22-02-06-13.jpg',
-    rank: 'B'
-},
-{
-    name: '❀ Khả Vi ❀',
-    age: 23,
-    measurements: '89-59-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/6ZPg3Ls/Untitled-design-78.png',
-    rank: 'B'
-},
-{
-    name: '♡ Yuri ♡',
-    age: 24,
-    measurements: '90-60-93',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/3C87zds/Untitled-design-69.png',
-    rank: 'B'
-},
-{
-    name: '❋ Mỹ An ❋',
-    age: 25,
-    measurements: '91-61-94',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/bL1Q0Vn/photo-2024-12-25-14-28-56.jpg',
-    rank: 'B'
-},
-{
-    name: '✭ Thiên Quỳnh ✭',
-    age: 23,
-    measurements: '90-60-92',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/3S8WQ28/photo-2024-12-22-01-25-40.jpg',
-    rank: 'B'
-},
-{
-    name: '✧ Hà Thanh ✧',
-    age: 24,
-    measurements: '88-57-91',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/fHRwCM7/photo-2024-12-22-01-45-58.jpg',
-    rank: 'B'
-},
-{
-    name: '❋ Trúc An ❋',
-    age: 22,
-    measurements: '89-59-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/686wgPf/anh-thu-nguc-rell-hang-that-100-chat-luong-hang-a-3275858-original.jpg',
-    rank: 'S'
-},
-{
-    name: '✶ Trà My ✶',
-    age: 24,
-    measurements: '90-60-93',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/VmWtXJm/Untitled-design-53.png',
-    rank: 'B'
-},
-{
-    name: '❁ Mỹ Duyên ❁',
-    age: 23,
-    measurements: '89-59-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/tLqFXs7/82dd3be7b5d672d1a0cbe14aacc075b9-thumb-small.webp',
-    rank: 'B'
-},
-{
-    name: '★ Phương Mai ★',
-    age: 22,
-    measurements: '88-58-91',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/1RkKx4T/photo-2024-12-22-01-50-58.jpg',
-    rank: 'B'
-},
-{
-    name: '✸ Vân Nhi ✸',
-    age: 22,
-    measurements: '88-57-91',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/jD4dhT8/Untitled-design-64.png',
-    rank: 'S'
-},
-{
-    name: '✾ Hồng nhung ✾',
-    age: 22,
-    measurements: '87-58-90',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/RH02jKV/Untitled-design-85.png',
-    rank: 'B'
-},
-{
-    name: '❖ Emi ❖',
-    age: 25,
-    measurements: '92-61-94',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/X3vhqGM/reup-1m72-ha-anh-nguoi-mau-minh-day-dzu-bu-lam-tinh-cuc-da-3212434-original.jpg',
-    rank: 'B'
-},
-{
-    name: '✦ Nhu quỳnh ✦',
-    age: 22,
-    measurements: '88-57-91',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/vLw3rXt/photo-2024-12-22-01-59-49.jpg',
-    rank: 'B'
-},
-{
-    name: '✪ Khánh huyền ✪',
-    age: 23,
-    measurements: '89-59-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/YLLT3qC/photo-2024-12-15-14-11-40.jpg',
-    rank: 'B'
-},
-{
-    name: '❀ Hana ❀',
-    age: 23,
-    measurements: '88-58-91',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/zrZ42Jk/Untitled-design-74.png',
-    rank: 'B'
-},
-{
-    name: '⚜ Nami ⚜',
-    age: 22,
-    measurements: '89-58-91',
-    rating: '⭐ 4.0',
-    img: 'https://i.ibb.co/VV84hTf/photo-2024-12-25-11-57-56-2.jpg',
-    rank: 'B'
-},
-{
-    name: '✨ Yuki ✨',
-    age: 22,
-    measurements: '89-59-92',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/6vK23xc/photo-2024-12-22-01-56-47.jpg',
-    rank: 'B'
-},
-{
-    name: '☾ Tố nhu ☾',
-    age: 26,
-    measurements: '93-61-94',
-    rating: '⭐ 4.9',
-    img: 'https://i.ibb.co/z7jjg2b/Untitled-design-60.png',
-    rank: 'S'
-},
-{
-    name: '✪ Linh hồng ✪',
-    age: 23,
-    measurements: '88-58-92',
-    rating: '⭐ 4.5',
-    img: 'https://i.ibb.co/4jWNswd/photo-2024-12-17-19-25-05.jpg',
-    rank: 'A'
-},
-{
-    name: '✾ Minh tú ✾',
-    age: 24,
-    measurements: '89-59-92',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/rHTv3sh/photo-2024-12-23-05-38-10.jpg',
-    rank: 'B'
-},
-{
-    name: '❖ Hải yến ❖',
-    age: 25,
-    measurements: '90-60-94',
-    rating: '⭐ 4.4',
-    img: 'https://i.ibb.co/WvNX2TY/photo-2024-12-23-20-35-43.jpg',
-    rank: 'S'
-},
-{
-    name: '✿ Bảo anh ✿',
-    age: 22,
-    measurements: '87-58-90',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/6ZYsMxS/photo-2024-12-23-20-37-31.jpg',
-    rank: 'B'
-},
-{
-    name: '✦ Tú anh ✦',
-    age: 23,
-    measurements: '89-57-91',
-    rating: '⭐ 4.2',
-    img: 'https://i.ibb.co/8sgjh1D/photo-2024-12-26-12-40-19.jpg',
-    rank: 'B'
-},
-{
-    name: '✪ Diễm quỳnh ✪',
-    age: 24,
-    measurements: '88-59-92',
-    rating: '⭐ 4.1',
-    img: 'https://i.ibb.co/7SpVtdG/photo-2024-12-27-04-43-07.jpg',
-    rank: 'B'
-},
-{
-    name: '❀ Phương ly ❀',
-    age: 23,
-    measurements: '90-60-93',
-    rating: '⭐ 4.6',
-    img: 'https://i.ibb.co/26sy3KX/photo-2024-12-27-04-45-53.jpg',
-    rank: 'S'
-},
-{
-    name: '⚜ Trần kiều ⚜',
-    age: 22,
-    measurements: '87-56-90',
-    rating: '⭐ 4.3',
-    img: 'https://i.ibb.co/k1Cfy0r/photo-2024-12-27-04-46-25.jpg',
-    rank: 'S'
-},
-{
-    name: '⌘ Uyển chi ⌘',
-    age: 24,
-    measurements: '89-58-90',
-    rating: '⭐ 4.8',
-    img: 'https://i.ibb.co/42HGKKK/Untitled-design-83.png',
-    rank: 'S'
-}];
+const secondaryCharacters=[{name:'Lan Chi ☘',age:23,measurements:'88-58-92',rating:'⭐ 4.8',img:'https://i.ibb.co/0M1x10j/photo-2024-12-22-01-48-23.jpg',rank:'A'},{name:'♡°Cẩm Tú°♡',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/wJKWM15/kieu-anh-dam-nu-lam-tinh-cuc-phe-3313889-original.jpg',rank:'A'},{name:'✦Khánh Nhi✦',age:22,measurements:'89-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XYGH6Mb/photo-2024-12-22-02-00-04.jpg',rank:'B'},{name:'❖Hạ Vy Queen❖',age:23,measurements:'89-59-91',rating:'⭐ 4.8',img:'https://i.ibb.co/3d80hzR/Untitled-design-67.png',rank:'A'},{name:'♛Thảo Vy♛',age:22,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/XXhCCW9/photo-2024-12-22-02-06-35.jpg',rank:'A'},{name:'♡Nhã Uyên♡',age:26,measurements:'90-60-90',rating:'⭐ 4.7',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✧Uyên Saki✧',age:24,measurements:'92-60-93',rating:'⭐ 4.9',img:'https://i.ibb.co/Z2GWH72/photo-2024-12-22-01-48-34.jpg',rank:'B'},{name:'❥Thiên Kim❥',age:22,measurements:'88-58-92',rating:'⭐ 4.6',img:'https://i.ibb.co/mtWdy3h/reup-nhu-y-face-xinh-body-dep-3171531-original.jpg',rank:'B'},{name:'❁Mai Anh❁',age:24,measurements:'92-60-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tZ2gmfQ/Untitled-design-86.png',rank:'B'},{name:'✦Thiên Thảo Kiều✦',age:24,measurements:'90-60-92',rating:'⭐ 4.8',img:'https://i.ibb.co/mXZ0Yzr/photo-2024-12-22-01-25-17.jpg',rank:'A'},{name:'♢Quỳnh Hana♢',age:23,measurements:'89-58-90',rating:'⭐ 4.9',img:'https://i.ibb.co/kxY99jY/photo-2024-12-14-17-41-52.jpg',rank:'A'},{name:'♚Lâm Vy Baby♚',age:24,measurements:'89-60-92',rating:'⭐ 4.3',img:'https://i.ibb.co/rw4WL21/Untitled-design-58.png',rank:'B'},{name:'✽Diệu Thúy✽',age:25,measurements:'92-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/ccQdPBf/photo-2024-12-22-01-56-58.jpg',rank:'A'},{name:'⚜Ái Linh Baby⚜',age:24,measurements:'91-59-92',rating:'⭐ 4.8',img:'https://i.ibb.co/6H0cvLD/photo-2024-12-22-02-06-38.jpg',rank:'A'},{name:'✶Thùy Linh✶',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/6Dg8MBw/photo-2024-11-17-06-42-10.jpg',rank:'B'},{name:'★ Nhiên Sakura ★',age:26,measurements:'91-59-93',rating:'⭐ 4.7',img:'https://i.ibb.co/dmPsFsp/photo-2024-12-22-01-50-42.jpg',rank:'A'},{name:'❉ Anh Thu ❉',age:22,measurements:'90-58-91',rating:'⭐ 4.5',img:'https://i.ibb.co/sbw4PFq/Untitled-design-81.png',rank:'B'},{name:'❋ Huyền Anh ❋',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'B'},{name:'✥ Thanh Tú ✥',age:26,measurements:'90-59-93',rating:'⭐ 4.0',img:'https://i.ibb.co/8z0rJ92/photo-2024-12-22-01-48-47.jpg',rank:'B'},{name:'♔ Minh Ngọc ♔',age:23,measurements:'91-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/ZhfygHw/Untitled-design-75.png',rank:'A'},{name:'✪ Ngọc Huyền ✪',age:23,measurements:'89-59-91',rating:'⭐ 4.1',img:'https://i.ibb.co/qyFCdFn/photo-2024-12-22-01-48-44.jpg',rank:'B'},{name:'✧ Linh Lan ✧',age:22,measurements:'90-58-91',rating:'⭐ 4.3',img:'https://i.ibb.co/1bThHZ4/hotgirl-minh-anh-2k1-xinh-suggar-baby-tuyet-hang-moi-vao-nghe-3282055-original.jpg',rank:'A'},{name:'✶ Trúc Lam Baby ✶',age:22,measurements:'90-60-92',rating:'⭐ 4.2',img:'https://i.ibb.co/Wt8QJHc/photo-2024-12-22-02-06-48.jpg',rank:'B'},{name:'❋ Thiên An ❋',age:25,measurements:'92-61-95',rating:'⭐ 4.0',img:'https://i.ibb.co/McF1y1z/Untitled-design-80.png',rank:'B'},{name:'❀ Quỳnh An ❀',age:24,measurements:'93-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/k29ms5p/Untitled-design-71.png',rank:'A'},{name:'✤ Mỹ Linh ✤',age:24,measurements:'91-60-93',rating:'⭐ 4.3',img:'https://i.ibb.co/HKVpxJd/photo-2024-12-22-01-56-50.jpg',rank:'A'},{name:'♡ Lâm Anh ♡',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/KV55Wbk/photo-2024-12-22-01-25-13.jpg',rank:'A'},{name:'✯ Thúy Vi ✯',age:25,measurements:'92-61-94',rating:'⭐ 4.3',img:'https://i.ibb.co/r50wYM9/photo-2024-12-22-01-45-32.jpg',rank:'A'},{name:'✧ Thiên Trúc Baby ✧',age:24,measurements:'89-60-91',rating:'⭐ 4.3',img:'https://i.ibb.co/XVH7QNd/Untitled-design-57.png',rank:'A'},{name:'✿ Uyên Châu ✿',age:23,measurements:'91-59-93',rating:'⭐ 4.3',img:'https://i.ibb.co/Fzd5Qg8/Untitled-design-68.png',rank:'A'},{name:'❥ Nhật Linh ❥',age:23,measurements:'91-61-93',rating:'⭐ 4.4',img:'https://i.ibb.co/qD8R1pN/427446647-1098436921490983-1080917778984417527-n.jpg',rank:'A'},{name:'✽ Rina ✽',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/2dzy8Hv/Untitled-design-66.png',rank:'A'},{name:'✦ Kim Anh ✦',age:22,measurements:'90-60-92',rating:'⭐ 4.4',img:'https://i.ibb.co/DY5bG4t/photo-2024-12-22-01-56-44.jpg',rank:'A'},{name:'✤ Lan Anh ✤',age:22,measurements:'90-58-92',rating:'⭐ 4.4',img:'https://i.ibb.co/ThJGBpG/Untitled-design-84.png',rank:'A'},{name:'❖ Thảo Nguyên ❖',age:23,measurements:'88-59-91',rating:'⭐ 4.5',img:'https://i.ibb.co/41rRRjB/photo-2024-12-22-01-57-01.jpg',rank:'A'},{name:'✧ Lina ✧',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/kGHnkM4/Untitled-design-62.png',rank:'B'},{name:'✨ Như Ý ✨',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/tqY7WTK/photo-2024-12-22-02-07-16.jpg',rank:'A'},{name:'♛ Thùy Trang ♛',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/YL1dp4S/Untitled-design-76.png',rank:'B'},{name:'❂ Minh Ánh ❂',age:24,measurements:'91-59-92',rating:'⭐ 4.6',img:'https://i.ibb.co/Twwz2mH/photo-2024-12-22-02-07-25.jpg',rank:'A'},{name:'⚜ Ayu ⚜',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/f1KFDHm/re-up-kha-di-mat-xinh-veu-dep-mong-to-trym-khit-3305036-original.jpg',rank:'A'},{name:'✪ Linh Nhi ✪',age:25,measurements:'91-60-94',rating:'⭐ 4.9',img:'https://i.ibb.co/0XbmnpS/Untitled-design-82.png',rank:'S'},{name:'✽ Mei ✽',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/3fTqGNk/photo-2024-12-22-02-06-21.jpg',rank:'A'},{name:'✧ Annie ✧',age:26,measurements:'91-61-94',rating:'⭐ 4.1',img:'https://i.ibb.co/Rh7Mgsb/re-up-ha-vy-em-gai-xinh-chuan-hot-girl-gia-chat-3212722-original.jpg',rank:'B'},{name:'❤️ Anna ❤️',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/ZYYkJdb/photo-2024-12-22-02-06-04.jpg',rank:'A'},{name:'✿ Luna ✿',age:23,measurements:'89-59-91',rating:'⭐ 4.3',img:'https://i.ibb.co/gPbwd9Y/Untitled-design-73.png',rank:'A'},{name:'✦ Ngọc Trâm ✦',age:22,measurements:'90-60-93',rating:'⭐ 4.7',img:'https://i.ibb.co/SvR4LSw/Untitled-design-61.png',rank:'A'},{name:'♢ Kim Hạnh ♢',age:24,measurements:'90-60-92',rating:'⭐ 4.5',img:'https://i.ibb.co/1fCMxtQ/photo-2024-12-22-02-05-46.jpg',rank:'A'},{name:'✸ Tiểu My ✸',age:25,measurements:'91-61-94',rating:'⭐ 4.4',img:'https://i.ibb.co/GQKV9yp/reup-bao-anh-2k2-hot-body-nong-bong-goi-tinh-vu-mong-cang-3313328-original.jpg',rank:'A'},{name:'✶ Thiên Trang ✶',age:26,measurements:'92-61-94',rating:'⭐ 4.8',img:'https://i.ibb.co/BG3r0qZ/photo-2024-12-22-01-24-49.jpg',rank:'B'},{name:'✦ Akira ✦',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/ZMCspC5/photo-2024-12-22-01-25-30.jpg',rank:'B'},{name:'♢ Rina ♢',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/1XZGqb9/photo-2024-12-22-02-05-34.jpg',rank:'A'},{name:'✸ Ngọc Lan ✸',age:23,measurements:'88-59-90',rating:'⭐ 4.1',img:'https://i.ibb.co/HT0Nwb5/photo-2024-12-22-01-56-55.jpg',rank:'B'},{name:'❂ Lưu Ngọc ❂',age:26,measurements:'91-61-93',rating:'⭐ 4.0',img:'https://i.ibb.co/sWY5brC/photo-2024-12-22-01-48-41.jpg',rank:'B'},{name:'✥ Phương Trang ✥',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/5WdcZFd/photo-2024-12-22-02-06-13.jpg',rank:'B'},{name:'❀ Khả Vi ❀',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZPg3Ls/Untitled-design-78.png',rank:'B'},{name:'♡ Yuri ♡',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/3C87zds/Untitled-design-69.png',rank:'B'},{name:'❋ Mỹ An ❋',age:25,measurements:'91-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/bL1Q0Vn/photo-2024-12-25-14-28-56.jpg',rank:'B'},{name:'✭ Thiên Quỳnh ✭',age:23,measurements:'90-60-92',rating:'⭐ 4.1',img:'https://i.ibb.co/3S8WQ28/photo-2024-12-22-01-25-40.jpg',rank:'B'},{name:'✧ Hà Thanh ✧',age:24,measurements:'88-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/fHRwCM7/photo-2024-12-22-01-45-58.jpg',rank:'B'},{name:'❋ Trúc An ❋',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/686wgPf/anh-thu-nguc-rell-hang-that-100-chat-luong-hang-a-3275858-original.jpg',rank:'S'},{name:'✶ Trà My ✶',age:24,measurements:'90-60-93',rating:'⭐ 4.4',img:'https://i.ibb.co/VmWtXJm/Untitled-design-53.png',rank:'B'},{name:'❁ Mỹ Duyên ❁',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/tLqFXs7/82dd3be7b5d672d1a0cbe14aacc075b9-thumb-small.webp',rank:'B'},{name:'★ Phương Mai ★',age:22,measurements:'88-58-91',rating:'⭐ 4.1',img:'https://i.ibb.co/1RkKx4T/photo-2024-12-22-01-50-58.jpg',rank:'B'},{name:'✸ Vân Nhi ✸',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/jD4dhT8/Untitled-design-64.png',rank:'S'},{name:'✾ Hồng nhung ✾',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/RH02jKV/Untitled-design-85.png',rank:'B'},{name:'❖ Emi ❖',age:25,measurements:'92-61-94',rating:'⭐ 4.2',img:'https://i.ibb.co/X3vhqGM/reup-1m72-ha-anh-nguoi-mau-minh-day-dzu-bu-lam-tinh-cuc-da-3212434-original.jpg',rank:'B'},{name:'✦ Nhu quỳnh ✦',age:22,measurements:'88-57-91',rating:'⭐ 4.1',img:'https://i.ibb.co/vLw3rXt/photo-2024-12-22-01-59-49.jpg',rank:'B'},{name:'✪ Khánh huyền ✪',age:23,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/YLLT3qC/photo-2024-12-15-14-11-40.jpg',rank:'B'},{name:'❀ Hana ❀',age:23,measurements:'88-58-91',rating:'⭐ 4.2',img:'https://i.ibb.co/zrZ42Jk/Untitled-design-74.png',rank:'B'},{name:'⚜ Nami ⚜',age:22,measurements:'89-58-91',rating:'⭐ 4.0',img:'https://i.ibb.co/VV84hTf/photo-2024-12-25-11-57-56-2.jpg',rank:'B'},{name:'✨ Yuki ✨',age:22,measurements:'89-59-92',rating:'⭐ 4.3',img:'https://i.ibb.co/6vK23xc/photo-2024-12-22-01-56-47.jpg',rank:'B'},{name:'☾ Tố nhu ☾',age:26,measurements:'93-61-94',rating:'⭐ 4.9',img:'https://i.ibb.co/z7jjg2b/Untitled-design-60.png',rank:'S'},{name:'✪ Linh hồng ✪',age:23,measurements:'88-58-92',rating:'⭐ 4.5',img:'https://i.ibb.co/4jWNswd/photo-2024-12-17-19-25-05.jpg',rank:'A'},{name:'✾ Minh tú ✾',age:24,measurements:'89-59-92',rating:'⭐ 4.2',img:'https://i.ibb.co/rHTv3sh/photo-2024-12-23-05-38-10.jpg',rank:'B'},{name:'❖ Hải yến ❖',age:25,measurements:'90-60-94',rating:'⭐ 4.4',img:'https://i.ibb.co/WvNX2TY/photo-2024-12-23-20-35-43.jpg',rank:'S'},{name:'✿ Bảo anh ✿',age:22,measurements:'87-58-90',rating:'⭐ 4.3',img:'https://i.ibb.co/6ZYsMxS/photo-2024-12-23-20-37-31.jpg',rank:'B'},{name:'✦ Tú anh ✦',age:23,measurements:'89-57-91',rating:'⭐ 4.2',img:'https://i.ibb.co/8sgjh1D/photo-2024-12-26-12-40-19.jpg',rank:'B'},{name:'✪ Diễm quỳnh ✪',age:24,measurements:'88-59-92',rating:'⭐ 4.1',img:'https://i.ibb.co/7SpVtdG/photo-2024-12-27-04-43-07.jpg',rank:'B'},{name:'❀ Phương ly ❀',age:23,measurements:'90-60-93',rating:'⭐ 4.6',img:'https://i.ibb.co/26sy3KX/photo-2024-12-27-04-45-53.jpg',rank:'S'},{name:'⚜ Trần kiều ⚜',age:22,measurements:'87-56-90',rating:'⭐ 4.3',img:'https://i.ibb.co/k1Cfy0r/photo-2024-12-27-04-46-25.jpg',rank:'S'},{name:'⌘ Uyển chi ⌘',age:24,measurements:'89-58-90',rating:'⭐ 4.8',img:'https://i.ibb.co/42HGKKK/Untitled-design-83.png',rank:'S'}];
 
 
 function generateRandomRating(min = 4.0, max = 4.7) {
@@ -8083,7 +7443,7 @@ function showRegionContent() {
   const locationInfo = localStorage.getItem('userLocation');
 
   if (!locationInfo) {
-    alert('Vui lòng bật định vị để xác định quốc gia.');
+    alert('Vui lòng bật định vị để hệ thống đề xuất chính xác nhất');
     return;
   }
 
@@ -8092,7 +7452,7 @@ function showRegionContent() {
 
   const country = getCountryFromCoordinates(latitude, longitude);
   if (!country) {
-    alert('Không xác định được quốc gia từ vị trí của bạn.');
+    alert('Không xác định được vị trí của bạn.');
     return;
   }
 
@@ -8105,7 +7465,7 @@ function showRegionContent() {
   } else {
     // Nếu không tìm thấy thành phố
     console.warn("No closest city found for user.");
-    alert('Không tìm thấy thành phố gần bạn, hiển thị danh sách quốc gia.');
+    alert('Vị trí không khả dụng');
   }
 
   generateCityButtons(country); // Tạo danh sách thành phố
@@ -8249,32 +7609,38 @@ function sendMessage(name, button, telegramLink) {
 
 // Function to display character details
 function displayCharacterDetails(characterName) {
+  const detail = characterDetails[characterName];
   const detailsContainer = document.getElementById("details-container");
-  const imageGallery = document.getElementById("image-gallery");
   const messageButton = document.getElementById("detail-message-button");
-  const character = characterDetails[characterName];
 
-  if (character) {
-    document.getElementById("detail-name").textContent = character.name;
-    document.getElementById("detail-status").textContent = character.status;
-    document.getElementById("detail-height").textContent = `Chiều cao: ${character.height}`;
-    document.getElementById("detail-measurements").textContent = `Số đo: ${character.measurements}`;
-    document.getElementById("detail-service").textContent = character.service;
-    document.getElementById("detail-duration").textContent = `Thời gian phục vụ: ${character.duration}`;
-
-    // Reset and load gallery images
-    loadImageGallery(character.images);
-
-    // Set message button action
-    messageButton.textContent = "Gửi tin nhắn";
-    messageButton.onclick = () => {
-      sendMessage(character.name, messageButton, character.telegramLink);
-    };
-
-    // Display details container
-    detailsContainer.style.display = "block";
+  if (!detail) {
+    alert("Chỉ xem được thông tin trong cùng khu vực");
+    return;
   }
+
+  // Update details
+  document.getElementById("detail-name").innerText = detail.name || "Chưa có thông tin";
+  document.getElementById("detail-status").innerText = detail.status || "Không xác định";
+  document.getElementById("detail-height").innerText = `Chiều cao: ${detail.height || "Chưa rõ"}`;
+  document.getElementById("detail-measurements").innerText = `Số đo: ${detail.measurements || "Chưa rõ"}`;
+  document.getElementById("detail-service").innerText = `Dịch vụ: ${detail.service || "Chưa rõ"}`;
+  document.getElementById("detail-duration").innerText = `Thời gian phục vụ: ${detail.duration || "Chưa rõ"}`;
+
+  // Load gallery images
+  loadImageGallery(detail.images);
+
+  // Set message button action
+  messageButton.textContent = "Gửi tin nhắn";
+  messageButton.onclick = () => {
+    sendMessage(detail.name, messageButton, detail.telegramLink);
+  };
+
+  // Show the details container
+  detailsContainer.style.display = "block";
 }
+
+
+
 
 // Function to reset image gallery
 function resetImageGallery() {
@@ -9616,22 +8982,23 @@ h3 {
 
 .ranking-header {
 	text-align: center;
-	font-size: 22px;
+	font-size: 26px;
 	gap: 15px;
 	font-weight: bold;
 	text-transform: uppercase;
-  background: linear-gradient(210deg, #a12ff2, #000000); /* Gradient tím-hồng neon */
-  top: 10px;
+  background: linear-gradient(135deg, #a12ff2, #ff4ecd); /* Gradient tím-hồng neon */
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	letter-spacing: 3px;
-  margin-bottom: 5px;
+	padding: 20px 0;
 	position: relative;
 	overflow: hidden;
-	border-radius: 10px;
+	animation: glow 2s infinite alternate;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	text-shadow: 0 0 15px rgba(74, 105, 189, 0.6)
-  font-family: 'Poppins', sans-serif; /* Áp dụng font chữ Poppins */
 }
 
 .ranking-header::before {
@@ -9654,6 +9021,26 @@ h3 {
 	background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.5), transparent);
 	transform: skewX(-20deg);
 	animation: shine 2.5s infinite
+}
+
+@keyframes shine {
+	0% {
+		left: -100%
+	}
+
+	100% {
+		left: 100%
+	}
+}
+
+@keyframes glow {
+	from {
+		text-shadow: 0 0 20px rgba(74, 105, 189, 0.6)
+	}
+
+	to {
+		text-shadow: 0 0 30px rgba(74, 105, 189, 0.8)
+	}
 }
 .ranking-item.top-1 .ranking-icon,
 .ranking-item.top-2 .ranking-icon,
@@ -9949,11 +9336,11 @@ h3 {
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(135deg, #6a0dad, #b74cd9);
-    color: #000000;
+    color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
     font-size: 16px;
-    font-weight: bold;
+
     text-align: center;
     box-shadow: 0 4px 20px rgba(183, 76, 217, 0.7); /* Đổi độ bóng để thông báo nổi bật hơn */
     z-index: 1000;
@@ -10041,7 +9428,6 @@ h3 {
     font-weight: bold;
     line-height: 1.4;
 }
-
 
 #reserve-list {
 	list-style: none;
