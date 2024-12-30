@@ -237,7 +237,9 @@
     .close-button:hover {
       color: #ffcccc;
     }
-
+    .timestamp {  
+    display: none;  
+}  
   
   </style>
 </head>
@@ -1196,7 +1198,7 @@ h2:hover::before {
   flex: 1;
   font-size: 18px;
   color: #fff;
-  font-weight: 500;
+
   letter-spacing: 0.5px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -1576,7 +1578,25 @@ h2:hover::before {
   }
 }
 
+.message-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
 
+.message-button:hover {
+    background-color: #0056b3;
+}
+.message-button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
 
     </style>
   </head>
@@ -1619,136 +1639,160 @@ h2:hover::before {
       
       </div>
  
-   <div id="characterSection" class="wide-section"><h2 class="suggestion-title"><img <div id="characterSection" class="wide-section">
-    <h2 class="suggestion-title">
-      <img src="https://i.ibb.co/1mJnvFy/gif1.gif" alt="Đề Xuất Gần Bạn Nhất" class="ultra-wide-image">
-    </h2>
-    <div class="character-list">
-      <div class="recommendation-item" onclick="displayCharacterDetails('Yumi')">
-        <img src="https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg" alt="Yumi">
-        <p><strong>Yumi</strong></p>
-        <p>Tuổi: 22</p>
-        <p>Số đo: 90-56-90</p>
-        <p>⭐ 4.6</p>
-        <p>Rank: S</p>
+      <div id="characterSection" class="wide-section"><h2 class="suggestion-title"><img <div id="characterSection" class="wide-section">
+        <h2 class="suggestion-title">
+          <img src="https://i.ibb.co/1QVTkSJ/gif1-1.gif" alt="Đề Xuất Gần Bạn Nhất" class="ultra-wide-image">
+        </h2>
+        <div class="character-list">
+          <div class="recommendation-item" onclick="displayCharacterDetails('Yumi')">
+            <img src="https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg" alt="Yumi">
+            <p><strong>Yumi</strong></p>
+            <p>Tuổi: 24</p>
+            <p>Số đo: 90-56-90</p>
+            <p>⭐ 4.6</p>
+            <p>Rank: S</p>
+            <button id="button-Yumi" class="message-button" onclick="sendMessage('Yumi')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Hà Huyền')">
+            <img src="https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg" alt="Hà Huyền">
+            <p><strong>Hà Huyền</strong></p>
+            <p>Tuổi: 25</p>
+            <p>Số đo: 86-58-90</p>
+            <p>⭐ 4.8</p>
+            <p>Rank: A</p>
+            <button id="button-HaHuyen" class="message-button" onclick="event.stopPropagation(); sendMessage('Hà Huyền')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Maily')">
+            <img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Maily">
+            <p><strong>Mai ly</strong></p>
+            <p>Tuổi: 23</p>
+            <p>Số đo: 88-58-86</p>
+            <p>⭐ 4.7</p>
+            <p>Rank: B</p>
+            <button id="button-Maily" class="message-button" onclick="event.stopPropagation(); sendMessage('Maily')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Amy')">
+            <img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy">
+            <p><strong>Amy</strong></p>
+            <p>Tuổi: 24</p>
+            <p>Số đo: 91-61-94</p>
+            <p>⭐ 4.8</p>
+            <p>Rank: A</p>
+            <button id="button-Amy" class="message-button" onclick="event.stopPropagation(); sendMessage('Amy')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Quynhnhi')">
+            <img src="https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg" alt="Quynhnhi">
+            <p><strong>Quỳnh Nhi</strong></p>
+            <p>Tuổi: 22</p>
+            <p>Số đo: 87-57-89</p>
+            <p>⭐ 4.7</p>
+            <p>Rank: S</p>
+            <button id="button-Quynhnhi" class="message-button" onclick="event.stopPropagation(); sendMessage('Quynhnhi')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('ManNhi')">
+            <img src="https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg" alt="ManNhi">
+            <p><strong>Mẫn Nhi</strong></p>
+            <p>Tuổi: 25</p>
+            <p>Số đo: 91-58-92</p>
+            <p>⭐ 4.6</p>
+            <p>Rank: A</p>
+            <button id="button-QuynhAnh" class="message-button" 
+            onclick="event.stopPropagation(); sendMessage('Quỳnh Anh', this)">
+            Gửi tin nhắn
+        </button>
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')">
+            <img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh">
+            <p><strong>Quỳnh Anh</strong></p>
+            <p>Tuổi: 23</p>
+            <p>Số đo: 87-57-89</p>
+            <p>⭐ 4.7</p>
+            <p>Rank: A</p>
+            <button id="button-ManNhi" class="message-button" onclick="event.stopPropagation(); sendMessage('ManNhi')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Chang')">
+            <img src="https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg" alt="Chang">
+            <p><strong>Chang</strong></p>
+            <p>Tuổi: 24</p>
+            <p>Số đo: 89-60-93</p>
+            <p>⭐ 4.8</p>
+            <p>Rank: S</p>
+            <button id="button-Chang" class="message-button" onclick="event.stopPropagation(); sendMessage('Chang')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Yuna')">
+            <img src="https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg" alt="Yuna">
+            <p><strong>Yuna</strong></p>
+            <p>Tuổi: 23</p>
+            <p>Số đo: 90-60-93</p>
+            <p>⭐ 4.6</p>
+            <p>Rank: S</p>
+            <button id="button-Yuna" class="message-button" onclick="event.stopPropagation(); sendMessage('Yuna')">Gửi tin nhắn</button>
+
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Hà My')">
+            <img src="https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg" alt="Hà My">
+            <p><strong>Hà My</strong></p>
+            <p>Tuổi: 24</p>
+            <p>Số đo: 89-59-91</p>
+            <p>⭐ 4.7</p>
+            <p>Rank: B</p>
+            <button id="button-HaMy" class="message-button" onclick="event.stopPropagation(); sendMessage('Hà My')">Gửi tin nhắn</button>
+
+          </div>
+        </div>
       </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Hà Huyền')">
-        <img src="https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg" alt="Hà Huyền">
-        <p><strong>Hà Huyền</strong></p>
-        <p>Tuổi: 21</p>
-        <p>Số đo: 86-58-90</p>
-        <p>⭐ 4.8</p>
-        <p>Rank: A</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Maily')">
-        <img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Maily">
-        <p><strong>Maily</strong></p>
-        <p>Tuổi: 23</p>
-        <p>Số đo: 88-58-86</p>
-        <p>⭐ 4.7</p>
-        <p>Rank: B</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Amy')">
-        <img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy">
-        <p><strong>Amy</strong></p>
-        <p>Tuổi: 22</p>
-        <p>Số đo: 91-61-94</p>
-        <p>⭐ 4.8</p>
-        <p>Rank: A</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Lucy')">
-        <img src="https://i.ibb.co/Dfc46yb/photo-2024-09-05-18-55-27.jpg" alt="Lucy">
-        <p><strong>Lucy</strong></p>
-        <p>Tuổi: 25</p>
-        <p>Số đo: 87-57-89</p>
-        <p>⭐ 4.7</p>
-        <p>Rank: B</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('ManNhi')">
-        <img src="https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg" alt="ManNhi">
-        <p><strong>ManNhi</strong></p>
-        <p>Tuổi: 22</p>
-        <p>Số đo: 91-58-92</p>
-        <p>⭐ 4.6</p>
-        <p>Rank: A</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')">
-        <img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh">
-        <p><strong>Quỳnh Anh</strong></p>
-        <p>Tuổi: 23</p>
-        <p>Số đo: 87-57-89</p>
-        <p>⭐ 4.7</p>
-        <p>Rank: A</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Chang')">
-        <img src="https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg" alt="Chang">
-        <p><strong>Chang</strong></p>
-        <p>Tuổi: 24</p>
-        <p>Số đo: 89-60-93</p>
-        <p>⭐ 4.8</p>
-        <p>Rank: S</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Yuna')">
-        <img src="https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg" alt="Yuna">
-        <p><strong>Yuna</strong></p>
-        <p>Tuổi: 24</p>
-        <p>Số đo: 90-60-93</p>
-        <p>⭐ 4.6</p>
-        <p>Rank: S</p>
-      </div>
-      <div class="recommendation-item" onclick="displayCharacterDetails('Hà My')">
-        <img src="https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg" alt="Hà My">
-        <p><strong>Hà My</strong></p>
-        <p>Tuổi: 23</p>
-        <p>Số đo: 89-59-91</p>
-        <p>⭐ 4.7</p>
-        <p>Rank: B</p>
-      </div>
-    </div>
-  </div>
   
           
          
         
       
-          <div class="details-overlay" id="details-overlay" onclick="closeDetails()"></div>
-          <div id="details-container" class="details-container">
-            <button class="close-details" onclick="closeDetails()">✖</button>
-            <div class="detail-content">
-              <h3 id="detail-name">✨ Tên nhân vật ✨</h3>
-              <div class="info-item">
-                <i class="fas fa-circle status-icon" data-tooltip="Trạng thái"></i>
-                <span id="detail-status" class="value">⭐ Hoạt động ⭐</span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-ruler-vertical height-icon" data-tooltip="Chiều cao"></i>
-                <span id="detail-height" class="value">📏 Chiều cao: 160 cm</span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-balance-scale measurements-icon" data-tooltip="Số đo"></i>
-                <span id="detail-measurements" class="value">📐 Số đo: 90-60-90</span>
-              </div>
-              <div class="info-item service-item">
-                <i class="fas fa-star service-icon" data-tooltip="Cam kết"></i>
-                <span id="detail-service" class="value">✨ Cam kết trải nghiệm tuyệt vời ✨</span>
-              </div>
-              <div class="info-item">
-                <i class="fas fa-clock duration-icon" data-tooltip="Thời gian phục vụ"></i>
-                <span id="detail-duration" class="value">⏳ Thời gian phục vụ: 40 phút</span>
-              </div>
-            </div>
-       
-        
-        
-      
-        <!-- Thư viện hình ảnh -->
-        <div id="image-gallery"></div>
-      </div>
-        <div id="imageModal" class="image-modal">
-          <button class="close-modal" onclick="closeModal()">&times;</button>
-          <img class="modal-content" id="modalImage" alt="Large View">
+    <div class="details-overlay" id="details-overlay" onclick="closeDetails()"></div>
+    <div id="details-container" class="details-container">
+      <button class="close-details" onclick="closeDetails()">✖</button>
+      <div class="detail-content">
+        <h3 id="detail-name">✨ Tên nhân vật ✨</h3>
+        <div class="info-item">
+          <i class="fas fa-circle status-icon" data-tooltip="Trạng thái"></i>
+          <span id="detail-status" class="value">⭐ Hoạt động ⭐</span>
         </div>
-        
+        <div class="info-item">
+          <i class="fas fa-ruler-vertical height-icon" data-tooltip="Chiều cao"></i>
+          <span id="detail-height" class="value">📏 Chiều cao: 160 cm</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-balance-scale measurements-icon" data-tooltip="Số đo"></i>
+          <span id="detail-measurements" class="value">📐 Số đo: 90-60-90</span>
+        </div>
+        <div class="info-item service-item">
+          <i class="fas fa-star service-icon" data-tooltip="Cam kết"></i>
+          <span id="detail-service" class="value">✨ Cam kết trải nghiệm tuyệt vời ✨</span>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-clock duration-icon" data-tooltip="Thời gian phục vụ"></i>
+          <span id="detail-duration" class="value">⏳ Thời gian phục vụ: 40 phút</span>
+        </div>
+    
+        <!-- Nút gửi tin nhắn -->
+        <div class="info-item">
+          <button id="detail-message-button" class="message-button">Gửi tin nhắn</button>
+        </div>
+      </div>
+    
+      <!-- Thư viện hình ảnh -->
+      <div id="image-gallery"></div>
+    </div>
+    <div id="imageModal" class="image-modal">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <img class="modal-content" id="modalImage" alt="Large View">
+    </div>
+    
   
     <script>
 
@@ -1769,6 +1813,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+function resetAllButtons() {
+  // Xóa trạng thái lưu trong localStorage
+  localStorage.removeItem('hiddenButtons');
+
+  // Hiển thị lại tất cả các nút "Gửi tin nhắn"
+  const allButtons = document.querySelectorAll('.message-button');
+  allButtons.forEach(button => {
+    button.style.display = 'inline-block'; // Hiển thị lại nút
+  });
+
+  console.log("Tất cả các nút đã được reset.");
+}
 
 
     const characterDetails = {
@@ -1790,15 +1846,19 @@ document.addEventListener('DOMContentLoaded', () => {
   Hàng chuẩn chất lượng cao!
 `,
 
-       
         duration: "⏱️ Luôn sẵn sàng",
         images: [
           
           "https://i.ibb.co/TWL7SKM/302431620-1523119151470082-6017363333342789886-n.jpg",
           "https://i.ibb.co/rk2ZFDz/303505058-1523119218136742-7220536016051488811-n.jpg","https://i.ibb.co/Btt1mw5/319012117-1586807448434585-8857040735483383765-n.jpg","https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg","https://i.ibb.co/nBCy6wt/442414576-1907317203050273-7272925531125045232-n.jpg","https://i.ibb.co/jhpMN0S/462743427-2016048275510498-4384882081891702551-n.jpg","https://i.ibb.co/tMkQrPS/photo-2024-09-05-04-55-41.jpg","https://i.ibb.co/6RKR3x0/photo-2024-09-05-04-55-42-2.jpg","https://i.ibb.co/9v5mDwW/photo-2024-09-05-04-55-42-5.jpg","https://i.ibb.co/jb0L2Dh/photo-2024-09-05-04-55-42-6.jpg","https://i.ibb.co/8rrgt7x/photo-2024-09-05-04-55-42-7.jpg","https://i.ibb.co/Z65Lthb/photo-2024-09-05-04-55-42-8.jpg","https://i.ibb.co/bg77KGJ/photo-2024-09-05-04-55-42-9.jpg","https://i.ibb.co/7yndCcr/photo-2024-09-05-04-55-43-2.jpg","https://i.ibb.co/tzrpMXw/photo-2024-09-05-04-55-43-3.jpg","https://i.ibb.co/y0FbHdL/photo-2024-09-05-04-55-43-4.jpg","https://i.ibb.co/zx3Y05J/photo-2024-09-05-04-55-43-5.jpg","https://i.ibb.co/ZNd6qKR/photo-2024-09-05-04-55-45-2.jpg","https://i.ibb.co/k8wKwXT/photo-2024-09-05-04-55-45.jpg","https://i.ibb.co/v3WT8LX/453091407-1951470318634961-3988249591401710614-n.jpg","https://i.ibb.co/kGy8VqZ/456490630-1972260833222576-7459924110115885306-n.jpg","https://i.ibb.co/JjFdZ4C/460087239-1991641134617879-7408235882998523685-n.jpg",
           "https://i.ibb.co/K9DwZ65/462743427-2016048275510498-4384882081891702551-n.jpg"
-        ]
-      },
+          ],
+          messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Yumi')"
+    },
+    telegramLink: "https://t.me/yumixinhhh"
+  },
 
       "Hà Huyền": {
         name: "Hà Huyền",
@@ -1821,9 +1881,13 @@ document.addEventListener('DOMContentLoaded', () => {
         images: [
           "https://i.ibb.co/8X5ZpbB/408725612-1489117888548677-7938195270057156128-n.jpg",
           "https://i.ibb.co/8cRzwDV/383756409-1450607245733075-4818141408238196370-n.jpg","https://i.ibb.co/v3N3FMT/353017933-1399626904164443-3384725205729918730-n.jpg","https://i.ibb.co/QHWWJTN/316169388-1274408853352916-7077694155830683169-n.jpg","https://i.ibb.co/qWQyC06/275138413-1100935457366924-6396910769917078980-n.jpg","https://i.ibb.co/4gTJxwt/292884473-1178618856265250-175000647134861741-n.jpg","https://i.ibb.co/sgzNtNf/303105942-1215513462575789-707884256299403241-n.jpg","https://i.ibb.co/z2rms6r/395638247-1467304944063305-5512392484449680736-n.jpg","https://i.ibb.co/D879vKQ/405127006-1479894232804376-7434074654868707497-n.jpg","https://i.ibb.co/ZRjvVd4/432771239-1544995982960867-630242919755697340-n.jpg","https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg"
-        ]
-      },
-    
+          ],
+          messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Hà Huyền')"
+    },
+    telegramLink: "https://t.me/hahuyen2k3"
+  },
     
       "Maily": {
         name: "Mai Ly",
@@ -1844,11 +1908,13 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://i.ibb.co/NjqMFHp/IMG-0963.jpg",
         "https://i.ibb.co/VHhLXLq/IMG-0966.jpg","https://i.ibb.co/hDjnQSf/IMG-0969.jpg","https://i.ibb.co/nfD8Vr9/IMG-0965.jpg","https://i.ibb.co/MMxLSBv/IMG-0972.jpg","https://i.ibb.co/mBNgzmF/IMG-0967.jpg","https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg",
   "https://i.ibb.co/tXxk2jf/1-HU7-K8-E1-J-7-S6-HVT.jpg"
-      ]
-    
-    
-    
-      },
+  ],
+  messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Mai Ly')"
+    },
+    telegramLink: "https://t.me/maily483"
+  },
       "Amy": {
         name: "Amy",
         status: "Hoạt Động",
@@ -1867,31 +1933,52 @@ document.addEventListener('DOMContentLoaded', () => {
           "https://i.ibb.co/kyZvwKj/416836167-18319225438140467-3211025461518436963-n.jpg",
  "https://i.ibb.co/9ZXWTQX/416969166-18319225423140467-5603286920183519950-n.jpg","https://i.ibb.co/s2m0rsv/417020711-18319225441140467-7148758048589178387-n.jpg","https://i.ibb.co/4YtwyfY/456111299-18348803026140467-918336652170975872-n.jpg","https://i.ibb.co/YDJgwCy/456486586-18349431616140467-8591061972536888890-n.jpg","https://i.ibb.co/Lnb8HBx/456487412-18349431598140467-3082900273994637775-n.jpg","https://i.ibb.co/fM5PQvL/456510459-18349431607140467-6369908208813540895-n-1.jpg","https://i.ibb.co/6mzZM8Q/461445056-18354338752140467-7919709787529616807-n.jpg","https://i.ibb.co/mNqj9xN/461857515-18355249507140467-2837449301235508990-n.jpg","https://i.ibb.co/JxmyVYv/461940571-18355249525140467-6145041215129117621-n.jpg","https://i.ibb.co/LSn3zXs/462269119-18355973512140467-6139831667677658778-n.jpg","https://i.ibb.co/ZfXBvz9/Instagram-highlights-stories-17977193060735719-1.jpg","https://i.ibb.co/DC7XjKx/Instagram-highlights-stories-17977193060735719.jpg","https://i.ibb.co/mhgWXqs/photo-2024-10-07-21-11-41.jpg","https://i.ibb.co/Y0JWRhC/Save-The-Video-App-363500522-229433956233642-5587940116585302164-n.jpg","https://i.ibb.co/jRY8smp/Save-The-Video-App-364263036-261824383267329-9143166390948101533-n.jpg","https://i.ibb.co/ckmnW8N/Save-The-Video-App-364341204-799791968556585-7807479463862832425-n.jpg","https://i.ibb.co/rkdrpnH/Save-The-Video-App-365548000-852986726249697-4742178861420926061-n-1.jpg","https://i.ibb.co/YBf0cht/Save-The-Video-App-454564779-18347425165140467-8323930334737558718-n.jpg","https://i.ibb.co/F47gvZD/Save-The-Video-App-460575704-18353366170140467-6835324141600346990-n.jpg","https://i.ibb.co/D7fL2NC/Save-The-Video-App-460658080-18353366155140467-162377102346118466-n.jpg","https://i.ibb.co/G7Bvcmh/Save-The-Video-App-460727619-18353366233140467-4855929002437452289-n.jpg","https://i.ibb.co/qC25hk4/Save-The-Video-App-460747569-18353366179140467-7718809086127651176-n.jpg","https://i.ibb.co/9bx6cXC/Save-The-Video-App-460802633-18353366224140467-4748650278288112717-n.jpg","https://i.ibb.co/FYrQXZJ/Save-The-Video-App-460804670-18353366194140467-1092024016528287386-n.jpg","https://i.ibb.co/pXj1Nzg/Save-The-Video-App-460832718-18353633767140467-8137333835235299238-n.jpg","https://i.ibb.co/TPtvK9j/photo-9-2024-09-20-09-04-21.jpg","https://i.ibb.co/KwrbgQf/photo-2024-12-11-23-00-59.jpg","https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg",
           "https://i.ibb.co/HNy9j12/photo-2024-12-11-23-00-53.jpg"
-        ]
-      },
+          ],
+          messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Amy')"
+    },
+    telegramLink: "https://t.me/amykute"
+  },
     
-      "Lucy": {
-        name: "Lucy",
+      "Quynhnhi": {
+        name: "Quỳnh Nhi",
         status: "Hoạt Động",
-        height: "165 cm",
+        height: "163 cm",
         measurements: "V1: 87 - V2: 57 - V3: 89",
         service: `
-  Một bé tuyệt vời mà phải rất lâu mới lại sản sinh ra được.
-  Sở hữu chiều cao lý tưởng cùng đôi chân dài như kiếm Nhật, một bộ ngực quá ngon, mông cong và tròn hết mức.
-  Ai yêu thích cái đẹp đắm say này, chỉ cần lên giường một lần thôi thì chắc chắn đã nghiền luôn rồi.
-`,
+        Một nàng thơ mang phong cách dịu dàng nhưng lại đầy cuốn hút.
+      Cơ thể chuẩn chỉnh từng đường nét khiến các anh mê mệt.
+      Làn da trắng hồng không tỳ vết và luôn thơm mát như hoa cỏ.
+    `,
 
         duration: "⏱️ Luôn sẵn sàng",
         images: [
-          "https://i.ibb.co/KrsB7VG/photo-2024-09-05-18-55-28-3.jpg",
-          "https://i.ibb.co/Sy6HCDB/photo-2024-09-05-18-55-28.jpg","https://i.ibb.co/3NngQws/photo-2024-09-05-18-55-27-4.jpg","https://i.ibb.co/xX36C3R/photo-2024-09-05-18-55-27-3.jpg","https://i.ibb.co/JCCKTJ5/photo-2024-09-05-18-55-26-2.jpg","https://i.ibb.co/tJ1BFTP/photo-2024-09-05-18-55-26.jpg","https://i.ibb.co/pb18cM9/photo-2024-09-05-18-55-25-6.jpg","https://i.ibb.co/Dgcy4tw/photo-2024-09-05-18-55-25-5.jpg","https://i.ibb.co/x570BSZ/photo-2024-09-05-18-55-25-3.jpg","https://i.ibb.co/Y24sHjh/photo-2024-09-05-18-55-25-2.jpg","https://i.ibb.co/xYBPfG0/photo-2024-09-05-18-55-25.jpg","https://i.ibb.co/4mj3R6C/photo-2024-09-05-18-55-24-2.jpg",
-          "https://i.ibb.co/k4G1kR9/photo-2024-09-05-18-55-24.jpg"
-    
-          ]
-      },
-
-
-      
+        "https://i.ibb.co/0VMQHNm/taoanhdep-lam-net-anh-32923.jpg",
+"https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg",
+"https://i.ibb.co/mRMhPPJ/taoanhdep-lam-net-anh-31209.jpg",
+"https://i.ibb.co/tYv8Kxq/429962798-1078524956691354-6752593249391163373-n.jpg",
+"https://i.ibb.co/KVrqHTn/433915801-1097328484811001-908908767717880403-n.jpg",
+"https://i.ibb.co/qxqTgWD/434017556-1097328491477667-4249447468972054282-n.jpg",
+"https://i.ibb.co/3ySHbZG/467230191-1253918285818686-361563123323444382-n.jpg",
+"https://i.ibb.co/9Gnhd0B/467340886-1253918512485330-2937789930869431523-n.jpg",
+"https://i.ibb.co/5xb62wf/470052780-1274462077097640-6210759457174402732-n-1.jpg",
+"https://i.ibb.co/3vxsf8s/469780109-1274462087097639-337058499512322833-n-1.jpg",
+"https://i.ibb.co/k8stmyZ/471615714-1286178365926011-4746604888228047489-n.jpg",
+"https://i.ibb.co/JKgFJHp/471263914-1286178382592676-965400728677297348-n.jpg",
+"https://i.ibb.co/WkzTS59/471261178-1286178455926002-4101563328347043321-n.jpg",
+"https://i.ibb.co/r2syTvr/471596963-1286178459259335-9028804134637523147-n.jpg",
+"https://i.ibb.co/5K4QtQs/471327859-1286502982560216-5841311277794898467-n.jpg",
+"https://i.ibb.co/JvnLNnk/471190116-1286503375893510-4722874735065689298-n.jpg",
+"https://i.ibb.co/9GgPm46/471465742-1286510015892846-7048630244955112503-n.jpg",
+"https://i.ibb.co/fkC9ytq/471308321-1286510979226083-8216318391984039441-n.jpg"
+          ],
+          messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Quỳnh Nhi')"
+    },
+    telegramLink: "https://t.me/qnhi2k22"
+  },
       "ManNhi": {
       name: "Mẫn Nhi",
     status: "Hoạt Động",
@@ -1909,9 +1996,13 @@ document.addEventListener('DOMContentLoaded', () => {
       "https://i.ibb.co/hWvVQqH/photo-2024-12-22-15-46-45.jpg",
       "https://i.ibb.co/1v49B33/photo-2024-12-22-16-11-20.jpg","https://i.ibb.co/9W51NPR/photo-2024-12-22-16-11-28.jpg","https://i.ibb.co/4dQFRxs/photo-2024-12-22-16-11-31.jpg","https://i.ibb.co/JyFjsTf/photo-2024-12-22-16-11-36.jpg","https://i.ibb.co/z6j3JYJ/photo-2024-12-22-16-11-41.jpg","https://i.ibb.co/0Q0g4RN/photo-2024-12-22-16-11-45.jpg","https://i.ibb.co/5WsjdF5/photo-2024-12-22-16-11-48.jpg","https://i.ibb.co/GskXqWf/photo-2024-12-22-16-11-51.jpg","https://i.ibb.co/4Jvjwmk/photo-2024-12-22-16-11-54.jpg","https://i.ibb.co/7GHt81j/photo-2024-12-22-16-11-57.jpg","https://i.ibb.co/6NJCW5F/photo-2024-12-22-16-12-00.jpg","https://i.ibb.co/bBKHSt4/photo-2024-12-22-16-12-04.jpg","https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg","https://i.ibb.co/3f8Hstw/photo-2024-12-22-16-12-10.jpg","https://i.ibb.co/8YY74x5/photo-2024-12-22-16-12-15.jpg","https://i.ibb.co/HCRwz2X/photo-2024-12-22-16-12-23.jpg","https://i.ibb.co/Dt1pgg5/photo-2024-12-22-16-12-26.jpg","https://i.ibb.co/1L5VSw3/photo-2024-12-22-16-12-29.jpg",
       "https://i.ibb.co/n6NCNQj/photo-2024-12-22-16-12-33.jpg"
-        ]
-      },
-    
+      ],
+      messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Man Nhi')"
+    },
+    telegramLink: "https://t.me/mannhi22t"
+  },
       
       "Quỳnh Anh": {
         name: "Quỳnh Anh",
@@ -1929,8 +2020,13 @@ document.addEventListener('DOMContentLoaded', () => {
           "https://i.ibb.co/cCfM8t2/309989643-629711185484700-800178790464316697-n.jpg",
           "https://i.ibb.co/fvqkdYG/336259995-154577060807678-8601816291592842410-n.jpg","https://i.ibb.co/r47Knqx/337389624-587013110135564-3829004120735026130-n.jpg","https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg","https://i.ibb.co/fNm3d5V/367410131-816286566827160-6359684262952889763-n.jpg","https://i.ibb.co/42SRH5R/383214997-837770018012148-1280788975135102072-n.jpg","https://i.ibb.co/cYbqdZc/384235372-839434814512335-2260972901569626098-n.jpg","https://i.ibb.co/92FXzHs/387729334-845115860610897-2354261134729548408-n.jpg","https://i.ibb.co/Ss5ny1N/405306079-871290721326744-7522073540435670885-n.jpg","https://i.ibb.co/MhXrFMZ/441602376-970638008058681-8481165972533691356-n.jpg","https://i.ibb.co/p3sKK5S/454503517-1020509216404893-1431358853470073923-n.jpg","https://i.ibb.co/Jm6jkS1/456315582-1027932035662611-7804666417740511200-n.jpg","https://i.ibb.co/0hhkDVk/463120465-1066533151802499-8148182830936919702-n.jpg","https://i.ibb.co/wJf90n3/photo-2024-12-11-23-00-35.jpg",
           "https://i.ibb.co/bdsRRwV/photo-2024-12-11-23-00-32.jpg"
-        ]
-      },
+          ],
+          messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Quỳnh Anh')"
+    },
+    telegramLink: "https://t.me/qhanh2k"
+  },
     
       
       "Chang": {
@@ -1952,9 +2048,13 @@ document.addEventListener('DOMContentLoaded', () => {
           "https://i.ibb.co/KjTFxXs/430029198-946267713512468-5042154628741578756-n.jpg",
           "https://i.ibb.co/CMzrMHz/378854303-855617289244178-5284751463597591029-n.jpg","https://i.ibb.co/DCXrwLx/435893748-973112090828030-3658708461828827600-n.jpg","https://i.ibb.co/HxCvHSL/448578095-1008821667257072-2805937849532685211-n.jpg","https://i.ibb.co/mcnLQcm/453099935-1034995834639655-2625415353164096910-n.jpg","https://i.ibb.co/c6LntKm/461048233-1070808574391714-6457504351249761695-n.jpg","https://i.ibb.co/3dCf0NY/461315968-1072265027579402-2095170161509221025-n.jpg","https://i.ibb.co/R99XhXm/465055380-1097488548390383-6204572662205406771-n.jpg","https://i.ibb.co/sHY4sWp/465004871-1097488598390378-4886516484980949515-n.jpg","https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg","https://i.ibb.co/Qjn0ZYv/452104232-1029202725218966-2860286147676872065-n.jpg","https://i.ibb.co/S3ZZRm8/452866837-1031653198307252-4040690016312092931-n.jpg","https://i.ibb.co/sJDf3BT/453433956-1034997097972862-5183529550957858747-n.jpg","https://i.ibb.co/MBCVy8F/454575777-1041074547365117-1895654296518936209-n.jpg","https://i.ibb.co/W6y4q0g/461048236-1070808604391711-8132402547166610401-n.jpg","https://i.ibb.co/Pwd0g5M/photo-2024-12-11-23-01-09.jpg","https://i.ibb.co/0yGsptc/photo-2024-12-11-23-01-06.jpg",
           "https://i.ibb.co/mR1cvc3/photo-2024-12-11-23-01-02.jpg"
-        ]
-      },
-    
+          ],
+          messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Chang')"
+    },
+    telegramLink: "https://t.me/changdangeo"
+  },
       "Yuna": {
         name: "Yuna",
         status: "Hoạt Động",
@@ -1972,9 +2072,13 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://i.ibb.co/42sMhrh/photo-2024-12-22-16-12-37.jpg",
 "https://i.ibb.co/gwmQkch/photo-2024-12-22-16-12-43.jpg", "https://i.ibb.co/mJgzwph/photo-2024-12-22-16-12-47.jpg", "https://i.ibb.co/mNPhWhw/photo-2024-12-22-16-12-50.jpg", "https://i.ibb.co/HpZV0jx/photo-2024-12-22-16-12-40.jpg", "https://i.ibb.co/S7J7SCB/photo-2024-12-22-16-12-57.jpg", "https://i.ibb.co/QFdVP7w/photo-2024-12-22-16-13-00.jpg", "https://i.ibb.co/sJZZNWc/photo-2024-12-22-16-13-03.jpg", "https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg", "https://i.ibb.co/4KtzWYt/photo-2024-12-22-16-13-14.jpg", "https://i.ibb.co/KX0Qk26/photo-2024-12-22-16-13-17.jpg", "https://i.ibb.co/QYNGhxq/photo-2024-12-22-16-13-21.jpg", "https://i.ibb.co/k4zYSJH/photo-2024-12-22-16-13-25.jpg", "https://i.ibb.co/3WRNpm1/photo-2024-12-22-16-13-28.jpg", "https://i.ibb.co/wsHzTCp/photo-2024-12-22-16-13-30.jpg", "https://i.ibb.co/BtJ7XRH/photo-2024-12-22-16-13-38.jpg", "https://i.ibb.co/bvBxf9K/photo-2024-12-22-16-13-41.jpg", "https://i.ibb.co/MfPs25T/photo-2024-12-22-16-13-43.jpg", "https://i.ibb.co/KG53Y14/photo-2024-12-22-16-13-46.jpg", "https://i.ibb.co/XYRQPrv/photo-2024-12-22-16-13-49.jpg",
 "https://i.ibb.co/M88YMBM/photo-2024-12-22-16-13-53.jpg"
-          ]
-      },
-    
+],
+messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Yuna')"
+    },
+    telegramLink: "https://t.me/yuna2k0"
+  },
       "Hà My": {
         name: "Hà My",
         status: "Hoạt Động",
@@ -1991,10 +2095,14 @@ document.addEventListener('DOMContentLoaded', () => {
         "https://i.ibb.co/sFpYycr/452346105-122097053972434651-70304625633922474-n.jpg",
         "https://i.ibb.co/SmdxdWh/452456058-122097965540434651-3912502212670174861-n.jpg","https://i.ibb.co/WzHdPPS/453808018-122106853232434651-4604519005165612319-n.jpg","https://i.ibb.co/TmfLwVb/454325120-122108645144434651-795226551275134592-n.jpg","https://i.ibb.co/XZ45hh0/454819894-122109417518434651-4162265515860444955-n.jpg","https://i.ibb.co/ZXkgCXB/455314793-122110440716434651-433169597141769416-n.jpg","https://i.ibb.co/4SNd7hF/455277592-122110743476434651-3300050035046233741-n.jpg","https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg","https://i.ibb.co/7gdFX78/455968603-122111767070434651-6913421045416419060-n.jpg","https://i.ibb.co/sP5J3yX/456513928-122112246536434651-2776176340085354863-n.jpg","https://i.ibb.co/0YgLdkf/456565869-122112731396434651-8237853306147565521-n.jpg","https://i.ibb.co/djNfmx1/457033116-122113186844434651-6281615223706451419-n.jpg","https://i.ibb.co/3yVT1xt/457183690-122113673636434651-3115662083493267900-n.jpg","https://i.ibb.co/yd0CyK7/457876971-122114618300434651-2157768203712887052-n.jpg","https://i.ibb.co/qDpG43q/460636309-122118376964434651-2180858217538166205-n.jpg","https://i.ibb.co/J3zsY7S/461512276-122119820114434651-7954635395370619903-n.jpg","https://i.ibb.co/2N37mqL/462373564-122121580796434651-8196861796321031764-n.jpg","https://i.ibb.co/JHkGjnJ/462646415-122122065134434651-8643311744588327997-n.jpg","https://i.ibb.co/MpQ8D12/462746291-122122415960434651-8840312681855580438-n.jpg","https://i.ibb.co/7NMDBBm/464133519-122123559818434651-9114080325865249596-n.jpg","https://i.ibb.co/HG9nkg3/464328944-122123883152434651-9138667014083794969-n.jpg","https://i.ibb.co/8s4Ghcd/465005198-122124788240434651-1038284664742036829-n.jpg","https://i.ibb.co/jW96NYP/photo-2024-12-11-23-00-43.jpg","https://i.ibb.co/txDT9kD/photo-2024-12-11-23-00-41.jpg",
         "https://i.ibb.co/BjCGm6f/photo-2024-12-11-23-00-38.jpg"
-       
-          ]
-      }
-    };
+        ],
+        messageButton: {
+      label: "Gửi tin nhắn",
+      action: "sendMessage('Hà My')"
+    },
+    telegramLink: "https://t.me/hamyne678"
+  }
+};
     
 
 
@@ -2020,44 +2128,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   
-  
-  
-  function displayCharacterDetails(characterName) {
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Sự kiện khi nhấn nút "Gửi tin nhắn"
+  document.querySelector(".character-list").addEventListener("click", (event) => {
+    const button = event.target;
+    if (button.classList.contains("message-button")) {
+      const characterName = button.getAttribute("data-name");
+      const telegramLink = button.getAttribute("data-link");
+
+      if (!characterName || !telegramLink) return;
+
+      // Xử lý gửi tin nhắn và ẩn các nút khác
+      sendMessage(characterName, button, telegramLink);
+    }
+  });
+});
+
+// Hàm gửi tin nhắn và ẩn các nút khác
+function sendMessage(characterName, button, telegramLink) {
+  const confirmation = confirm(`Bạn có chắc chắn muốn gửi tin nhắn cho ${characterName}?`);
+  if (!confirmation) return;
+
+  // Mở Telegram
+  if (telegramLink.startsWith("https://t.me/")) {
+    window.open(telegramLink, "_blank");
+  } else {
+    alert("Liên kết Telegram không hợp lệ.");
+    return;
+  }
+
+  // Ẩn tất cả các nút khác
+  const allButtons = document.querySelectorAll(".message-button");
+  allButtons.forEach((btn) => {
+    if (btn !== button) {
+      btn.style.display = "none"; // Ẩn các nút không phải là nút đã nhấn
+    }
+  });
+}
+
+
+
+
+function displayCharacterDetails(characterName) {
   const detailsContainer = document.getElementById('details-container');
   const imageGallery = document.getElementById('image-gallery');
+  const messageButton = document.getElementById('detail-message-button');
   const character = characterDetails[characterName];
 
-  if (detailsContainer && character) {
+  if (character) {
+    // Gán thông tin chi tiết
     document.getElementById('detail-name').textContent = character.name;
     document.getElementById('detail-status').textContent = character.status;
-    document.getElementById('detail-height').textContent = character.height;
-    document.getElementById('detail-measurements').textContent = character.measurements;
+    document.getElementById('detail-height').textContent = `Chiều cao: ${character.height}`;
+    document.getElementById('detail-measurements').textContent = `Số đo: ${character.measurements}`;
     document.getElementById('detail-service').textContent = character.service;
-    document.getElementById('detail-duration').textContent = character.duration;
+    document.getElementById('detail-duration').textContent = `Thời gian phục vụ: ${character.duration}`;
 
-    // Tải ảnh vào thư viện
-    imageGallery.innerHTML = '';
+    // Hiển thị hình ảnh
+    imageGallery.innerHTML = "";
     character.images.forEach((url) => {
       const img = document.createElement('img');
       img.src = url;
       img.alt = character.name;
-      img.classList.add('gallery-image');
-      img.onclick = () => openModal(url); // Mở modal khi click ảnh
       imageGallery.appendChild(img);
     });
 
+    // Nút gửi tin nhắn
+    messageButton.textContent = "Gửi tin nhắn";
+    messageButton.onclick = () => {
+      window.location.href = character.telegramLink; // Chuyển hướng trực tiếp
+    };
+
+    // Hiển thị chi tiết
     detailsContainer.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Tắt cuộn trang khi mở modal
   }
 }
 
+
+
+
+
+// Hàm đóng chi tiết
 function closeDetails() {
   const detailsContainer = document.getElementById('details-container');
   if (detailsContainer) {
     detailsContainer.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Khôi phục cuộn trang
+    const buttons = document.querySelectorAll('.message-button');
+    buttons.forEach((button) => {
+      button.disabled = false;
+      button.style.backgroundColor = ""; // Reset màu nút
+      button.style.cursor = "pointer";
+    });
   }
 }
+
 
 document.querySelector('.close-modal').addEventListener('click', closeModal);
 document.getElementById('imageModal').addEventListener('click', function (event) {
@@ -2086,12 +2252,16 @@ document.getElementById('imageModal').addEventListener('click', function (event)
   function openModal(imageSrc) {
   const modal = document.getElementById('imageModal');
   const modalImage = document.getElementById('modalImage');
+
   if (modal && modalImage) {
-    modal.style.display = 'flex'; // Hiển thị modal
+    modal.style.display = 'flex';
     modalImage.src = imageSrc;
-    document.body.style.overflow = 'hidden'; // Tắt cuộn trang khi modal mở
+    document.body.style.overflow = 'hidden'; // Tắt cuộn trang
+  } else {
+    console.error("Không tìm thấy modal hoặc modalImage");
   }
 }
+
 
 function closeModal() {
   const modal = document.getElementById('imageModal');
@@ -2103,12 +2273,13 @@ function closeModal() {
 }
 
 // Đóng modal khi nhấn bên ngoài nội dung modal
-window.addEventListener('click', function (event) {
+window.addEventListener('click', (event) => {
   const modal = document.getElementById('imageModal');
   if (modal && event.target === modal) {
     closeModal();
   }
 });
+
 
   
 document.addEventListener('DOMContentLoaded', () => {  
@@ -5790,6 +5961,22 @@ document.addEventListener('DOMContentLoaded', () => {
       <p>Nhập mã xác nhận để hoàn tất đặt lịch.</p>
       <input type="text" id="bookingCodeInput" placeholder="Nhập mã đặt lịch" required>
       <div class="button-container">
+      </div>
+
+        <div id="errorNotification" class="error-notification" style="display: none;">
+          <span id="errorMessage"></span>
+        </div>
+        
+          
+
+      <p class="help-note">
+        <a href="https://direct.lc.chat/18963027/" target="_blank" style="color: #ffcc00; text-decoration: none;">
+          Lấy mã đặt lịch tại đây nếu chưa có.
+        </a>
+      </p>
+  
+      <!-- Nút xác nhận -->
+      <div class="button-container">
         <button class="confirm-button" onclick="submitBookingCode()">Xác nhận</button>
       </div>
       <!-- Spinner khi đang xử lý -->
@@ -5902,8 +6089,8 @@ document.addEventListener('DOMContentLoaded', () => {
   padding: 10px 15px;
   font-size: 14px;
   font-weight: bold;
-  color: #ffffff;
-  background: #ff6f61;
+  color: #000000;
+  background: #ff1500;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -5924,7 +6111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   padding: 10px 20px;
   font-size: 16px;
   font-weight: bold;
-  color: #ffffff;
+  color: #000000;
   background: linear-gradient(145deg, #00c853, #00e676); /* Gradient xanh */
   border: none;
   border-radius: 5px;
@@ -5954,7 +6141,7 @@ document.addEventListener('DOMContentLoaded', () => {
   align-items: center;
   justify-content: center;
   background: #00c853;
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   padding: 10px 20px;
   border-radius: 5px;
@@ -5977,7 +6164,85 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 }
 
+.booking-code-note {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
 
+.help-note {
+  font-size: 14px;
+  color: #ffcc00;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.help-note a {
+  color: #ffcc00;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.help-note a:hover {
+  color: #ffaa00;
+}
+.booking-code-note {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.help-note {
+  font-size: 14px;
+  color: #ffcc00;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.help-note a {
+  color: #ffcc00;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.help-note a:hover {
+  color: #ffaa00;
+}
+.error-notification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+  background-color: #ff4d4f; /* Màu đỏ */
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.error-notification.hide {
+  display: none;
+}
+
+.error-notification.show {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 <script>
 
@@ -6008,8 +6273,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }  
     });  
     
-    // Xác nhận đặt lịch và chuyển sang modal nhập mã  
-    function confirmBooking() {  
+       // Xác nhận đặt lịch và chuyển sang modal nhập mã  
+       function confirmBooking() {  
       const partner = document.getElementById('partnerSelect').value;  
       const time = document.getElementById('timeInput').value;  
       const location = document.getElementById('locationInput').value;  
@@ -6023,10 +6288,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }  
     }  
     
-    // Mở modal nhập mã đặt lịch  
-    function openBookingCodeModal() {  
-      document.getElementById('bookingCodeModal').style.display = 'flex';  
-    }  
+    function openBookingCodeModal() {
+  // Hiển thị modal nhập mã
+  const bookingModal = document.getElementById('bookingCodeModal');
+  if (bookingModal) {
+    bookingModal.style.display = 'flex';
+
+    // Đảm bảo mã mặc định được hiển thị
+    const defaultBookingCodeElement = document.getElementById('defaultBookingCode');
+    if (defaultBookingCodeElement) {
+      defaultBookingCodeElement.textContent = '88889999';
+    }
+  }
+}
     
     // Danh sách nhân vật phân loại theo xếp hạng  
     const partnersByRank = {  
@@ -6049,7 +6323,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Lan Chi ☘',  
         '♡°Cẩm Tú°♡',  
         '✾ Minh Tú ✾',  
-        'Lucy',  
+        'Quỳnh Nhi',  
         '✤ Lan Anh ✤',  
         '✦ Khánh Nhi ✦',  
         '❖ Hạ Vy Queen ❖',  
@@ -6181,33 +6455,41 @@ function populatePartnerList() {
       }  
     }  
     
-    function submitBookingCode() {  
-      const bookingCode = document.getElementById('bookingCodeInput').value;  
-      const spinner = document.getElementById('spinner');  
-      const successNotification = document.getElementById('successNotification');  
-    
-      if (bookingCode) {  
-        // Hiển thị spinner  
-        spinner.style.display = 'block';  
-        successNotification.style.display = 'none'; // Ẩn thông báo thành công nếu có  
-    
-        // Giả lập quá trình xử lý 3 giây  
-        setTimeout(() => {  
-          spinner.style.display = 'none'; // Ẩn spinner  
-          successNotification.style.display = 'block'; // Hiển thị thông báo thành công  
-          successNotification.classList.add('show');  
-    
-          // Ẩn thông báo sau 3 giây  
-          setTimeout(() => {  
-            successNotification.classList.remove('show');  
-            successNotification.style.display = 'none';  
-            closeModal('bookingCodeModal');  
-          }, 3000);  
-        }, 3000);  
-      } else {  
-        alert('Vui lòng nhập mã đặt lịch.');  
-      }  
-    }  
+    function submitBookingCode() {
+  const bookingCodeInput = document.getElementById('bookingCodeInput').value.trim();
+  const spinner = document.getElementById('spinner');
+  const successNotification = document.getElementById('successNotification');
+  const errorNotification = document.getElementById('errorNotification'); // Thêm thông báo lỗi
+  const validCode = '88889999'; // Mã đặt lịch hợp lệ
+
+  // Kiểm tra mã nhập vào
+  if (bookingCodeInput === validCode) {
+    // Hiển thị spinner
+    spinner.style.display = 'block';
+    successNotification.style.display = 'none';
+    errorNotification.style.display = 'none';
+
+    // Giả lập quá trình xử lý
+    setTimeout(() => {
+      spinner.style.display = 'none';
+      successNotification.style.display = 'block';
+
+      // Ẩn thông báo sau 3 giây
+      setTimeout(() => {
+        successNotification.style.display = 'none';
+        closeModal('bookingCodeModal');
+      }, 3000);
+    }, 3000);
+  } else {
+    // Hiển thị thông báo lỗi
+    errorNotification.style.display = 'block';
+    errorNotification.textContent = 'Mã đặt lịch không hợp lệ. Vui lòng thử lại.';
+    setTimeout(() => {
+      errorNotification.style.display = 'none';
+    }, 3000);
+  }
+}
+
     
     // Hiển thị thông báo thành công  
     function showSuccessNotification(message) {  
@@ -6868,24 +7150,25 @@ const countries = [
 
 
 const mainCharacters = [  
-  
   {  
     name: "Yumi",  
-    age: 22,  
+    age: 24,  
     measurements: "90-56-90",  
     rating: "⭐ 4.6",  
     img: "https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg",  
     type: "main",  
-    rank: "S" // Thứ hạng  
+    rank: "S",  
+    telegramLink: "https://t.me/yumixinhhh" // Thêm liên kết Telegram
   },  
   {  
     name: "Hà Huyền",  
-    age: 21,  
+    age: 25,  
     measurements: "86-58-90",  
     rating: "⭐ 4.8",  
     img: "https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg",  
     type: "main",  
-    rank: "A" // Thứ hạng  
+    rank: "A",  
+    telegramLink: "https://t.me/hahuyen2k3"  
   },  
   {  
     name: "Maily",  
@@ -6894,35 +7177,38 @@ const mainCharacters = [
     rating: "⭐ 4.7",  
     img: "https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg",  
     type: "main",  
-    rank: "B" // Thứ hạng  
+    rank: "B",  
+    telegramLink: "https://t.me/mailycute"  
   },  
- 
   {  
     name: "Amy",  
-    age: 22,  
+    age: 24,  
     measurements: "91-61-94",  
     rating: "⭐ 4.8",  
     img: "https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg",  
     type: "main",  
-    rank: "S" // Thứ hạng  
+    rank: "A",  
+    telegramLink: "https://t.me/amykute"  
   },  
   {  
-    name: "Lucy",  
-    age: 25,  
+    name: "Quynhnhi",  
+    age: 22,  
     measurements: "87-57-89",  
     rating: "⭐ 4.7",  
-    img: "https://i.ibb.co/Dfc46yb/photo-2024-09-05-18-55-27.jpg",  
+    img: "https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg",  
     type: "main",  
-    rank: "A" // Thứ hạng  
+    rank: "A",  
+    telegramLink: "https://t.me/qnhi2k22"  
   },  
   {  
     name: "ManNhi",  
-    age: 22,  
+    age: 25,  
     measurements: "91-58-92",  
     rating: "⭐ 4.6",  
     img: "https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg",  
     type: "main",  
-    rank: "A" // Thứ hạng  
+    rank: "A",  
+    telegramLink: "https://t.me/mannhi22t"  
   },  
   {  
     name: "Quỳnh Anh",  
@@ -6931,7 +7217,8 @@ const mainCharacters = [
     rating: "⭐ 4.7",  
     img: "https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg",  
     type: "main",  
-    rank: "B" // Thứ hạng  
+    rank: "B",  
+    telegramLink: "https://t.me/qhanh2k"  
   },  
   {  
     name: "Chang",  
@@ -6940,27 +7227,30 @@ const mainCharacters = [
     rating: "⭐ 4.8",  
     img: "https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg",  
     type: "main",  
-    rank: "S" // Thứ hạng  
+    rank: "S",  
+    telegramLink: "https://t.me/changdangeo"  
   },  
   {  
     name: "Yuna",  
-    age: 24,  
+    age: 23,  
     measurements: "90-60-93",  
     rating: "⭐ 4.6",  
     img: "https://i.ibb.co/pQ6LyDw/photo-2024-12-22-16-13-10.jpg",  
     type: "main",  
-    rank: "S" // Thứ hạng  
+    rank: "S",  
+    telegramLink: "https://t.me/yuna2k0"  
   },  
   {  
     name: "Hà My",  
-    age: 23,  
+    age: 26,  
     measurements: "89-59-91",  
     rating: "⭐ 4.7",  
     img: "https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg",  
     type: "main",  
-    rank: "B" // Thứ hạng  
+    rank: "A",  
+    telegramLink: "https://t.me/hamyne678"  
   }  
-]; 
+];
 
 
 const secondaryCharacters = [  
@@ -7849,7 +8139,7 @@ document.querySelector('a[onclick="showContent(\'regionContent\')"]').addEventLi
 
 
 
-// Hiển thị danh sách nhân vật
+
 // Hiển thị danh sách nhân vật  
 function showCharacterList(cityName) {  
   const characterListDiv = document.getElementById('characterList');  
@@ -7889,51 +8179,147 @@ function showCharacterList(cityName) {
 }  
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Restore button states from localStorage
+  restoreButtonState();
 
+  // Event listener for character list button clicks
+  document.querySelector(".character-list").addEventListener("click", (event) => {
+    const button = event.target;
+    if (button.classList.contains("message-button")) {
+      const characterName = button.getAttribute("data-name");
+      const telegramLink = button.getAttribute("data-link");
 
+      if (!characterName || !telegramLink) return;
 
+      sendMessage(characterName, button, telegramLink);
+    }
+  });
+});
 
+// Function to restore button states from localStorage
+function restoreButtonState() {
+  const hiddenButtons = JSON.parse(localStorage.getItem("hiddenButtons")) || [];
+  hiddenButtons.forEach((buttonId) => {
+    const button = document.getElementById(buttonId);
+    if (button) {
+      button.style.display = "none"; // Hide button
+    }
+  });
+}
+
+// Function to save hidden button states to localStorage
+function saveHiddenButton(buttonId) {
+  const hiddenButtons = JSON.parse(localStorage.getItem("hiddenButtons")) || [];
+  if (!hiddenButtons.includes(buttonId)) {
+    hiddenButtons.push(buttonId);
+    localStorage.setItem("hiddenButtons", JSON.stringify(hiddenButtons));
+  }
+}
+
+// Function to reset all buttons
+function resetAllButtons() {
+  localStorage.removeItem("hiddenButtons"); // Clear hidden buttons from localStorage
+
+  const allButtons = document.querySelectorAll(".message-button");
+  allButtons.forEach((button) => {
+    button.style.display = "inline-block"; // Show all buttons
+  });
+
+  console.log("All buttons have been reset and are now visible.");
+}
+
+// Function to handle sending a message
+function sendMessage(name, button, telegramLink) {
+  const confirmation = confirm(
+    `Bạn có chắc chắn muốn chọn ${name}? Sau khi gửi tin nhắn sẽ không thể thay đổi.`
+  );
+
+  if (confirmation) {
+    button.style.display = "none"; // Hide the button
+    saveHiddenButton(button.id); // Save the hidden button state to localStorage
+
+    if (telegramLink) {
+      window.open(telegramLink, "_blank"); // Open Telegram link
+    } else {
+      alert("Không tìm thấy liên kết Telegram.");
+    }
+  }
+}
+
+// Function to display character details
 function displayCharacterDetails(characterName) {
-  const detail = characterDetails[characterName];
-  const detailsContainer = document.getElementById('details-container');
+  const detailsContainer = document.getElementById("details-container");
+  const imageGallery = document.getElementById("image-gallery");
+  const messageButton = document.getElementById("detail-message-button");
+  const character = characterDetails[characterName];
 
-  if (!detail) {
-    alert('Chỉ xem được thông tin trong cùng khu vực');
-    return;
+  if (character) {
+    document.getElementById("detail-name").textContent = character.name;
+    document.getElementById("detail-status").textContent = character.status;
+    document.getElementById("detail-height").textContent = `Chiều cao: ${character.height}`;
+    document.getElementById("detail-measurements").textContent = `Số đo: ${character.measurements}`;
+    document.getElementById("detail-service").textContent = character.service;
+    document.getElementById("detail-duration").textContent = `Thời gian phục vụ: ${character.duration}`;
+
+    // Reset and load gallery images
+    loadImageGallery(character.images);
+
+    // Set message button action
+    messageButton.textContent = "Gửi tin nhắn";
+    messageButton.onclick = () => {
+      sendMessage(character.name, messageButton, character.telegramLink);
+    };
+
+    // Display details container
+    detailsContainer.style.display = "block";
   }
-
-  // Cập nhật thông tin chi tiết
-  document.getElementById('detail-name').innerText = detail.name || 'Chưa có thông tin';
-  document.getElementById('detail-status').innerText = detail.status || 'Không xác định';
-  document.getElementById('detail-height').innerText = `Chiều cao: ${detail.height || 'Chưa rõ'}`;
-  document.getElementById('detail-measurements').innerText = `Số đo: ${detail.measurements || 'Chưa rõ'}`;
-  document.getElementById('detail-service').innerText = `Dịch vụ: ${detail.service || 'Chưa rõ'}`;
-  document.getElementById('detail-duration').innerText = `Thời gian phục vụ: ${detail.duration || 'Chưa rõ'}`;
-
-  // Load hình ảnh
-  loadImageGallery(detail.images);
-
-  detailsContainer.style.display = 'block';
 }
 
+// Function to reset image gallery
+function resetImageGallery() {
+  const imageGallery = document.getElementById("image-gallery");
+  imageGallery.innerHTML = ""; // Clear gallery
+  imageGallery.style.display = "grid";
+  imageGallery.style.gridTemplateColumns = "repeat(auto-fit, minmax(100px, 1fr))";
+  imageGallery.style.gap = "10px";
+}
+
+// Function to load images into the gallery
 function loadImageGallery(images) {
-  const imageGallery = document.getElementById('image-gallery');
-  imageGallery.innerHTML = '';
+  resetImageGallery(); // Reset gallery before adding new images
 
-  if (images && images.length > 0) {
-    images.forEach(url => {
-      const img = document.createElement('img');
-      img.src = url;
-      img.alt = 'Gallery Image';
-      img.classList.add('gallery-image');
-      img.onclick = () => openModal(url);
-      imageGallery.appendChild(img);
-    });
-  } else {
-    imageGallery.innerHTML = '<p>Không có hình ảnh.</p>';
+  images.forEach((url) => {
+    const img = document.createElement("img");
+    img.src = url;
+    img.alt = "Gallery Image";
+    img.classList.add("gallery-image");
+    img.onclick = () => openModal(url); // Open modal on image click
+    document.getElementById("image-gallery").appendChild(img);
+  });
+}
+
+// Function to close details overlay
+function closeDetails() {
+  const detailsContainer = document.getElementById("details-container");
+  if (detailsContainer) {
+    detailsContainer.style.display = "none";
   }
 }
 
+// Function to close modal
+function closeModal() {
+  const modal = document.getElementById("imageModal");
+  modal.style.display = "none";
+}
+
+// Function to open modal
+function openModal(imageUrl) {
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  modalImage.src = imageUrl;
+  modal.style.display = "block";
+}
 
 
 
@@ -11369,7 +11755,17 @@ userInput.addEventListener("keypress", (e) => {
   }
 });
 
+ // Vô hiệu hóa chuột phải
+ document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
 
+  // Vô hiệu hóa phím F12 và các tổ hợp phím kiểm tra
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+      e.preventDefault();
+    }
+  });
   </script>
 </body>
 
