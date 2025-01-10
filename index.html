@@ -843,7 +843,7 @@ body, html {
 
 .menu-button:active {
   transform: scale(0.95);
-  box-shadow: 0 0 20px rgba(255, 78, 205, 0.8), 0 0 30px rgba(183, 76, 217, 0.6); /* Hiệu ứng bóng nhỏ lại */
+  
 }
 
 .menu-button::before {
@@ -1599,9 +1599,8 @@ h2:hover::before {
             <p>Tuổi: 24</p>
             <p>Số đo: 90-56-90</p>
             <p>⭐ 4.6</p>
-         <p>Ngày gia nhập: 2024-11-01</p>
-            <button id="button-Yumi" class="message-button" onclick="sendMessage('Yumi')">Gửi tin nhắn</button>
-
+            <p>Ngày gia nhập: 2024-11-01</p>
+            <button class="message-button" data-name="Yumi" data-link="https://t.me/yumixinhhh">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Hà Huyền')">
             <img src="https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg" alt="Hà Huyền">
@@ -1610,19 +1609,7 @@ h2:hover::before {
             <p>Số đo: 86-58-90</p>
             <p>⭐ 4.8</p>
             <p>Ngày gia nhập: 2024-05-20</p>
-            <button id="button-HaHuyen" class="message-button" onclick="event.stopPropagation(); sendMessage('Hà Huyền')">Gửi tin nhắn</button>
-
-          </div>
-          <div class="recommendation-item" onclick="displayCharacterDetails('Mai ly')">
-            <img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Mai ly">
-            <p><strong>Mai ly</strong></p>
-            <p>Tuổi: 23</p>
-            <p>Số đo: 88-58-86</p>
-            <p>⭐ 4.7</p>
-            <p>Ngày gia nhập: 2023-10-12</p>
-
-            <button id="button-Mai ly" class="message-button" onclick="event.stopPropagation(); sendMessage('Mai ly')">Gửi tin nhắn</button>
-
+            <button class="message-button" data-name="Hà Huyền" data-link="https://t.me/hahuyen2k3">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Amy')">
             <img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy">
@@ -1631,20 +1618,16 @@ h2:hover::before {
             <p>Số đo: 91-61-94</p>
             <p>⭐ 4.8</p>
             <p>Ngày gia nhập: 2024-03-18</p>
-
-            <button id="button-Amy" class="message-button" onclick="event.stopPropagation(); sendMessage('Amy')">Gửi tin nhắn</button>
-
+            <button class="message-button" data-name="Amy" data-link="https://t.me/amykute">Gửi tin nhắn</button>
           </div>
-          <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Nhi')">
-            <img src="https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg" alt="Quỳnh Nhi">
-            <p><strong>Quỳnh Nhi</strong></p>
-            <p>Tuổi: 22</p>
-            <p>Số đo: 87-57-89</p>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Mai ly')">
+            <img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Mai ly">
+            <p><strong>Mai ly</strong></p>
+            <p>Tuổi: 23</p>
+            <p>Số đo: 88-58-86</p>
             <p>⭐ 4.7</p>
-            <p>Ngày gia nhập: 2024-12-09</p>
-
-            <button id="button-Quỳnh Nhi" class="message-button" onclick="event.stopPropagation(); sendMessage('Quỳnh Nhi')">Gửi tin nhắn</button>
-
+            <p>Ngày gia nhập: 2023-10-12</p>
+            <button class="message-button" data-name="Mai ly" data-link="https://t.me/mailyyeu">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Mẫn Nhi')">
             <img src="https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg" alt="Mẫn Nhi">
@@ -1653,9 +1636,16 @@ h2:hover::before {
             <p>Số đo: 91-58-92</p>
             <p>⭐ 4.6</p>
             <p>Ngày gia nhập: 2024-01-15</p>
-
-            <button id="button-Mẫn Nhi" class="message-button" onclick="event.stopPropagation(); sendMessage('Mẫn Nhi')">Gửi tin nhắn</button>
-
+            <button class="message-button" data-name="Mẫn Nhi" data-link="https://t.me/mannhi22t">Gửi tin nhắn</button>
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Nhi')">
+            <img src="https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg" alt="Quỳnh Nhi">
+            <p><strong>Quỳnh Nhi</strong></p>
+            <p>Tuổi: 22</p>
+            <p>Số đo: 87-57-89</p>
+            <p>⭐ 4.7</p>
+            <p>Ngày gia nhập: 2024-12-09</p>
+            <button class="message-button" data-name="Quỳnh Nhi" data-link="https://t.me/qnhi2k22">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')">
             <img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh">
@@ -1664,9 +1654,7 @@ h2:hover::before {
             <p>Số đo: 87-57-89</p>
             <p>⭐ 4.7</p>
             <p>Ngày gia nhập: 2024-11-24</p>
-
-            <button id="button-Quỳnh Anh" class="message-button" onclick="event.stopPropagation(); sendMessage('Quỳnh Anh')">Gửi tin nhắn</button>
-
+            <button class="message-button" data-name="Quỳnh Anh" data-link="https://t.me/qhanh2k">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Chang')">
             <img src="https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg" alt="Chang">
@@ -1675,9 +1663,7 @@ h2:hover::before {
             <p>Số đo: 89-60-93</p>
             <p>⭐ 4.8</p>
             <p>Ngày gia nhập: 2024-06-14</p>
-
-            <button id="button-Chang" class="message-button" onclick="event.stopPropagation(); sendMessage('Chang')">Gửi tin nhắn</button>
-
+            <button class="message-button" data-name="Chang" data-link="https://t.me/changdangeo">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Yuna')">
             <img src="https://i.ibb.co/9v0vWz3/Snaptik-app-74425646241191232083.jpg" alt="Yuna">
@@ -1686,9 +1672,7 @@ h2:hover::before {
             <p>Số đo: 90-60-93</p>
             <p>⭐ 4.6</p>
             <p>Ngày gia nhập: 2024-09-28</p>
-
-            <button id="button-Yuna" class="message-button" onclick="event.stopPropagation(); sendMessage('Yuna')">Gửi tin nhắn</button>
-
+            <button class="message-button" data-name="Yuna" data-link="https://t.me/yuna2k0">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Hà My')">
             <img src="https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg" alt="Hà My">
@@ -1697,10 +1681,9 @@ h2:hover::before {
             <p>Số đo: 89-59-91</p>
             <p>⭐ 4.7</p>
             <p>Ngày gia nhập: 2024-04-22</p>
-
-            <button id="button-HaMy" class="message-button" onclick="event.stopPropagation(); sendMessage('Hà My')">Gửi tin nhắn</button>
-
+            <button class="message-button" data-name="Hà My" data-link="https://t.me/hamyne678">Gửi tin nhắn</button>
           </div>
+          
         </div>
       </div>
   
@@ -2072,30 +2055,37 @@ messageButton: {
   }
   
 
-// Thêm sự kiện khi nhấn nút "Gửi tin nhắn"
-function addMessageButtonEventListeners() {
+
+  function addMessageButtonEventListeners() {
   document.querySelectorAll(".message-button").forEach(button => {
     button.addEventListener("click", (event) => {
-      const characterName = event.target.getAttribute("data-name");
-      const telegramLink = event.target.getAttribute("data-link");
+      event.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
 
-      // Xác nhận hành động trước khi gửi tin nhắn
-      const confirmation = confirm(`Bạn có chắc chắn muốn gửi tin nhắn cho ${characterName}? Sau khi gửi tin nhắn sẽ không thể thay đổi.`);
+      const characterName = button.getAttribute("data-name");
+      const telegramLink = button.getAttribute("data-link");
 
+      // Kiểm tra nếu liên kết Telegram không hợp lệ
+      if (!telegramLink || telegramLink.trim() === "" || telegramLink === "#") {
+        alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);
+        return;
+      }
+
+      // Hiển thị xác nhận
+      const confirmation = confirm(`Bạn có muốn liên hệ với ${characterName}?`);
       if (confirmation) {
-        // Ẩn tất cả các nút sau khi xác nhận
-        hideAllMessageButtons();
-
-        // Mở liên kết Telegram
-        if (telegramLink) {
-          window.open(telegramLink, "_blank");
-        } else {
-          alert("Không tìm thấy liên kết Telegram.");
-        }
+        // Chuyển đến liên kết Telegram
+        window.open(telegramLink, "_blank");
       }
     });
   });
 }
+
+
+
+
+// Khôi phục trạng thái nút khi tải trang
+document.addEventListener("DOMContentLoaded", restoreButtonState);
+
 
 // Hàm ẩn tất cả các nút "Gửi tin nhắn"
 function hideAllMessageButtons() {
@@ -2116,32 +2106,7 @@ function restoreButtonState() {
   });
 }
 
-// Hàm thêm sự kiện khi nhấn nút "Gửi tin nhắn"
-function addMessageButtonEventListeners() {
-  document.querySelectorAll(".message-button").forEach(button => {
-    button.addEventListener("click", (event) => {
-      const characterName = event.target.getAttribute("data-name");
-      const telegramLink = event.target.getAttribute("data-link");
 
-      // Kiểm tra nếu telegramLink có sẵn
-      if (!telegramLink) {
-        alert("Không tìm thấy liên kết Telegram.");
-        return;
-      }
-
-      // Xác nhận hành động trước khi gửi tin nhắn
-      const confirmation = confirm(`Bạn có chắc chắn muốn gửi tin nhắn cho ${characterName}? Sau khi gửi tin nhắn sẽ không thể thay đổi.`);
-
-      if (confirmation) {
-        // Ẩn tất cả các nút sau khi xác nhận
-        hideAllMessageButtons();
-
-        // Mở liên kết Telegram
-        window.open(telegramLink, "_blank");  // Đảm bảo mở Telegram trong tab mới
-      }
-    });
-  });
-}
 
 
 
@@ -2256,6 +2221,29 @@ window.addEventListener('click', (event) => {
   }
 });
 
+function addMessageButtonEventListeners() {
+  document.querySelectorAll(".message-button").forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+
+      const characterName = button.getAttribute("data-name");
+      const telegramLink = button.getAttribute("data-link");
+
+      // Kiểm tra nếu liên kết Telegram không hợp lệ
+      if (!telegramLink || telegramLink.trim() === "" || telegramLink === "#") {
+        alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);
+        return;
+      }
+
+      // Hiển thị xác nhận
+      const confirmation = confirm(`Bạn có muốn liên hệ với ${characterName}?`);
+      if (confirmation) {
+        // Chuyển đến liên kết Telegram
+        window.open(telegramLink, "_blank");
+      }
+    });
+  });
+}
 
   
 document.addEventListener('DOMContentLoaded', () => {  
@@ -6834,8 +6822,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Tạo HTML cho danh sách nhân vật
   const charactersHTML = allCharacters
-    .map(
-      (character) => `
+  .map((character) => {
+    const telegramLink = character.telegramLink || "#"; // Gán "#" nếu không có liên kết
+    return `
       <div class="recommendation-item" onclick="displayCharacterDetails('${character.name}')">
         <div class="character-card">
           <img src="${character.img}" alt="${character.name}">
@@ -6845,14 +6834,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <p>Số đo: ${character.measurements}</p>
             <p>${character.rating}</p>
             <p>Ngày gia nhập: ${character.joinedDate}</p>
-            <button class="message-button" data-name="${character.name}" data-link="${character.telegramLink || '#'}">
+            <button class="message-button" data-name="${character.name}" data-link="${telegramLink}">
               Gửi tin nhắn
             </button>
           </div>
         </div>
-      </div>`
-    )
-    .join("");
+      </div>
+    `;
+  })
+  .join("");
+
+
 
   // Gán nội dung HTML vào phần tử characterList
   characterListDiv.innerHTML = charactersHTML;
@@ -6885,6 +6877,32 @@ function searchCharacters() {
   displayCharacters(filteredCharacters);
 }
 
+function addMessageButtonEventListeners() {
+  document.querySelectorAll(".message-button").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
+      const characterName = button.getAttribute("data-name");
+      const telegramLink = button.getAttribute("data-link");
+
+      // Kiểm tra nếu liên kết bị thiếu hoặc không hợp lệ
+      if (!telegramLink || telegramLink === "#" || telegramLink.trim() === "null") {
+        alert(`Không tìm thấy liên kết Telegram cho ${characterName}.`);
+        return;
+      }
+
+      // Xác nhận trước khi chuyển hướng
+      const confirmation = confirm(`Bạn có chắc chắn muốn liên hệ đến ${characterName}?`);
+
+      if (confirmation) {
+        // Ẩn tất cả các nút sau khi xác nhận
+        hideAllMessageButtons();
+
+        // Chuyển hướng đến liên kết Telegram
+        window.open(telegramLink, "_blank");
+      }
+    });
+  });
+}
 
 
 
@@ -6907,36 +6925,7 @@ function restoreButtonState() {
   });
 }
 
-function addMessageButtonEventListeners() {
-  document.querySelectorAll(".message-button").forEach(button => {
-    button.addEventListener("click", (event) => {
-      event.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài
-      const characterName = event.target.getAttribute("data-name");
-      const telegramLink = event.target.getAttribute("data-link");
 
-      if (!telegramLink) {
-        alert(`Không tìm thấy liên kết Telegram cho ${characterName}.`);
-        return;
-      }
-
-      // Xác nhận hành động trước khi gửi tin nhắn
-      const confirmation = confirm(`Bạn có chắc chắn muốn liên hệ đến ${characterName}?`);
-
-      if (confirmation) {
-        // Ẩn tất cả các nút sau khi xác nhận
-        hideAllMessageButtons();
-
-        // Mở liên kết Telegram
-        window.open(telegramLink, "_blank");
-      }
-    });
-  });
-}
-
-
-
-// Khôi phục trạng thái nút khi tải trang
-document.addEventListener("DOMContentLoaded", restoreButtonState);
 
 
 // Hàm hiển thị chi tiết nhân vật
