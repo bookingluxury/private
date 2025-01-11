@@ -692,88 +692,88 @@ checkLocation();
       </div>
       <div class="stat-item time-box">
         <i class="fas fa-clock"></i>
-        <span>Time:</span>
-        <strong id="userTime">00:00:00</strong>
+        <span>Thời gian còn lại:</span>
+        <strong id="userTime">20:00</strong>
       </div>
     </div>
-  
+    
     <script>
+      // Khởi tạo dữ liệu ban đầu
+      let online = parseInt(localStorage.getItem("online")) || 204;
+      let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 3887;
+      let visitCount = parseInt(localStorage.getItem("visitCount")) || 146483;
+    
+      // Giới hạn thời gian truy cập (20 phút)
+      const MAX_TIME = 30 * 60; // 30 phút = 1800 giây
+let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
+    
+      function updateOnline() {
+        const change = Math.floor(Math.random() * 10) - 5;
+        online = Math.max(100, online + change); // Đảm bảo không nhỏ hơn 100
+        document.getElementById("online").innerText = online;
+        localStorage.setItem("online", online);
+      }
+    
+      function updateVipMembers() {
+        vipMembers++;
+        document.getElementById("vipMembers").innerText = vipMembers;
+        localStorage.setItem("vipMembers", vipMembers);
+      }
+    
+      function updateVisitCount() {
+        const increment = Math.floor(Math.random() * 50) + 1;
+        visitCount += increment;
+        document.getElementById("visitCount").innerText = visitCount;
+        localStorage.setItem("visitCount", visitCount);
+      }
+    
+      function updateRemainingTime() {
+  if (remainingTime > 0) {
+    remainingTime--;
+    localStorage.setItem("remainingTime", remainingTime);
 
-const countryToTimezone = {
-    Vietnam: "Asia/Ho_Chi_Minh",
-    USA: "America/New_York",
-    Korea: "Asia/Seoul",
-    Japan: "Asia/Tokyo",
-    Cambodia: "Asia/Phnom_Penh",
-    Thailand: "Asia/Bangkok",
-    Australia: "Australia/Sydney",
-    Taiwan: "Asia/Taipei",
-  };
+    const minutes = Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60;
 
-  // Lấy dữ liệu từ localStorage hoặc sử dụng giá trị mặc định
-          let online = parseInt(localStorage.getItem("online")) || 457;
-          let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 3768;
-          let visitCount = parseInt(localStorage.getItem("visitCount")) || 105782;
-  
-          function updateOnline() {
-              const changes = [5, 13, 24, 32, 15, 11, 22, 11, 15, 17, 5, 17, 4, 19, 22, 12, 15, 29, 7, 12, 22, 11, 7, 12];
-              let change = changes[Math.floor(Math.random() * changes.length)];
-              if (Math.random() < 0.5) change = -change; // Có 50% khả năng giảm
-  
-              online = Math.max(147, Math.min(312, online + change));
-              document.getElementById("online").innerText = online;
-              localStorage.setItem("online", online);
-          }
-  
-          function updateVipMembers() {
-              vipMembers += 1;
-              document.getElementById("vipMembers").innerText = vipMembers;
-              localStorage.setItem("vipMembers", vipMembers);
-          }
-  
-          function updateVisitCount() {
-              visitCount += Math.floor(Math.random() * 50) + 1;
-              document.getElementById("visitCount").innerText = visitCount;
-              localStorage.setItem("visitCount", visitCount);
-          }
-          function updateUserTime() {
-    const userLocation = JSON.parse(localStorage.getItem("userLocation")) || { country: "Vietnam" };
+    document.getElementById("userTime").innerText =
+      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  } else {
+    document.getElementById("userTime").innerText = "Hết giờ!";
+    alert("Bạn đã hết thời gian truy cập trong ngày.");
+    clearInterval(timerInterval);
 
-    console.log("Đang lấy vị trí quốc gia:", userLocation); // Debug vị trí quốc gia
-    const timeZone = countryToTimezone[userLocation.country];
-
-    if (!timeZone) {
-        console.warn("Không tìm thấy múi giờ cho quốc gia:", userLocation.country);
-        document.getElementById("userTime").innerText = "00:00:00"; // Hiển thị giá trị mặc định
-        return;
-    }
-
-    // Cập nhật thời gian theo múi giờ
-    const now = new Date().toLocaleTimeString("vi-VN", { timeZone });
-    document.getElementById("userTime").innerText = now;
+    // Chặn tương tác hoặc hiển thị thông báo toàn màn hình
+    document.body.innerHTML =
+      "<h1 style='text-align:center;color:red;'>Bạn đã hết thời gian truy cập trong ngày. Quay lại vào ngày mai!</h1>";
+  }
 }
-
-
-function initializeUserLocation() {
-    if (!localStorage.getItem("userLocation")) {
-        const defaultLocation = { country: "Vietnam" };
-        localStorage.setItem("userLocation", JSON.stringify(defaultLocation));
-    }
-    console.log("User location từ localStorage:", JSON.parse(localStorage.getItem("userLocation")));
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    initializeUserLocation();
-    updateUserTime();
-
-    // Cập nhật thời gian mỗi giây
-    setInterval(updateUserTime, 1000);
-});
-
-  </script>
-</body>
-
-</html>
+    
+      function resetDailyTime() {
+        const lastVisit = localStorage.getItem("lastVisitDate");
+        const today = new Date().toLocaleDateString();
+    
+        if (lastVisit !== today) {
+          localStorage.setItem("lastVisitDate", today);
+          remainingTime = MAX_TIME;
+          localStorage.setItem("remainingTime", remainingTime);
+        }
+      }
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        resetDailyTime();
+        updateRemainingTime();
+        timerInterval = setInterval(updateRemainingTime, 1000);
+    
+        // Cập nhật số liệu liên tục
+        setInterval(updateOnline, 5000); // Cập nhật mỗi 5 giây
+        setInterval(updateVipMembers, 600000);
+        setInterval(updateVisitCount, 10000); // Cập nhật mỗi 10 giây
+      });
+    </script>
+    
+  </body>
+  
+  </html>
 
 
   <!DOCTYPE html>
