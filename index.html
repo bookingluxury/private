@@ -683,92 +683,87 @@ checkLocation();
       <div class="stat-item">
         <i class="fas fa-check-circle"></i>
         <span>Đã dùng dịch vụ</span>
-        <strong id="vipMembers">3887</strong>
+        <strong id="vipMembers">4197</strong>
       </div>
       <div class="stat-item">
         <i class="fas fa-chart-line"></i>
         <span>Tổng lượt truy cập</span>
-        <strong id="visitCount">146483</strong>
+        <strong id="visitCount">218483</strong>
       </div>
       <div class="stat-item time-box">
         <i class="fas fa-clock"></i>
         <span>Thời gian còn lại:</span>
-        <strong id="userTime">20:00</strong>
+        <strong id="userTime">60:00</strong>
       </div>
     </div>
     
     <script>
-      // Khởi tạo dữ liệu ban đầu
-      let online = parseInt(localStorage.getItem("online")) || 204;
-      let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 3887;
-      let visitCount = parseInt(localStorage.getItem("visitCount")) || 146483;
-    
-      // Giới hạn thời gian truy cập (20 phút)
-      const MAX_TIME = 30 * 60; // 30 phút = 1800 giây
-let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
-    
-      function updateOnline() {
-        const change = Math.floor(Math.random() * 10) - 5;
-        online = Math.max(100, online + change); // Đảm bảo không nhỏ hơn 100
-        document.getElementById("online").innerText = online;
-        localStorage.setItem("online", online);
-      }
-    
-      function updateVipMembers() {
-        vipMembers++;
-        document.getElementById("vipMembers").innerText = vipMembers;
-        localStorage.setItem("vipMembers", vipMembers);
-      }
-    
-      function updateVisitCount() {
-        const increment = Math.floor(Math.random() * 50) + 1;
-        visitCount += increment;
-        document.getElementById("visitCount").innerText = visitCount;
-        localStorage.setItem("visitCount", visitCount);
-      }
-    
-      function updateRemainingTime() {
-  if (remainingTime > 0) {
-    remainingTime--;
-    localStorage.setItem("remainingTime", remainingTime);
+    const MAX_TIME = 60 * 60; // 60 phút = 3600 giây
+  let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
+  let online = parseInt(localStorage.getItem("online")) || 204;
+  let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 4917;
+  let visitCount = parseInt(localStorage.getItem("visitCount")) || 218483;
 
-    const minutes = Math.floor(remainingTime / 60);
-    const seconds = remainingTime % 60;
+  function resetDailyTime() {
+    const lastVisit = localStorage.getItem("lastVisitDate");
+    const today = new Date().toLocaleDateString();
 
-    document.getElementById("userTime").innerText =
-      `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-  } else {
-    document.getElementById("userTime").innerText = "Hết giờ!";
-    alert("Bạn đã hết thời gian truy cập trong ngày.");
-    clearInterval(timerInterval);
-
-    // Chặn tương tác hoặc hiển thị thông báo toàn màn hình
-    document.body.innerHTML =
-      "<h1 style='text-align:center;color:red;'>Bạn đã hết thời gian truy cập trong ngày. Quay lại vào ngày mai!</h1>";
+    if (lastVisit !== today) {
+      localStorage.setItem("lastVisitDate", today);
+      remainingTime = MAX_TIME;
+      localStorage.setItem("remainingTime", remainingTime);
+    }
   }
+
+  function updateRemainingTime() {
+    if (remainingTime > 0) {
+      remainingTime--;
+      localStorage.setItem("remainingTime", remainingTime);
+
+      const minutes = Math.floor(remainingTime / 60);
+      const seconds = remainingTime % 60;
+      document.getElementById("userTime").innerText =
+        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    } else {
+      document.getElementById("userTime").innerText = "Hết giờ!";
+      clearInterval(timerInterval);
+      document.body.innerHTML =
+        "<h1 style='text-align:center;color:red;'>Bạn đã hết thời gian truy cập trong ngày. Quay lại vào ngày mai!</h1>";
+      alert("Bạn đã hết thời gian truy cập trong ngày.");
+    }
+  }
+
+  function updateOnline() {
+  const change = Math.floor(Math.random() * 41) - 20; // Dao động từ -20 đến +20
+  online = Math.max(200, online + change); // Đảm bảo online không nhỏ hơn 100
+  document.getElementById("online").innerText = online.toLocaleString(); // Hiển thị dạng số
+  localStorage.setItem("online", online); // Lưu vào localStorage
 }
-    
-      function resetDailyTime() {
-        const lastVisit = localStorage.getItem("lastVisitDate");
-        const today = new Date().toLocaleDateString();
-    
-        if (lastVisit !== today) {
-          localStorage.setItem("lastVisitDate", today);
-          remainingTime = MAX_TIME;
-          localStorage.setItem("remainingTime", remainingTime);
-        }
-      }
-    
-      document.addEventListener("DOMContentLoaded", () => {
-        resetDailyTime();
-        updateRemainingTime();
-        timerInterval = setInterval(updateRemainingTime, 1000);
-    
-        // Cập nhật số liệu liên tục
-        setInterval(updateOnline, 5000); // Cập nhật mỗi 5 giây
-        setInterval(updateVipMembers, 600000);
-        setInterval(updateVisitCount, 10000); // Cập nhật mỗi 10 giây
-      });
+
+
+  function updateVipMembers() {
+    vipMembers++;
+    document.getElementById("vipMembers").innerText = vipMembers.toLocaleString();
+    localStorage.setItem("vipMembers", vipMembers);
+  }
+
+  function updateVisitCount() {
+    const increment = Math.floor(Math.random() * 50) + 1;
+    visitCount += increment;
+    document.getElementById("visitCount").innerText = visitCount.toLocaleString();
+    localStorage.setItem("visitCount", visitCount);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    resetDailyTime();
+    updateRemainingTime();
+    timerInterval = setInterval(updateRemainingTime, 1000);
+
+    setInterval(updateOnline, 5000);
+    setInterval(updateVipMembers, 600000);
+    setInterval(updateVisitCount, 10000);
+  });
+
     </script>
     
   </body>
@@ -2043,44 +2038,22 @@ messageButton: {
   }
   
   function loadImageGallery(images) {
-    resetImageGallery();  // Reset trước khi load ảnh mới
-  
-    images.forEach(url => {
-      const img = document.createElement('img');
-      img.src = url;
-      img.alt = 'Gallery Image';
-      img.classList.add('gallery-image');
-      img.onclick = () => openModal(url);  // Gọi openModal khi click vào ảnh
-      imageGallery.appendChild(img);
-    });
-  }
-  
+  resetImageGallery();
 
-
-  function addMessageButtonEventListeners() {
-  document.querySelectorAll(".message-button").forEach(button => {
-    button.addEventListener("click", (event) => {
-      event.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
-
-      const characterName = button.getAttribute("data-name");
-      const telegramLink = button.getAttribute("data-link");
-
-      // Kiểm tra nếu liên kết Telegram không hợp lệ
-      if (!telegramLink || telegramLink.trim() === "" || telegramLink === "#") {
-        alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);
-        return;
-      }
-
-      // Hiển thị xác nhận
-      const confirmation = confirm(`Bạn có muốn liên hệ với ${characterName}?`);
-      if (confirmation) {
-        // Chuyển đến liên kết Telegram
-        window.open(telegramLink, "_blank");
-      }
-    });
+  images.forEach(url => {
+    const img = document.createElement('img');
+    img.setAttribute('loading', 'lazy'); // Thêm Lazy Loading
+    img.src = url;
+    img.alt = 'Gallery Image';
+    img.classList.add('gallery-image');
+    img.onclick = () => openModal(url);
+    imageGallery.appendChild(img);
   });
 }
 
+  
+
+function addMessageButtonEventListeners(){document.querySelectorAll(".message-button").forEach(button=>{button.addEventListener("click",(event)=>{event.stopPropagation();const characterName=button.getAttribute("data-name");const telegramLink=button.getAttribute("data-link");if(!telegramLink||telegramLink.trim()===""||telegramLink==="#"){alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);return}const confirmation=confirm(`Bạn cómuốn liên hệvới ${characterName}?`);if(confirmation){window.open(telegramLink,"_blank")}})})}
 
 
 
@@ -2088,238 +2061,22 @@ messageButton: {
 document.addEventListener("DOMContentLoaded", restoreButtonState);
 
 
-// Hàm ẩn tất cả các nút "Gửi tin nhắn"
-function hideAllMessageButtons() {
-  document.querySelectorAll(".message-button").forEach(button => {
-    button.style.display = "none";
-    // Lưu trạng thái ẩn nút vào localStorage
-    localStorage.setItem(button.getAttribute("data-name"), 'hidden');
-  });
-}
-
-// Hàm để khôi phục trạng thái ẩn của các nút khi tải lại trang
-function restoreButtonState() {
-  document.querySelectorAll(".message-button").forEach(button => {
-    const characterName = button.getAttribute("data-name");
-    if (localStorage.getItem(characterName) === 'hidden') {
-      button.style.display = "none"; // Ẩn nút đã bị ẩn trước đó
-    }
-  });
-}
+function hideAllMessageButtons(){document.querySelectorAll(".message-button").forEach(button=>{button.style.display="none";localStorage.setItem(button.getAttribute("data-name"),'hidden')})}function restoreButtonState(){document.querySelectorAll(".message-button").forEach(button=>{const characterName=button.getAttribute("data-name");if(localStorage.getItem(characterName)==='hidden'){button.style.display="none"}})}
 
 
 
 
 
 
-
-function displayCharacterDetails(characterName) {
-  const detailsContainer = document.getElementById('details-container');
-  const imageGallery = document.getElementById('image-gallery');
-  const messageButton = document.getElementById('detail-message-button');
-  const character = characterDetails[characterName];
-
-  if (character) {
-    // Gán thông tin chi tiết
-    document.getElementById('detail-name').textContent = character.name;
-    document.getElementById('detail-status').textContent = character.status;
-    document.getElementById('detail-height').textContent = `Chiều cao: ${character.height}`;
-    document.getElementById('detail-measurements').textContent = `Số đo: ${character.measurements}`;
-    document.getElementById('detail-service').textContent = character.service;
-    document.getElementById('detail-duration').textContent = `Thời gian phục vụ: ${character.duration}`;
-
-    // Hiển thị hình ảnh
-    imageGallery.innerHTML = "";
-    character.images.forEach((url) => {
-      const img = document.createElement('img');
-      img.src = url;
-      img.alt = character.name;
-      imageGallery.appendChild(img);
-    });
-
-    // Nút gửi tin nhắn
-    messageButton.textContent = "Gửi tin nhắn";
-    messageButton.onclick = () => {
-      window.location.href = character.telegramLink; // Chuyển hướng trực tiếp
-    };
-
-    // Hiển thị chi tiết
-    detailsContainer.style.display = 'block';
-  }
-}
+function displayCharacterDetails(characterName){const detailsContainer=document.getElementById('details-container');const imageGallery=document.getElementById('image-gallery');const messageButton=document.getElementById('detail-message-button');const character=characterDetails[characterName];if(character){document.getElementById('detail-name').textContent=character.name;document.getElementById('detail-status').textContent=character.status;document.getElementById('detail-height').textContent=`Chiều cao:${character.height}`;document.getElementById('detail-measurements').textContent=`Sốđo:${character.measurements}`;document.getElementById('detail-service').textContent=character.service;document.getElementById('detail-duration').textContent=`Thời gian phục vụ:${character.duration}`;imageGallery.innerHTML="";character.images.forEach((url)=>{const img=document.createElement('img');img.src=url;img.alt=character.name;imageGallery.appendChild(img)});messageButton.textContent="Gửi tin nhắn";messageButton.onclick=()=>{window.location.href=character.telegramLink};detailsContainer.style.display='block'}}
 
 
 
 
-
-// Hàm đóng chi tiết
-function closeDetails() {
-  const detailsContainer = document.getElementById('details-container');
-  if (detailsContainer) {
-    detailsContainer.style.display = 'none';
-    const buttons = document.querySelectorAll('.message-button');
-    buttons.forEach((button) => {
-      button.disabled = false;
-      button.style.backgroundColor = ""; // Reset màu nút
-      button.style.cursor = "pointer";
-    });
-  }
-}
-
-
-document.querySelector('.close-modal').addEventListener('click', closeModal);
-document.getElementById('imageModal').addEventListener('click', function (event) {
-  if (event.target === this) {
-    closeModal();
-  }
-});
-
-
-
-
-  // Hàm load hình ảnh vào thư viện
-  function loadImageGallery(images) {
-    const imageGallery = document.getElementById('image-gallery');
-    imageGallery.innerHTML = ''; // Xóa nội dung cũ
-  
-    images.forEach(url => {
-      const img = document.createElement('img');
-      img.src = url;
-      img.classList.add('gallery-image');
-      img.onclick = () => openModal(url);
-      imageGallery.appendChild(img);
-    });
-  }
-  
-  function openModal(imageSrc) {
-  const modal = document.getElementById('imageModal');
-  const modalImage = document.getElementById('modalImage');
-
-  if (modal && modalImage) {
-    modal.style.display = 'flex';
-    modalImage.src = imageSrc;
-    document.body.style.overflow = 'hidden'; // Tắt cuộn trang
-  } else {
-    console.error("Không tìm thấy modal hoặc modalImage");
-  }
-}
-
-
-function closeModal() {
-  const modal = document.getElementById('imageModal');
-  console.log("Đang cố gắng đóng modal", modal);
-  if (modal) {
-    modal.style.display = 'none'; // Ẩn modal
-    document.body.style.overflow = 'auto'; // Bật lại cuộn trang
-  }
-}
-
-// Đóng modal khi nhấn bên ngoài nội dung modal
-window.addEventListener('click', (event) => {
-  const modal = document.getElementById('imageModal');
-  if (modal && event.target === modal) {
-    closeModal();
-  }
-});
-
-function addMessageButtonEventListeners() {
-  document.querySelectorAll(".message-button").forEach(button => {
-    button.addEventListener("click", (event) => {
-      event.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
-
-      const characterName = button.getAttribute("data-name");
-      const telegramLink = button.getAttribute("data-link");
-
-      // Kiểm tra nếu liên kết Telegram không hợp lệ
-      if (!telegramLink || telegramLink.trim() === "" || telegramLink === "#") {
-        alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);
-        return;
-      }
-
-      // Hiển thị xác nhận
-      const confirmation = confirm(`Bạn có muốn liên hệ với ${characterName}?`);
-      if (confirmation) {
-        // Chuyển đến liên kết Telegram
-        window.open(telegramLink, "_blank");
-      }
-    });
-  });
-}
-
-  
-document.addEventListener('DOMContentLoaded', () => {  
-    const closeButton = document.getElementById('closeButton');  
-    const characterSection = document.getElementById('characterSection');  
-    const menuButton = document.getElementById('menuButton');  
-    const menuPanel = document.getElementById('menuPanel');  
-    const spinner = document.getElementById('spinner'); // Thêm phần tử spinner  
-
-    if (!closeButton) console.error("Không tìm thấy phần tử với ID 'closeButton'");  
-    if (!characterSection) console.error("Không tìm thấy phần tử với ID 'characterSection'");  
-    if (!menuButton) console.error("Không tìm thấy phần tử với ID 'menuButton'");  
-    if (!menuPanel) console.error("Không tìm thấy phần tử với ID 'menuPanel'");  
-    if (!spinner) console.error("Không tìm thấy phần tử với ID 'spinner'");  
-
-    // Hàm hiển thị spinner  
-    function showSpinner() {  
-        if (spinner) {  
-            spinner.classList.remove('hidden');  
-        }  
-    }  
-
-    // Hàm ẩn spinner  
-    function hideSpinner() {  
-        if (spinner) {  
-            spinner.classList.add('hidden');  
-        }  
-    }  
-
-    // Hàm ẩn danh sách nhân vật  
-    function closeCharacterSection() {  
-        if (characterSection) {  
-            characterSection.classList.add('hidden');  
-            characterSection.style.display = 'none';  
-        }  
-    }  
-
-    // Hàm hiển thị danh sách nhân vật  
-    function showCharacterSection() {  
-        if (characterSection && menuPanel) {  
-            showSpinner(); // Hiển thị spinner khi bắt đầu quá trình tải  
-
-            // Giả sử đây là nơi bạn thực hiện các thao tác bất đồng bộ, ví dụ như gọi API  
-            // Thay thế setTimeout bằng các thao tác thực tế của bạn  
-            setTimeout(() => {  
-                characterSection.classList.remove('hidden');  
-                characterSection.style.display = 'block';  
-                menuPanel.classList.remove('active');  
-
-                hideSpinner(); // Ẩn spinner khi hoàn tất  
-            }, 2000); // Mô phỏng quá trình tải dữ liệu trong 2 giây  
-        }  
-    }  
+function closeDetails(){const detailsContainer=document.getElementById('details-container');if(detailsContainer){detailsContainer.style.display='none';const buttons=document.querySelectorAll('.message-button');buttons.forEach((button)=>{button.disabled=false;button.style.backgroundColor="";button.style.cursor="pointer"})}}document.querySelector('.close-modal').addEventListener('click',closeModal);document.getElementById('imageModal').addEventListener('click',function(event){if(event.target===this){closeModal()}});function loadImageGallery(images){const imageGallery=document.getElementById('image-gallery');imageGallery.innerHTML='';images.forEach(url=>{const img=document.createElement('img');img.src=url;img.classList.add('gallery-image');img.onclick=()=>openModal(url);imageGallery.appendChild(img)})}function openModal(imageSrc){const modal=document.getElementById('imageModal');const modalImage=document.getElementById('modalImage');if(modal&&modalImage){modal.style.display='flex';modalImage.src=imageSrc;document.body.style.overflow='hidden'}else{console.error("Không tìm thấy modal hoặc modalImage")}}function closeModal(){const modal=document.getElementById('imageModal');console.log("Đang cố gắng đóng modal",modal);if(modal){modal.style.display='none';document.body.style.overflow='auto'}}window.addEventListener('click',(event)=>{const modal=document.getElementById('imageModal');if(modal&&event.target===modal){closeModal()}});function addMessageButtonEventListeners(){document.querySelectorAll(".message-button").forEach(button=>{button.addEventListener("click",(event)=>{event.stopPropagation();const characterName=button.getAttribute("data-name");const telegramLink=button.getAttribute("data-link");if(!telegramLink||telegramLink.trim()===""||telegramLink==="#"){alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);return}const confirmation=confirm(`Bạn cómuốn liên hệvới ${characterName}?`);if(confirmation){window.open(telegramLink,"_blank")}})})}document.addEventListener('DOMContentLoaded',()=>{const closeButton=document.getElementById('closeButton');const characterSection=document.getElementById('characterSection');const menuButton=document.getElementById('menuButton');const menuPanel=document.getElementById('menuPanel');const spinner=document.getElementById('spinner');if(!closeButton)console.error("Không tìm thấy phần tử với ID 'closeButton'");if(!characterSection)console.error("Không tìm thấy phần tử với ID 'characterSection'");if(!menuButton)console.error("Không tìm thấy phần tử với ID 'menuButton'");if(!menuPanel)console.error("Không tìm thấy phần tử với ID 'menuPanel'");if(!spinner)console.error("Không tìm thấy phần tử với ID 'spinner'");function showSpinner(){if(spinner){spinner.classList.remove('hidden')}}function hideSpinner(){if(spinner){spinner.classList.add('hidden')}}function closeCharacterSection(){if(characterSection){characterSection.classList.add('hidden');characterSection.style.display='none'}}function showCharacterSection(){if(characterSection&&menuPanel){showSpinner();setTimeout(()=>{characterSection.classList.remove('hidden');characterSection.style.display='block';menuPanel.classList.remove('active');hideSpinner()},2000)}}
 
     // Gán sự kiện click vào menu "Đề xuất gần bạn" để hiển thị danh sách nhân vật  
-    const menuLink = document.querySelector('.menu-panel a');  
-    if (menuLink) {  
-        menuLink.addEventListener('click', (e) => {  
-            e.preventDefault();  
-            showCharacterSection();  
-        });  
-    } else {  
-        console.error('Không tìm thấy phần tử .menu-panel a');  
-    }  
-
-    // Gán sự kiện click vào nút menu để mở/đóng menu panel và ẩn danh sách nhân vật  
-    if (menuButton) {  
-        menuButton.addEventListener('click', () => {  
-            if (menuPanel) {  
-                menuPanel.classList.toggle('active');  
-                closeCharacterSection();  
-            }  
-        });  
-    }  
-});  
+    const menuLink=document.querySelector('.menu-panel a');if(menuLink){menuLink.addEventListener('click',(e)=>{e.preventDefault();showCharacterSection()})}else{console.error('Không tìm thấy phần tử .menu-panel a')}if(menuButton){menuButton.addEventListener('click',()=>{if(menuPanel){menuPanel.classList.toggle('active');closeCharacterSection()}})}}); 
     </script>
   </body>
   </html>
@@ -2460,6 +2217,14 @@ document.addEventListener('DOMContentLoaded', () => {
   box-shadow: 0 4px 10px rgba(255, 78, 205, 0.3); /* Giảm đổ bóng */
 }
 
+img.lazy {
+  filter: blur(5px);
+  transition: filter 0.3s;
+}
+
+img.lazy-loaded {
+  filter: blur(0);
+}
 
 
 
@@ -2473,150 +2238,31 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>  
   
   <div id="girlContent" class="content-section" style="display: none; position: relative;">  
-  
     <!-- Tiêu đề Thư viện -->  
-    <img src="https://i.ibb.co/yVJN2kc/gif4-1.gif" alt="Tiêu đề Thư Viện" class="gallery-title-image" width="99%" height="200">  
-      <!-- Nút ẩn thư viện -->  
-      <button class="close-library-button" onclick="hideContent('girlContent')">  
-        <i class="fas fa-times"></i></button>  
+    <img src="https://i.ibb.co/yVJN2kc/gif4-1.gif" alt="Tiêu đề Thư Viện" class="gallery-title-image" width="99%" height="200" loading="lazy">  
+      
+    <!-- Nút ẩn thư viện -->  
+    <button class="close-library-button" onclick="hideContent('girlContent')">  
+        <i class="fas fa-times"></i>
+    </button>  
       
     <!-- Thư viện ảnh -->  
     <div class="gallery" id="gallery">  
-      <!-- Thêm các hình ảnh ở đây -->  
-      <img src="https://via.placeholder.com/300" alt="Sample Image 1" onclick="openGirlModal(this.src)">  
-      <img src="https://via.placeholder.com/300" alt="Sample Image 2" onclick="openGirlModal(this.src)">  
-      <img src="https://via.placeholder.com/300" alt="Sample Image 3" onclick="openGirlModal(this.src)">  
-      <!-- Bạn có thể thêm thêm hình ảnh theo nhu cầu -->  
+        <!-- Thêm Lazy Loading cho hình ảnh -->
+        <img src="https://via.placeholder.com/300" alt="Sample Image 1" onclick="openGirlModal(this.src)" loading="lazy">  
+        <img src="https://via.placeholder.com/300" alt="Sample Image 2" onclick="openGirlModal(this.src)" loading="lazy">  
+        <img src="https://via.placeholder.com/300" alt="Sample Image 3" onclick="openGirlModal(this.src)" loading="lazy">  
+        <!-- Thêm thêm hình ảnh nếu cần -->  
     </div>  
-  </div>  
+</div>  
 
-
-  <div id="girlImageModal" class="girl-image-modal">  
+<div id="girlImageModal" class="girl-image-modal">  
     <button class="girl-close-button" onclick="closeGirlModal()">&times;</button>  
-    <img id="girlModalImage" src="" alt="Girl Xinh Image">  
-  </div>  
-  
+    <img id="girlModalImage" src="" alt="Girl Xinh Image" loading="lazy">  
+</div>  
+
   <script>  
-    // Function to toggle content visibility and close modal  
-    function toggleContent(sectionId) {  
-      const section = document.getElementById(sectionId);  
-      const isVisible = section.style.display === 'block';  
-      if (isVisible) {  
-        hideContent(sectionId);  
-      } else {  
-        showContent(sectionId);  
-      }  
-    }  
-
-    // Hiển thị nội dung theo ID  
-    function showContent(sectionId) {  
-      const sections = document.querySelectorAll('.content-section');  
-      sections.forEach(section => section.style.display = 'none'); // Ẩn tất cả nội dung  
-
-      const sectionToShow = document.getElementById(sectionId);  
-      if (sectionToShow) {  
-        sectionToShow.style.display = 'block'; // Hiển thị nội dung  
-      } else {  
-        console.warn(`Section with ID "${sectionId}" not found.`);  
-      }  
-
-      // Đóng modal khi mở một nội dung mới  
-      closeGirlModal();  
-    }  
-    
-  // Hàm đóng nội dung "girlContent"
-function hideGirlContent() {
-    const girlContent = document.getElementById('girlContent');
-    if (girlContent) {
-        girlContent.style.display = 'none'; // Ẩn girlContent
-    } else {
-        console.error('Không tìm thấy phần tử girlContent');
-    }
-}
-
-// Hàm đóng modal "girlImageModal"
-function closeGirlModal() {
-    const modal = document.getElementById('girlImageModal');
-    if (modal) {
-        modal.style.display = 'none'; // Ẩn modal
-    } else {
-        console.error('Không tìm thấy modal girlImageModal');
-    }
-}
-
-// Gắn sự kiện khi DOM đã tải xong
-document.addEventListener('DOMContentLoaded', () => {
-    // Gắn sự kiện đóng "girlContent" khi nhấn nút menu
-    const menuButton = document.getElementById('menuButton'); // ID nút menu
-    if (menuButton) {
-        menuButton.addEventListener('click', hideGirlContent);
-    }
-
-    // Gắn sự kiện cho các nút khác
-    const otherButtons = document.querySelectorAll('.other-button'); // Thay class bằng class các nút khác
-    otherButtons.forEach((button) => {
-        button.addEventListener('click', hideGirlContent);
-    });
-
-    // Gắn sự kiện cho nút đóng "girlContent"
-    const closeButton = document.querySelector('.close-library-button'); // Nút đóng "girlContent"
-    if (closeButton) {
-        closeButton.addEventListener('click', hideGirlContent);
-    }
-
-    // Gắn sự kiện cho nút đóng modal "girlImageModal"
-    const closeModalButton = document.querySelector('.girl-close-button'); // Nút đóng modal ảnh lớn
-    if (closeModalButton) {
-        closeModalButton.addEventListener('click', closeGirlModal);
-    }
-});
-
-    
-    // Hàm làm mới thư viện ảnh  
-    function refreshGallery(images) {  
-      const gallery = document.getElementById('gallery');  
-      if (!gallery) {  
-        console.warn('Gallery element not found.');  
-        return;  
-      }  
-
-      gallery.innerHTML = ''; // Làm trống thư viện  
-
-      images.forEach(imageUrl => {  
-        const img = document.createElement('img');  
-        img.src = imageUrl;  
-        img.alt = 'Girl Xinh Image';  
-        img.onclick = () => openGirlModal(imageUrl);  
-        gallery.appendChild(img);  
-      });  
-    }  
-    
-    function openGirlModal(imageUrl) {  
-      const modal = document.getElementById('girlImageModal');  
-      const modalImage = document.getElementById('girlModalImage');  
-
-      if (modal && modalImage) {  
-        modal.style.display = 'flex';  
-        modalImage.src = imageUrl;  
-      } else {  
-        console.warn('Girl Image Modal or Image Element not found.');  
-      }  
-    }  
-    
-    function closeGirlModal() {  
-      const modal = document.getElementById('girlImageModal');  
-      if (modal) {  
-        modal.style.display = 'none';  
-      }  
-    }  
-
-    // Đóng modal khi nhấn vào vùng ngoài ảnh  
-    window.addEventListener('click', function(event) {  
-      const modal = document.getElementById('girlImageModal');  
-      if (event.target === modal) {  
-        closeGirlModal();  
-      }  
-    });  
+  function toggleContent(sectionId){const section=document.getElementById(sectionId);const isVisible=section.style.display==='block';if(isVisible){hideContent(sectionId)}else{showContent(sectionId)}}function showContent(sectionId){const sections=document.querySelectorAll('.content-section');sections.forEach(section=>section.style.display='none');const sectionToShow=document.getElementById(sectionId);if(sectionToShow){sectionToShow.style.display='block'}else{console.warn(`Section with ID"${sectionId}"not found.`)}closeGirlModal()}function hideGirlContent(){const girlContent=document.getElementById('girlContent');if(girlContent){girlContent.style.display='none'}else{console.error('Không tìm thấy phần tử girlContent')}}function closeGirlModal(){const modal=document.getElementById('girlImageModal');if(modal){modal.style.display='none'}else{console.error('Không tìm thấy modal girlImageModal')}}document.addEventListener('DOMContentLoaded',()=>{const menuButton=document.getElementById('menuButton');if(menuButton){menuButton.addEventListener('click',hideGirlContent)}const otherButtons=document.querySelectorAll('.other-button');otherButtons.forEach((button)=>{button.addEventListener('click',hideGirlContent)});const closeButton=document.querySelector('.close-library-button');if(closeButton){closeButton.addEventListener('click',hideGirlContent)}const closeModalButton=document.querySelector('.girl-close-button');if(closeModalButton){closeModalButton.addEventListener('click',closeGirlModal)}});function refreshGallery(images){const gallery=document.getElementById('gallery');if(!gallery){console.warn('Gallery element not found.');return}gallery.innerHTML='';images.forEach(imageUrl=>{const img=document.createElement('img');img.classList.add('lazy');img.setAttribute('data-src',imageUrl);img.alt='Girl Xinh Image';img.onclick=()=>openGirlModal(imageUrl);gallery.appendChild(img)});setupLazyLoading()}function setupLazyLoading(){const lazyImages=document.querySelectorAll('img.lazy');const observer=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){const img=entry.target;img.src=img.dataset.src;img.classList.remove('lazy');observer.unobserve(img)}})});lazyImages.forEach(img=>observer.observe(img))}function openGirlModal(imageUrl){const modal=document.getElementById('girlImageModal');const modalImage=document.getElementById('girlModalImage');if(modal&&modalImage){modal.style.display='flex';modalImage.src=imageUrl}else{console.warn('Girl Image Modal or Image Element not found.')}}function closeGirlModal(){const modal=document.getElementById('girlImageModal');if(modal){modal.style.display='none'}}window.addEventListener('click',function(event){const modal=document.getElementById('girlImageModal');if(event.target===modal){closeGirlModal()}});
 
     // Tạo thư viện ban đầu
     document.addEventListener('DOMContentLoaded', () => {
@@ -5659,11 +5305,16 @@ function showPhotoGallery18Plus() {
   const gallery = document.getElementById('photoGallery18Plus');
   if (gallery) {
     gallery.style.display = 'block';
-    refreshGallery18Plus(images18Plus); // Tải ảnh khi mở thư viện
+
+    // Nếu thư viện chưa được làm mới, tải ảnh
+    if (!gallery.hasChildNodes()) {
+      refreshGallery18Plus(images18Plus);
+    }
   } else {
     console.error('Không tìm thấy phần tử thư viện ảnh 18+');
   }
 }
+
 
 
 // Hàm đóng thư viện ảnh
@@ -5726,11 +5377,31 @@ function refreshGallery18Plus(images) {
 
   images.forEach(imageUrl => {
     const img = document.createElement('img');
-    img.src = imageUrl;
+    img.classList.add('lazy'); // Thêm lớp lazy
+    img.setAttribute('data-src', imageUrl); // Sử dụng data-src để Lazy Loading
     img.alt = 'Thư viện 18+';
     img.onclick = () => openModal18Plus(imageUrl); // Gắn sự kiện mở modal
     gallery.appendChild(img);
   });
+
+  // Kích hoạt Lazy Loading sau khi ảnh được thêm
+  setupLazyLoading();
+}
+
+function setupLazyLoading() {
+  const lazyImages = document.querySelectorAll('img.lazy');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src; // Gán src thực tế
+        img.classList.remove('lazy');
+        observer.unobserve(img); // Ngừng quan sát
+      }
+    });
+  });
+
+  lazyImages.forEach(img => observer.observe(img));
 }
 
 function openModal18Plus(imageUrl) {
