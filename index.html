@@ -7355,12 +7355,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <body>  
 
-
-   <!-- Bảng giá -->  
-  <div id="pricing-table" class="pricing-table">
-    <img src="https://i.ibb.co/DVYLsP9/gif3-1.gif" alt="Tiêu đề Bảng Giá" class="pricing-title-image">
-    <button class="close-button" onclick="hidePricingTable()">✖</button>
-    <div class="package-container">
+<div id="pricing-table" class="pricing-table">
+  <img src="https://i.ibb.co/DVYLsP9/gif3-1.gif" alt="Tiêu đề Bảng Giá" class="pricing-title-image">
+  
+  <!-- Tiêu đề bổ sung cho bảng giá -->
+  <p class="pricing-description">
+    Giá dịch vụ tùy theo chất lượng và đối tác lựa chọn. Vui lòng liên hệ nhân viên tư vấn để biết thêm chi tiết
+  </p>
+  
+  <button class="close-button" onclick="hidePricingTable()">✖</button>
+  <div class="package-container">
       <!-- Gói Basic -->
       <div class="package">
         <h2>Dịch vụ Thường</h2>
