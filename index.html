@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -11,6 +9,7 @@
   <title>Chào mừng đến với LUXURY GIRL 🎀</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <body>
   <div class="snowflakes" aria-hidden="true">
     <div class="snowflake">❄</div>
     <div class="snowflake">❄</div>
@@ -19,6 +18,13 @@
     <div class="snowflake">❄</div>
     <div class="snowflake">❄</div>
   </div>
+  
+  <audio id="background-music" autoplay loop>
+    <source src="https://www.dropbox.com/scl/fi/cjilmhd835uwy87tmd8o5/MASHUP-8-IN-1-REMIX-_-NG-H-I-EM-N-KH-NG-x-ANH-L-NG-THI-N-x-ANH-TH-I-NH-N-NH-NG-_-HUYPT-REMIX.mp3?rlkey=2zux8czrqjbzn70gg8uivwb4o&st=47gleojy&dl=1" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ phát nhạc.
+  </audio>
+
+</body>
   <style>
 
 
@@ -114,6 +120,26 @@
         setTimeout(createSnowflake, i * 1000); // Tạo cách nhau 1 giây
       }
     });
+
+	   const audio = document.getElementById("background-music");
+
+  // Kiểm tra xem có thời gian được lưu trong LocalStorage không
+  const savedTime = parseFloat(localStorage.getItem("musicCurrentTime"));
+
+  // Đảm bảo không gán thời gian nếu không hợp lệ
+  if (!isNaN(savedTime)) {
+    audio.currentTime = savedTime; // Gán thời gian lưu trước đó
+  }
+
+  // Khi nhạc phát, lưu thời gian hiện tại vào LocalStorage
+  audio.addEventListener("timeupdate", () => {
+    localStorage.setItem("musicCurrentTime", audio.currentTime);
+  });
+
+  // Xử lý khi người dùng tải lại trang hoặc dừng nhạc
+  window.addEventListener("beforeunload", () => {
+    localStorage.setItem("musicCurrentTime", audio.currentTime);
+  });
   </script>
 </body>
 
