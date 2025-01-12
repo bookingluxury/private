@@ -1605,30 +1605,32 @@ h2:hover::before {
     </div>
  <div id="spinner" class="spinner hidden"></div>  
 
-    <div class="menu-panel" id="menuPanel">
-      <a href="#" onclick="showCharacterSection()">
-        <i class="fas fa-location-arrow"></i>Đề xuất gần bạn</a>
-    
-      <a href="#" onclick="showPricingTable()">
-        <i class="fas fa-dollar-sign"></i>Dịch vụ</a>
-      <a href="#" class="booking-button" onclick="openBookingModal()">
-        <i class="fas fa-calendar-alt"></i>Đặt Lịch</a>
-      <!-- Đổi chỗ với Girl Xinh -->
-      <a href="#" onclick="showContent('girlContent')">
-        <i class="fas fa-calendar-check"></i>Girl Xinh</a>
-      <!-- Đổi chỗ với Đặt Lịch -->
-      <a href="#" onclick="showPhotoGallery18Plus()">
-        <i class="fas fa-image"></i>Ảnh 18+</a>
-      <a href="#" onclick="showVideoGallery()">
-        <i class="fas fa-video"></i>Video 18+</a>
-      <!-- Thêm mới sau Ảnh 18+ -->
-      <a href="#" onclick="showLive18Plus()">
-        <i class="fas fa-play-circle"></i>Live 18+ Section</a>
-      <!-- Thêm mới ở cuối -->
-      <a href="#" onclick="refreshPage()">
-        <i class="fas fa-sync-alt"></i>Load lại trang</a>
-      
-      </div>
+ <div class="menu-panel" id="menuPanel">
+  <a href="#" onclick="showCharacterSection()">
+    <i class="fas fa-location-arrow"></i>Đề xuất gần bạn</a>
+
+  <a href="#" onclick="showPricingTable()">
+    <i class="fas fa-dollar-sign"></i>Dịch vụ</a>
+  <a href="#" class="booking-button" onclick="openBookingModal()">
+    <i class="fas fa-calendar-alt"></i>Đặt Lịch</a>
+  <!-- Đổi chỗ với Girl Xinh -->
+  <a href="#" onclick="showContent('girlContent')">
+    <i class="fas fa-calendar-check"></i> Ngắm Gái Xinh</a>
+  <!-- Đổi chỗ với Đặt Lịch -->
+  <a href="#" onclick="showPhotoGallery18Plus()">
+    <i class="fas fa-image"></i>Ảnh 18+</a>
+  <a href="#" onclick="showVideoGallery()">
+    <i class="fas fa-video"></i>Video 18+</a>
+  <!-- Thêm mới sau Ảnh 18+ -->
+  <a href="#" onclick="showLive18Plus()">
+    <i class="fas fa-play-circle"></i>Live 18+ Section</a>
+  <!-- Thêm mới ở cuối -->
+  <a href="#" onclick="refreshPage()">
+    <i class="fas fa-sync-alt"></i>Làm mới</a>
+    <a href="#" id="recruitmentLink">
+      <i class="fas fa-briefcase"></i> Tuyển Nhân Viên Hệ Thống
+    </a>
+  </div>
  
       <div id="characterSection" class="wide-section"><h2 class="suggestion-title"><img <div id="characterSection" class="wide-section">
         <h2 class="suggestion-title">
@@ -2128,6 +2130,235 @@ function closeDetails(){const detailsContainer=document.getElementById('details-
   </html>
 
 
+
+
+  
+  <!DOCTYPE html>
+  <html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển Nhân Viên Hệ Thống</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+  
+      /* Menu Panel */
+      .menu-panel {
+        width: 200px;
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        z-index: 100000;
+        border-radius: 10px;
+      }
+  
+      .menu-panel a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 10px 5px;
+        border-radius: 5px;
+        margin: 5px 0;
+        z-index: 100000;
+        transition: background-color 0.3s;
+      }
+  
+      .menu-panel a:hover {
+        background-color: #555;
+      }
+  
+      /* Form Container */
+      .form-container {
+        max-width: 500px;
+        margin: 20px auto;
+        background-color: #fff;
+        color: #333;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        display: none; /* Ẩn form mặc định */
+      }
+  
+      .form-container h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .form-container p {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    .form-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-container form input,
+    .form-container form select,
+    .form-container form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      color: #555;
+      transition: border-color 0.3s;
+    }
+
+    .form-container form input:focus,
+    .form-container form select:focus,
+    .form-container form textarea:focus {
+      border-color: #3d3c3a;
+      outline: none;
+    }
+
+    .form-container form button {
+  padding: 12px 20px;
+  background-color: #ffa502;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Thêm hiệu ứng tổng thể */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+  position: relative;
+  overflow: hidden; /* Ẩn phần hiệu ứng vượt ra ngoài nút */
+}
+
+.form-container form button:hover {
+  background-color: #e58e00;
+  transform: translateY(-3px); /* Hiệu ứng nhấn nút nổi lên */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng đổ bóng khi hover */
+}
+
+.form-container form button:active {
+  transform: translateY(1px); /* Hiệu ứng khi bấm */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ hơn */
+}
+
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .custom-close-button {
+
+  padding: 12px 20px;
+  background-color: #ffa502;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Thêm hiệu ứng tổng thể */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+  position: relative;
+  overflow: hidden; /* Ẩn phần hiệu ứng vượt ra ngoài nút */
+}
+
+.custom-close-button:hover {
+  background-color: #c9302c;
+}
+
+
+    </style>
+  </head>
+  <body>
+  
+  <!-- Menu Panel -->
+  <div class="menu-panel">
+    <a href="#" id="recruitmentLink">
+      <i class="fas fa-briefcase"></i> Tuyển Nhân Viên Hệ Thống
+    </a>
+  </div>
+  
+  <div class="form-container" id="recruitmentFormContainer">
+    <h2 class="form-title">Tuyển Nhân Viên Hệ Thống</h2>
+    <p class="form-description">
+      Không yêu cầu kinh nghiệm. Có kinh nghiệm thu nhập sẽ cao hơn.<br> 
+      Để lại thông tin, chúng tôi sẽ liên hệ sớm cho bạn.
+    </p>
+    <form id="recruitmentForm">
+      <input type="text" name="name" placeholder="Họ và tên" required>
+      <input type="number" name="age" placeholder="Tuổi" min="18" max="60" required>
+      <input type="email" name="email" placeholder="Gmail" required>
+      <input type="tel" name="phone" placeholder="Số điện thoại" required>
+      <input type="text" name="address" placeholder="Địa chỉ" required>
+      <select name="position" required>
+        <option value="" disabled selected>Chọn vị trí ứng tuyển</option>
+        <option value="tiepruou">Tiếp rượu</option>
+        <option value="dienhanh">Đi nhanh</option>
+        <option value="quadem">Qua đêm</option>
+        <option value="tuor">Đi tuor</option>
+        <option value="massage">Massage</option>
+      </select>
+      <textarea name="experience" rows="4" placeholder="Kinh nghiệm làm việc (nếu có)"></textarea>
+      <button type="submit">Gửi Ứng Tuyển</button>
+      <button type="button" class="close-button" onclick="closeRecruitmentForm()">Đóng</button>
+    </form>
+  </div>
+  
+  <script>
+    // Hiển thị form ứng tuyển
+    document.getElementById("recruitmentLink").addEventListener("click", (e) => {
+    e.preventDefault(); // Ngăn link chuyển trang
+    const formContainer = document.getElementById("recruitmentFormContainer");
+    formContainer.style.display = "block"; // Hiển thị form
+    formContainer.scrollIntoView({ behavior: "smooth" }); // Cuộn đến form
+  });
+// Đóng form ứng tuyển
+function closeRecruitmentForm() {
+  const formContainer = document.getElementById("recruitmentFormContainer");
+  formContainer.style.display = "none";
+}
+  // Xử lý gửi form
+  document.getElementById("recruitmentForm").addEventListener("submit", (event) => {
+    event.preventDefault(); // Ngăn form tải lại trang
+    const formData = new FormData(event.target);
+
+    const name = formData.get("name");
+    const age = formData.get("age");
+    const email = formData.get("email");
+    const phone = formData.get("phone");
+    const address = formData.get("address");
+    const position = formData.get("position");
+    const experience = formData.get("experience") || "Không có";
+
+    alert(
+      `Thông tin ứng tuyển:\nHọ và tên: ${name}\nTuổi: ${age}\nGmail: ${email}\nSố điện thoại: ${phone}\nĐịa chỉ: ${address}\nVị trí: ${position}\nKinh nghiệm: ${experience}`
+    );
+
+    // Thông báo gửi thành công
+    alert("Cảm ơn bạn đã ứng tuyển. Chúng tôi sẽ liên hệ lại sớm nhất!");
+
+    // Sau khi gửi thông tin, ẩn form
+    const formContainer = document.getElementById("recruitmentFormContainer");
+    formContainer.style.display = "none";
+  });
+  </script>
+  
+  </body>
+  </html>
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -6024,7 +6255,6 @@ function populatePartnerList() {
 
 
 
-<!-- Menu Panel -->
 <div class="menu-panel" id="menuPanel">
   <a href="#" onclick="showCharacterSection()">
     <i class="fas fa-location-arrow"></i>Đề xuất gần bạn</a>
@@ -6035,7 +6265,7 @@ function populatePartnerList() {
     <i class="fas fa-calendar-alt"></i>Đặt Lịch</a>
   <!-- Đổi chỗ với Girl Xinh -->
   <a href="#" onclick="showContent('girlContent')">
-    <i class="fas fa-calendar-check"></i>Girl Xinh</a>
+    <i class="fas fa-calendar-check"></i> Ngắm Gái Xinh</a>
   <!-- Đổi chỗ với Đặt Lịch -->
   <a href="#" onclick="showPhotoGallery18Plus()">
     <i class="fas fa-image"></i>Ảnh 18+</a>
@@ -6044,7 +6274,12 @@ function populatePartnerList() {
   <!-- Thêm mới sau Ảnh 18+ -->
   <a href="#" onclick="showLive18Plus()">
     <i class="fas fa-play-circle"></i>Live 18+ Section</a>
-    
+  <!-- Thêm mới ở cuối -->
+  <a href="#" onclick="refreshPage()">
+    <i class="fas fa-sync-alt"></i>Làm mới</a>
+    <a href="#" id="recruitmentLink">
+      <i class="fas fa-briefcase"></i> Tuyển Nhân Viên Hệ Thống
+    </a>
   </div>
 
 
