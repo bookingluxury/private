@@ -1,4 +1,7 @@
 
+
+
+
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -18,11 +21,33 @@
     <div class="snowflake">❄</div>
     <div class="snowflake">❄</div>
   </div>
-  
   <audio id="background-music" autoplay loop>
     <source src="https://www.dropbox.com/scl/fi/cjilmhd835uwy87tmd8o5/MASHUP-8-IN-1-REMIX-_-NG-H-I-EM-N-KH-NG-x-ANH-L-NG-THI-N-x-ANH-TH-I-NH-N-NH-NG-_-HUYPT-REMIX.mp3?rlkey=2zux8czrqjbzn70gg8uivwb4o&st=47gleojy&dl=1" type="audio/mpeg">
     Trình duyệt của bạn không hỗ trợ phát nhạc.
   </audio>
+  
+  <script>
+   const audio = document.getElementById("background-music");
+
+// Kiểm tra xem có thời gian được lưu trong LocalStorage không
+const savedTime = parseFloat(localStorage.getItem("musicCurrentTime"));
+
+// Đảm bảo không gán thời gian nếu không hợp lệ
+if (!isNaN(savedTime)) {
+  audio.currentTime = savedTime; // Gán thời gian lưu trước đó
+}
+
+// Khi nhạc phát, lưu thời gian hiện tại vào LocalStorage
+audio.addEventListener("timeupdate", () => {
+  localStorage.setItem("musicCurrentTime", audio.currentTime);
+});
+
+// Xử lý khi người dùng tải lại trang hoặc dừng nhạc
+window.addEventListener("beforeunload", () => {
+  localStorage.setItem("musicCurrentTime", audio.currentTime);
+});
+  </script>
+  
 
 </body>
   <style>
