@@ -748,71 +748,85 @@ checkLocation();
     </div>
     
     <script>
-    const MAX_TIME = 60 * 60; // 60 phút = 3600 giây
-  let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
-  let online = parseInt(localStorage.getItem("online")) || 204;
-  let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 4917;
-  let visitCount = parseInt(localStorage.getItem("visitCount")) || 218483;
+      const MAX_TIME = 60 * 60; // 60 phút = 3600 giây
+let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
+let online = parseInt(localStorage.getItem("online")) || 204;
+let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 4917;
+let visitCount = parseInt(localStorage.getItem("visitCount")) || 218483;
 
-  function resetDailyTime() {
-    const lastVisit = localStorage.getItem("lastVisitDate");
-    const today = new Date().toLocaleDateString();
+function resetDailyTime() {
+  const lastVisit = localStorage.getItem("lastVisitDate");
+  const today = new Date().toLocaleDateString();
 
-    if (lastVisit !== today) {
-      localStorage.setItem("lastVisitDate", today);
-      remainingTime = MAX_TIME;
-      localStorage.setItem("remainingTime", remainingTime);
-    }
+  if (lastVisit !== today) {
+    localStorage.setItem("lastVisitDate", today);
+    remainingTime = MAX_TIME;
+    localStorage.setItem("remainingTime", remainingTime);
   }
-
-  function updateRemainingTime() {
-    if (remainingTime > 0) {
-      remainingTime--;
-      localStorage.setItem("remainingTime", remainingTime);
-
-      const minutes = Math.floor(remainingTime / 60);
-      const seconds = remainingTime % 60;
-      document.getElementById("userTime").innerText =
-        `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-    } else {
-      document.getElementById("userTime").innerText = "Hết giờ!";
-      clearInterval(timerInterval);
-      document.body.innerHTML =
-        "<h1 style='text-align:center;color:red;'>Bạn đã hết thời gian truy cập trong ngày. Quay lại vào ngày mai!</h1>";
-      alert("Bạn đã hết thời gian truy cập trong ngày.");
-    }
-  }
-
-  function updateOnline() {
-  const change = Math.floor(Math.random() * 41) - 20; // Dao động từ -20 đến +20
-  online = Math.max(200, online + change); // Đảm bảo online không nhỏ hơn 100
-  document.getElementById("online").innerText = online.toLocaleString(); // Hiển thị dạng số
-  localStorage.setItem("online", online); // Lưu vào localStorage
 }
 
+function updateRemainingTime() {
+  if (remainingTime > 0) {
+    remainingTime--;
+    localStorage.setItem("remainingTime", remainingTime);
 
-  function updateVipMembers() {
-    vipMembers++;
-    document.getElementById("vipMembers").innerText = vipMembers.toLocaleString();
-    localStorage.setItem("vipMembers", vipMembers);
+    const minutes = Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60;
+    document.getElementById("userTime").innerText =
+      `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  } else {
+    clearInterval(timerInterval);
+    document.body.innerHTML =
+      "<h1 style='text-align:center;color:red;'>Bạn đã hết thời gian truy cập trong ngày. Quay lại vào ngày mai!</h1>";
+    alert("Bạn đã hết thời gian truy cập trong ngày.");
   }
+}
 
-  function updateVisitCount() {
-    const increment = Math.floor(Math.random() * 50) + 1;
-    visitCount += increment;
-    document.getElementById("visitCount").innerText = visitCount.toLocaleString();
-    localStorage.setItem("visitCount", visitCount);
-  }
+function updateOnline() {
+  const change = Math.floor(Math.random() * 41) - 20; // Dao động từ -20 đến +20
+  online = Math.max(200, online + change); // Không cho online < 200
+  document.getElementById("online").innerText = online.toLocaleString();
+  localStorage.setItem("online", online);
+}
 
-  document.addEventListener("DOMContentLoaded", () => {
-    resetDailyTime();
-    updateRemainingTime();
-    timerInterval = setInterval(updateRemainingTime, 1000);
+function updateVipMembers() {
+  vipMembers++;
+  document.getElementById("vipMembers").innerText = vipMembers.toLocaleString();
+  localStorage.setItem("vipMembers", vipMembers);
+}
 
-    setInterval(updateOnline, 5000);
-    setInterval(updateVipMembers, 600000);
-    setInterval(updateVisitCount, 10000);
-  });
+function updateVisitCount() {
+  const increment = Math.floor(Math.random() * 50) + 1; // Tăng ngẫu nhiên từ 1-50
+  visitCount += increment;
+  document.getElementById("visitCount").innerText = visitCount.toLocaleString();
+  localStorage.setItem("visitCount", visitCount);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Khởi tạo lại dữ liệu từ localStorage khi tải trang
+  resetDailyTime();
+
+  // Hiển thị các giá trị được lưu trong localStorage
+  document.getElementById("userTime").innerText = formatTime(remainingTime);
+  document.getElementById("online").innerText = online.toLocaleString();
+  document.getElementById("vipMembers").innerText = vipMembers.toLocaleString();
+  document.getElementById("visitCount").innerText = visitCount.toLocaleString();
+
+  // Cập nhật thời gian mỗi giây
+  timerInterval = setInterval(updateRemainingTime, 1000);
+
+  // Cập nhật các thông số khác theo chu kỳ
+  setInterval(updateOnline, 5000);
+  setInterval(updateVipMembers, 600000);
+  setInterval(updateVisitCount, 10000);
+});
+
+// Hàm định dạng thời gian (phút:giây)
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes.toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
+}
 
     </script>
     
