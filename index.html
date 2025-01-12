@@ -1,18 +1,13 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Chào mừng đến với LUXURY GIRL 🎀</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <body>
+   <body>
   <div class="snowflakes" aria-hidden="true">
     <div class="snowflake">❄</div>
     <div class="snowflake">❄</div>
@@ -21,33 +16,11 @@
     <div class="snowflake">❄</div>
     <div class="snowflake">❄</div>
   </div>
-  <audio id="background-music" autoplay loop>
-    <source src="https://www.dropbox.com/scl/fi/cjilmhd835uwy87tmd8o5/MASHUP-8-IN-1-REMIX-_-NG-H-I-EM-N-KH-NG-x-ANH-L-NG-THI-N-x-ANH-TH-I-NH-N-NH-NG-_-HUYPT-REMIX.mp3?rlkey=2zux8czrqjbzn70gg8uivwb4o&st=47gleojy&dl=1" type="audio/mpeg">
-    Trình duyệt của bạn không hỗ trợ phát nhạc.
-  </audio>
   
-  <script>
-   const audio = document.getElementById("background-music");
-
-// Kiểm tra xem có thời gian được lưu trong LocalStorage không
-const savedTime = parseFloat(localStorage.getItem("musicCurrentTime"));
-
-// Đảm bảo không gán thời gian nếu không hợp lệ
-if (!isNaN(savedTime)) {
-  audio.currentTime = savedTime; // Gán thời gian lưu trước đó
-}
-
-// Khi nhạc phát, lưu thời gian hiện tại vào LocalStorage
-audio.addEventListener("timeupdate", () => {
-  localStorage.setItem("musicCurrentTime", audio.currentTime);
-});
-
-// Xử lý khi người dùng tải lại trang hoặc dừng nhạc
-window.addEventListener("beforeunload", () => {
-  localStorage.setItem("musicCurrentTime", audio.currentTime);
-});
-  </script>
-  
+<audio id="background-music" autoplay loop>
+  <source src="https://www.dropbox.com/scl/fi/cjilmhd835uwy87tmd8o5/MASHUP-8-IN-1-REMIX-_-NG-H-I-EM-N-KH-NG-x-ANH-L-NG-THI-N-x-ANH-TH-I-NH-N-NH-NG-_-HUYPT-REMIX.mp3?rlkey=2zux8czrqjbzn70gg8uivwb4o&st=47gleojy&dl=1" type="audio/mpeg">
+  Trình duyệt của bạn không hỗ trợ phát nhạc.
+</audio>
 
 </body>
   <style>
@@ -96,22 +69,10 @@ window.addEventListener("beforeunload", () => {
   <div class="snowflakes">
   </div>
 
-<!-- Start of LiveChat (www.livechat.com) code -->
-<script>
 
-
-
-
-  window.__lc = window.__lc || {};
-  window.__lc.license = 18963027;
-  window.__lc.integration_name = "manual_channels";
-  window.__lc.product_name = "livechat";
-  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
-</script>
-<noscript><a href="https://www.livechat.com/chat-with/18963027/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
-<!-- End of LiveChat code -->
 
   <script>
+
 
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -145,25 +106,26 @@ window.addEventListener("beforeunload", () => {
       }
     });
 
-	   const audio = document.getElementById("background-music");
+	  
+    const audio = document.getElementById("background-music");
 
-  // Kiểm tra xem có thời gian được lưu trong LocalStorage không
-  const savedTime = parseFloat(localStorage.getItem("musicCurrentTime"));
+// Kiểm tra xem có thời gian được lưu trong LocalStorage không
+const savedTime = parseFloat(localStorage.getItem("musicCurrentTime"));
 
-  // Đảm bảo không gán thời gian nếu không hợp lệ
-  if (!isNaN(savedTime)) {
-    audio.currentTime = savedTime; // Gán thời gian lưu trước đó
-  }
+// Đảm bảo không gán thời gian nếu không hợp lệ
+if (!isNaN(savedTime)) {
+  audio.currentTime = savedTime; // Gán thời gian lưu trước đó
+}
 
-  // Khi nhạc phát, lưu thời gian hiện tại vào LocalStorage
-  audio.addEventListener("timeupdate", () => {
-    localStorage.setItem("musicCurrentTime", audio.currentTime);
-  });
+// Khi nhạc phát, lưu thời gian hiện tại vào LocalStorage
+audio.addEventListener("timeupdate", () => {
+  localStorage.setItem("musicCurrentTime", audio.currentTime);
+});
 
-  // Xử lý khi người dùng tải lại trang hoặc dừng nhạc
-  window.addEventListener("beforeunload", () => {
-    localStorage.setItem("musicCurrentTime", audio.currentTime);
-  });
+// Xử lý khi người dùng tải lại trang hoặc dừng nhạc
+window.addEventListener("beforeunload", () => {
+  localStorage.setItem("musicCurrentTime", audio.currentTime);
+});
   </script>
 </body>
 
@@ -349,6 +311,7 @@ checkLocation();
 </script>
 </body>
 </html>
+
 
 
 
@@ -626,6 +589,7 @@ checkLocation();
 
 
 
+
   <!DOCTYPE html>
   <html lang="vi">
 
@@ -748,7 +712,7 @@ checkLocation();
    const MAX_TIME = 60 * 60; // 60 phút = 3600 giây
 let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
 let online = parseInt(localStorage.getItem("online")) || 204;
-let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 4197;
+let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 4917;
 let visitCount = parseInt(localStorage.getItem("visitCount")) || 218483;
 
 function resetDailyTime() {
@@ -830,8 +794,6 @@ function formatTime(seconds) {
   </body>
   
   </html>
-
-
 
 
   <!DOCTYPE html>
@@ -1659,7 +1621,7 @@ h2:hover::before {
             <p>Số đo: 90-56-90</p>
             <p>⭐ 4.6</p>
             <p>Ngày gia nhập: 2024-11-01</p>
-            <button class="message-button" data-name="Yumi" data-link="https://t.me/yumixinhhh">Gửi tin nhắn</button>
+            <button class="message-button" data-name="Yumi" data-link="https://t.me/yumidangyeu22">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Hà Huyền')">
             <img src="https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg" alt="Hà Huyền">
@@ -1668,16 +1630,7 @@ h2:hover::before {
             <p>Số đo: 86-58-90</p>
             <p>⭐ 4.8</p>
             <p>Ngày gia nhập: 2024-05-20</p>
-            <button class="message-button" data-name="Hà Huyền" data-link="https://t.me/hahuyen2k3">Gửi tin nhắn</button>
-          </div>
-          <div class="recommendation-item" onclick="displayCharacterDetails('Amy')">
-            <img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy">
-            <p><strong>Amy</strong></p>
-            <p>Tuổi: 24</p>
-            <p>Số đo: 91-61-94</p>
-            <p>⭐ 4.8</p>
-            <p>Ngày gia nhập: 2024-03-18</p>
-            <button class="message-button" data-name="Amy" data-link="https://t.me/amykute">Gửi tin nhắn</button>
+            <button class="message-button" data-name="Hà Huyền" data-link="https://t.me/hahuyenvuive21">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Mai ly')">
             <img src="https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg" alt="Mai ly">
@@ -1686,7 +1639,25 @@ h2:hover::before {
             <p>Số đo: 88-58-86</p>
             <p>⭐ 4.7</p>
             <p>Ngày gia nhập: 2023-10-12</p>
-            <button class="message-button" data-name="Mai ly" data-link="https://t.me/mailyyeu">Gửi tin nhắn</button>
+            <button class="message-button" data-name="Mai ly" data-link="https://t.me/mailysexy23">Gửi tin nhắn</button>
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Amy')">
+            <img src="https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg" alt="Amy">
+            <p><strong>Amy</strong></p>
+            <p>Tuổi: 24</p>
+            <p>Số đo: 91-61-94</p>
+            <p>⭐ 4.8</p>
+            <p>Ngày gia nhập: 2024-03-18</p>
+            <button class="message-button" data-name="Amy" data-link="https://t.me/amydangyeu22">Gửi tin nhắn</button>
+          </div>
+          <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Nhi')">
+            <img src="https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg" alt="Quỳnh Nhi">
+            <p><strong>Quỳnh Nhi</strong></p>
+            <p>Tuổi: 22</p>
+            <p>Số đo: 87-57-89</p>
+            <p>⭐ 4.7</p>
+            <p>Ngày gia nhập: 2024-12-09</p>
+            <button class="message-button" data-name="Quỳnh Nhi" data-link="https://t.me/quynhnhivuive22">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Mẫn Nhi')">
             <img src="https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg" alt="Mẫn Nhi">
@@ -1697,15 +1668,6 @@ h2:hover::before {
             <p>Ngày gia nhập: 2024-01-15</p>
             <button class="message-button" data-name="Mẫn Nhi" data-link="https://t.me/mannhi22t">Gửi tin nhắn</button>
           </div>
-          <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Nhi')">
-            <img src="https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg" alt="Quỳnh Nhi">
-            <p><strong>Quỳnh Nhi</strong></p>
-            <p>Tuổi: 22</p>
-            <p>Số đo: 87-57-89</p>
-            <p>⭐ 4.7</p>
-            <p>Ngày gia nhập: 2024-12-09</p>
-            <button class="message-button" data-name="Quỳnh Nhi" data-link="https://t.me/qnhi2k22">Gửi tin nhắn</button>
-          </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Quỳnh Anh')">
             <img src="https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg" alt="Quỳnh Anh">
             <p><strong>Quỳnh Anh</strong></p>
@@ -1713,7 +1675,7 @@ h2:hover::before {
             <p>Số đo: 87-57-89</p>
             <p>⭐ 4.7</p>
             <p>Ngày gia nhập: 2024-11-24</p>
-            <button class="message-button" data-name="Quỳnh Anh" data-link="https://t.me/qhanh2k">Gửi tin nhắn</button>
+            <button class="message-button" data-name="Quỳnh Anh" data-link="https://t.me/quynhanhthattha23">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Chang')">
             <img src="https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg" alt="Chang">
@@ -1722,7 +1684,7 @@ h2:hover::before {
             <p>Số đo: 89-60-93</p>
             <p>⭐ 4.8</p>
             <p>Ngày gia nhập: 2024-06-14</p>
-            <button class="message-button" data-name="Chang" data-link="https://t.me/changdangeo">Gửi tin nhắn</button>
+            <button class="message-button" data-name="Chang" data-link="https://t.me/changdamdang24">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Yuna')">
             <img src="https://i.ibb.co/9v0vWz3/Snaptik-app-74425646241191232083.jpg" alt="Yuna">
@@ -1731,7 +1693,7 @@ h2:hover::before {
             <p>Số đo: 90-60-93</p>
             <p>⭐ 4.6</p>
             <p>Ngày gia nhập: 2024-09-28</p>
-            <button class="message-button" data-name="Yuna" data-link="https://t.me/yuna2k0">Gửi tin nhắn</button>
+            <button class="message-button" data-name="Yuna" data-link="https://t.me/yunadethuong24">Gửi tin nhắn</button>
           </div>
           <div class="recommendation-item" onclick="displayCharacterDetails('Hà My')">
             <img src="https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg" alt="Hà My">
@@ -1740,8 +1702,9 @@ h2:hover::before {
             <p>Số đo: 89-59-91</p>
             <p>⭐ 4.7</p>
             <p>Ngày gia nhập: 2024-04-22</p>
-            <button class="message-button" data-name="Hà My" data-link="https://t.me/hamyne678">Gửi tin nhắn</button>
+            <button class="message-button" data-name="Hà My" data-link="https://t.me/hamysexy23">Gửi tin nhắn</button>
           </div>
+          
           
         </div>
       </div>
@@ -2101,22 +2064,44 @@ messageButton: {
   }
   
   function loadImageGallery(images) {
-  resetImageGallery();
+    resetImageGallery();  // Reset trước khi load ảnh mới
+  
+    images.forEach(url => {
+      const img = document.createElement('img');
+      img.src = url;
+      img.alt = 'Gallery Image';
+      img.classList.add('gallery-image');
+      img.onclick = () => openModal(url);  // Gọi openModal khi click vào ảnh
+      imageGallery.appendChild(img);
+    });
+  }
+  
 
-  images.forEach(url => {
-    const img = document.createElement('img');
-    img.setAttribute('loading', 'lazy'); // Thêm Lazy Loading
-    img.src = url;
-    img.alt = 'Gallery Image';
-    img.classList.add('gallery-image');
-    img.onclick = () => openModal(url);
-    imageGallery.appendChild(img);
+
+  function addMessageButtonEventListeners() {
+  document.querySelectorAll(".message-button").forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+
+      const characterName = button.getAttribute("data-name");
+      const telegramLink = button.getAttribute("data-link");
+
+      // Kiểm tra nếu liên kết Telegram không hợp lệ
+      if (!telegramLink || telegramLink.trim() === "" || telegramLink === "#") {
+        alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);
+        return;
+      }
+
+      // Hiển thị xác nhận
+      const confirmation = confirm(`Bạn có muốn liên hệ với ${characterName}?`);
+      if (confirmation) {
+        // Chuyển đến liên kết Telegram
+        window.open(telegramLink, "_blank");
+      }
+    });
   });
 }
 
-  
-
-function addMessageButtonEventListeners(){document.querySelectorAll(".message-button").forEach(button=>{button.addEventListener("click",(event)=>{event.stopPropagation();const characterName=button.getAttribute("data-name");const telegramLink=button.getAttribute("data-link");if(!telegramLink||telegramLink.trim()===""||telegramLink==="#"){alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);return}const confirmation=confirm(`Bạn cómuốn liên hệvới ${characterName}?`);if(confirmation){window.open(telegramLink,"_blank")}})})}
 
 
 
@@ -2124,22 +2109,238 @@ function addMessageButtonEventListeners(){document.querySelectorAll(".message-bu
 document.addEventListener("DOMContentLoaded", restoreButtonState);
 
 
-function hideAllMessageButtons(){document.querySelectorAll(".message-button").forEach(button=>{button.style.display="none";localStorage.setItem(button.getAttribute("data-name"),'hidden')})}function restoreButtonState(){document.querySelectorAll(".message-button").forEach(button=>{const characterName=button.getAttribute("data-name");if(localStorage.getItem(characterName)==='hidden'){button.style.display="none"}})}
+// Hàm ẩn tất cả các nút "Gửi tin nhắn"
+function hideAllMessageButtons() {
+  document.querySelectorAll(".message-button").forEach(button => {
+    button.style.display = "none";
+    // Lưu trạng thái ẩn nút vào localStorage
+    localStorage.setItem(button.getAttribute("data-name"), 'hidden');
+  });
+}
+
+// Hàm để khôi phục trạng thái ẩn của các nút khi tải lại trang
+function restoreButtonState() {
+  document.querySelectorAll(".message-button").forEach(button => {
+    const characterName = button.getAttribute("data-name");
+    if (localStorage.getItem(characterName) === 'hidden') {
+      button.style.display = "none"; // Ẩn nút đã bị ẩn trước đó
+    }
+  });
+}
 
 
 
 
 
 
-function displayCharacterDetails(characterName){const detailsContainer=document.getElementById('details-container');const imageGallery=document.getElementById('image-gallery');const messageButton=document.getElementById('detail-message-button');const character=characterDetails[characterName];if(character){document.getElementById('detail-name').textContent=character.name;document.getElementById('detail-status').textContent=character.status;document.getElementById('detail-height').textContent=`Chiều cao:${character.height}`;document.getElementById('detail-measurements').textContent=`Sốđo:${character.measurements}`;document.getElementById('detail-service').textContent=character.service;document.getElementById('detail-duration').textContent=`Thời gian phục vụ:${character.duration}`;imageGallery.innerHTML="";character.images.forEach((url)=>{const img=document.createElement('img');img.src=url;img.alt=character.name;imageGallery.appendChild(img)});messageButton.textContent="Gửi tin nhắn";messageButton.onclick=()=>{window.location.href=character.telegramLink};detailsContainer.style.display='block'}}
+
+function displayCharacterDetails(characterName) {
+  const detailsContainer = document.getElementById('details-container');
+  const imageGallery = document.getElementById('image-gallery');
+  const messageButton = document.getElementById('detail-message-button');
+  const character = characterDetails[characterName];
+
+  if (character) {
+    // Gán thông tin chi tiết
+    document.getElementById('detail-name').textContent = character.name;
+    document.getElementById('detail-status').textContent = character.status;
+    document.getElementById('detail-height').textContent = `Chiều cao: ${character.height}`;
+    document.getElementById('detail-measurements').textContent = `Số đo: ${character.measurements}`;
+    document.getElementById('detail-service').textContent = character.service;
+    document.getElementById('detail-duration').textContent = `Thời gian phục vụ: ${character.duration}`;
+
+    // Hiển thị hình ảnh
+    imageGallery.innerHTML = "";
+    character.images.forEach((url) => {
+      const img = document.createElement('img');
+      img.src = url;
+      img.alt = character.name;
+      imageGallery.appendChild(img);
+    });
+
+    // Nút gửi tin nhắn
+    messageButton.textContent = "Gửi tin nhắn";
+    messageButton.onclick = () => {
+      window.location.href = character.telegramLink; // Chuyển hướng trực tiếp
+    };
+
+    // Hiển thị chi tiết
+    detailsContainer.style.display = 'block';
+  }
+}
 
 
 
 
-function closeDetails(){const detailsContainer=document.getElementById('details-container');if(detailsContainer){detailsContainer.style.display='none';const buttons=document.querySelectorAll('.message-button');buttons.forEach((button)=>{button.disabled=false;button.style.backgroundColor="";button.style.cursor="pointer"})}}document.querySelector('.close-modal').addEventListener('click',closeModal);document.getElementById('imageModal').addEventListener('click',function(event){if(event.target===this){closeModal()}});function loadImageGallery(images){const imageGallery=document.getElementById('image-gallery');imageGallery.innerHTML='';images.forEach(url=>{const img=document.createElement('img');img.src=url;img.classList.add('gallery-image');img.onclick=()=>openModal(url);imageGallery.appendChild(img)})}function openModal(imageSrc){const modal=document.getElementById('imageModal');const modalImage=document.getElementById('modalImage');if(modal&&modalImage){modal.style.display='flex';modalImage.src=imageSrc;document.body.style.overflow='hidden'}else{console.error("Không tìm thấy modal hoặc modalImage")}}function closeModal(){const modal=document.getElementById('imageModal');console.log("Đang cố gắng đóng modal",modal);if(modal){modal.style.display='none';document.body.style.overflow='auto'}}window.addEventListener('click',(event)=>{const modal=document.getElementById('imageModal');if(modal&&event.target===modal){closeModal()}});function addMessageButtonEventListeners(){document.querySelectorAll(".message-button").forEach(button=>{button.addEventListener("click",(event)=>{event.stopPropagation();const characterName=button.getAttribute("data-name");const telegramLink=button.getAttribute("data-link");if(!telegramLink||telegramLink.trim()===""||telegramLink==="#"){alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);return}const confirmation=confirm(`Bạn cómuốn liên hệvới ${characterName}?`);if(confirmation){window.open(telegramLink,"_blank")}})})}document.addEventListener('DOMContentLoaded',()=>{const closeButton=document.getElementById('closeButton');const characterSection=document.getElementById('characterSection');const menuButton=document.getElementById('menuButton');const menuPanel=document.getElementById('menuPanel');const spinner=document.getElementById('spinner');if(!closeButton)console.error("Không tìm thấy phần tử với ID 'closeButton'");if(!characterSection)console.error("Không tìm thấy phần tử với ID 'characterSection'");if(!menuButton)console.error("Không tìm thấy phần tử với ID 'menuButton'");if(!menuPanel)console.error("Không tìm thấy phần tử với ID 'menuPanel'");if(!spinner)console.error("Không tìm thấy phần tử với ID 'spinner'");function showSpinner(){if(spinner){spinner.classList.remove('hidden')}}function hideSpinner(){if(spinner){spinner.classList.add('hidden')}}function closeCharacterSection(){if(characterSection){characterSection.classList.add('hidden');characterSection.style.display='none'}}function showCharacterSection(){if(characterSection&&menuPanel){showSpinner();setTimeout(()=>{characterSection.classList.remove('hidden');characterSection.style.display='block';menuPanel.classList.remove('active');hideSpinner()},2000)}}
+
+// Hàm đóng chi tiết
+function closeDetails() {
+  const detailsContainer = document.getElementById('details-container');
+  if (detailsContainer) {
+    detailsContainer.style.display = 'none';
+    const buttons = document.querySelectorAll('.message-button');
+    buttons.forEach((button) => {
+      button.disabled = false;
+      button.style.backgroundColor = ""; // Reset màu nút
+      button.style.cursor = "pointer";
+    });
+  }
+}
+
+
+document.querySelector('.close-modal').addEventListener('click', closeModal);
+document.getElementById('imageModal').addEventListener('click', function (event) {
+  if (event.target === this) {
+    closeModal();
+  }
+});
+
+
+
+
+  // Hàm load hình ảnh vào thư viện
+  function loadImageGallery(images) {
+    const imageGallery = document.getElementById('image-gallery');
+    imageGallery.innerHTML = ''; // Xóa nội dung cũ
+  
+    images.forEach(url => {
+      const img = document.createElement('img');
+      img.src = url;
+      img.classList.add('gallery-image');
+      img.onclick = () => openModal(url);
+      imageGallery.appendChild(img);
+    });
+  }
+  
+  function openModal(imageSrc) {
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+
+  if (modal && modalImage) {
+    modal.style.display = 'flex';
+    modalImage.src = imageSrc;
+    document.body.style.overflow = 'hidden'; // Tắt cuộn trang
+  } else {
+    console.error("Không tìm thấy modal hoặc modalImage");
+  }
+}
+
+
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  console.log("Đang cố gắng đóng modal", modal);
+  if (modal) {
+    modal.style.display = 'none'; // Ẩn modal
+    document.body.style.overflow = 'auto'; // Bật lại cuộn trang
+  }
+}
+
+// Đóng modal khi nhấn bên ngoài nội dung modal
+window.addEventListener('click', (event) => {
+  const modal = document.getElementById('imageModal');
+  if (modal && event.target === modal) {
+    closeModal();
+  }
+});
+
+function addMessageButtonEventListeners() {
+  document.querySelectorAll(".message-button").forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation(); // Ngăn sự kiện click lan ra ngoài
+
+      const characterName = button.getAttribute("data-name");
+      const telegramLink = button.getAttribute("data-link");
+
+      // Kiểm tra nếu liên kết Telegram không hợp lệ
+      if (!telegramLink || telegramLink.trim() === "" || telegramLink === "#") {
+        alert(`Không tìm thấy liên kết Telegram cho ${characterName}!`);
+        return;
+      }
+
+      // Hiển thị xác nhận
+      const confirmation = confirm(`Bạn có muốn liên hệ với ${characterName}?`);
+      if (confirmation) {
+        // Chuyển đến liên kết Telegram
+        window.open(telegramLink, "_blank");
+      }
+    });
+  });
+}
+
+  
+document.addEventListener('DOMContentLoaded', () => {  
+    const closeButton = document.getElementById('closeButton');  
+    const characterSection = document.getElementById('characterSection');  
+    const menuButton = document.getElementById('menuButton');  
+    const menuPanel = document.getElementById('menuPanel');  
+    const spinner = document.getElementById('spinner'); // Thêm phần tử spinner  
+
+    if (!closeButton) console.error("Không tìm thấy phần tử với ID 'closeButton'");  
+    if (!characterSection) console.error("Không tìm thấy phần tử với ID 'characterSection'");  
+    if (!menuButton) console.error("Không tìm thấy phần tử với ID 'menuButton'");  
+    if (!menuPanel) console.error("Không tìm thấy phần tử với ID 'menuPanel'");  
+    if (!spinner) console.error("Không tìm thấy phần tử với ID 'spinner'");  
+
+    // Hàm hiển thị spinner  
+    function showSpinner() {  
+        if (spinner) {  
+            spinner.classList.remove('hidden');  
+        }  
+    }  
+
+    // Hàm ẩn spinner  
+    function hideSpinner() {  
+        if (spinner) {  
+            spinner.classList.add('hidden');  
+        }  
+    }  
+
+    // Hàm ẩn danh sách nhân vật  
+    function closeCharacterSection() {  
+        if (characterSection) {  
+            characterSection.classList.add('hidden');  
+            characterSection.style.display = 'none';  
+        }  
+    }  
+
+    // Hàm hiển thị danh sách nhân vật  
+    function showCharacterSection() {  
+        if (characterSection && menuPanel) {  
+            showSpinner(); // Hiển thị spinner khi bắt đầu quá trình tải  
+
+            // Giả sử đây là nơi bạn thực hiện các thao tác bất đồng bộ, ví dụ như gọi API  
+            // Thay thế setTimeout bằng các thao tác thực tế của bạn  
+            setTimeout(() => {  
+                characterSection.classList.remove('hidden');  
+                characterSection.style.display = 'block';  
+                menuPanel.classList.remove('active');  
+
+                hideSpinner(); // Ẩn spinner khi hoàn tất  
+            }, 2000); // Mô phỏng quá trình tải dữ liệu trong 2 giây  
+        }  
+    }  
 
     // Gán sự kiện click vào menu "Đề xuất gần bạn" để hiển thị danh sách nhân vật  
-    const menuLink=document.querySelector('.menu-panel a');if(menuLink){menuLink.addEventListener('click',(e)=>{e.preventDefault();showCharacterSection()})}else{console.error('Không tìm thấy phần tử .menu-panel a')}if(menuButton){menuButton.addEventListener('click',()=>{if(menuPanel){menuPanel.classList.toggle('active');closeCharacterSection()}})}}); 
+    const menuLink = document.querySelector('.menu-panel a');  
+    if (menuLink) {  
+        menuLink.addEventListener('click', (e) => {  
+            e.preventDefault();  
+            showCharacterSection();  
+        });  
+    } else {  
+        console.error('Không tìm thấy phần tử .menu-panel a');  
+    }  
+
+    // Gán sự kiện click vào nút menu để mở/đóng menu panel và ẩn danh sách nhân vật  
+    if (menuButton) {  
+        menuButton.addEventListener('click', () => {  
+            if (menuPanel) {  
+                menuPanel.classList.toggle('active');  
+                closeCharacterSection();  
+            }  
+        });  
+    }  
+});  
     </script>
   </body>
   </html>
@@ -2280,14 +2481,6 @@ function closeDetails(){const detailsContainer=document.getElementById('details-
   box-shadow: 0 4px 10px rgba(255, 78, 205, 0.3); /* Giảm đổ bóng */
 }
 
-img.lazy {
-  filter: blur(5px);
-  transition: filter 0.3s;
-}
-
-img.lazy-loaded {
-  filter: blur(0);
-}
 
 
 
@@ -2301,31 +2494,150 @@ img.lazy-loaded {
   </div>  
   
   <div id="girlContent" class="content-section" style="display: none; position: relative;">  
+  
     <!-- Tiêu đề Thư viện -->  
-    <img src="https://i.ibb.co/yVJN2kc/gif4-1.gif" alt="Tiêu đề Thư Viện" class="gallery-title-image" width="99%" height="200" loading="lazy">  
-      
-    <!-- Nút ẩn thư viện -->  
-    <button class="close-library-button" onclick="hideContent('girlContent')">  
-        <i class="fas fa-times"></i>
-    </button>  
+    <img src="https://i.ibb.co/yVJN2kc/gif4-1.gif" alt="Tiêu đề Thư Viện" class="gallery-title-image" width="99%" height="200">  
+      <!-- Nút ẩn thư viện -->  
+      <button class="close-library-button" onclick="hideContent('girlContent')">  
+        <i class="fas fa-times"></i></button>  
       
     <!-- Thư viện ảnh -->  
     <div class="gallery" id="gallery">  
-        <!-- Thêm Lazy Loading cho hình ảnh -->
-        <img src="https://via.placeholder.com/300" alt="Sample Image 1" onclick="openGirlModal(this.src)" loading="lazy">  
-        <img src="https://via.placeholder.com/300" alt="Sample Image 2" onclick="openGirlModal(this.src)" loading="lazy">  
-        <img src="https://via.placeholder.com/300" alt="Sample Image 3" onclick="openGirlModal(this.src)" loading="lazy">  
-        <!-- Thêm thêm hình ảnh nếu cần -->  
+      <!-- Thêm các hình ảnh ở đây -->  
+      <img src="https://via.placeholder.com/300" alt="Sample Image 1" onclick="openGirlModal(this.src)">  
+      <img src="https://via.placeholder.com/300" alt="Sample Image 2" onclick="openGirlModal(this.src)">  
+      <img src="https://via.placeholder.com/300" alt="Sample Image 3" onclick="openGirlModal(this.src)">  
+      <!-- Bạn có thể thêm thêm hình ảnh theo nhu cầu -->  
     </div>  
-</div>  
+  </div>  
 
-<div id="girlImageModal" class="girl-image-modal">  
+
+  <div id="girlImageModal" class="girl-image-modal">  
     <button class="girl-close-button" onclick="closeGirlModal()">&times;</button>  
-    <img id="girlModalImage" src="" alt="Girl Xinh Image" loading="lazy">  
-</div>  
-
+    <img id="girlModalImage" src="" alt="Girl Xinh Image">  
+  </div>  
+  
   <script>  
-  function toggleContent(sectionId){const section=document.getElementById(sectionId);const isVisible=section.style.display==='block';if(isVisible){hideContent(sectionId)}else{showContent(sectionId)}}function showContent(sectionId){const sections=document.querySelectorAll('.content-section');sections.forEach(section=>section.style.display='none');const sectionToShow=document.getElementById(sectionId);if(sectionToShow){sectionToShow.style.display='block'}else{console.warn(`Section with ID"${sectionId}"not found.`)}closeGirlModal()}function hideGirlContent(){const girlContent=document.getElementById('girlContent');if(girlContent){girlContent.style.display='none'}else{console.error('Không tìm thấy phần tử girlContent')}}function closeGirlModal(){const modal=document.getElementById('girlImageModal');if(modal){modal.style.display='none'}else{console.error('Không tìm thấy modal girlImageModal')}}document.addEventListener('DOMContentLoaded',()=>{const menuButton=document.getElementById('menuButton');if(menuButton){menuButton.addEventListener('click',hideGirlContent)}const otherButtons=document.querySelectorAll('.other-button');otherButtons.forEach((button)=>{button.addEventListener('click',hideGirlContent)});const closeButton=document.querySelector('.close-library-button');if(closeButton){closeButton.addEventListener('click',hideGirlContent)}const closeModalButton=document.querySelector('.girl-close-button');if(closeModalButton){closeModalButton.addEventListener('click',closeGirlModal)}});function refreshGallery(images){const gallery=document.getElementById('gallery');if(!gallery){console.warn('Gallery element not found.');return}gallery.innerHTML='';images.forEach(imageUrl=>{const img=document.createElement('img');img.classList.add('lazy');img.setAttribute('data-src',imageUrl);img.alt='Girl Xinh Image';img.onclick=()=>openGirlModal(imageUrl);gallery.appendChild(img)});setupLazyLoading()}function setupLazyLoading(){const lazyImages=document.querySelectorAll('img.lazy');const observer=new IntersectionObserver((entries,observer)=>{entries.forEach(entry=>{if(entry.isIntersecting){const img=entry.target;img.src=img.dataset.src;img.classList.remove('lazy');observer.unobserve(img)}})});lazyImages.forEach(img=>observer.observe(img))}function openGirlModal(imageUrl){const modal=document.getElementById('girlImageModal');const modalImage=document.getElementById('girlModalImage');if(modal&&modalImage){modal.style.display='flex';modalImage.src=imageUrl}else{console.warn('Girl Image Modal or Image Element not found.')}}function closeGirlModal(){const modal=document.getElementById('girlImageModal');if(modal){modal.style.display='none'}}window.addEventListener('click',function(event){const modal=document.getElementById('girlImageModal');if(event.target===modal){closeGirlModal()}});
+    // Function to toggle content visibility and close modal  
+    function toggleContent(sectionId) {  
+      const section = document.getElementById(sectionId);  
+      const isVisible = section.style.display === 'block';  
+      if (isVisible) {  
+        hideContent(sectionId);  
+      } else {  
+        showContent(sectionId);  
+      }  
+    }  
+
+    // Hiển thị nội dung theo ID  
+    function showContent(sectionId) {  
+      const sections = document.querySelectorAll('.content-section');  
+      sections.forEach(section => section.style.display = 'none'); // Ẩn tất cả nội dung  
+
+      const sectionToShow = document.getElementById(sectionId);  
+      if (sectionToShow) {  
+        sectionToShow.style.display = 'block'; // Hiển thị nội dung  
+      } else {  
+        console.warn(`Section with ID "${sectionId}" not found.`);  
+      }  
+
+      // Đóng modal khi mở một nội dung mới  
+      closeGirlModal();  
+    }  
+    
+  // Hàm đóng nội dung "girlContent"
+function hideGirlContent() {
+    const girlContent = document.getElementById('girlContent');
+    if (girlContent) {
+        girlContent.style.display = 'none'; // Ẩn girlContent
+    } else {
+        console.error('Không tìm thấy phần tử girlContent');
+    }
+}
+
+// Hàm đóng modal "girlImageModal"
+function closeGirlModal() {
+    const modal = document.getElementById('girlImageModal');
+    if (modal) {
+        modal.style.display = 'none'; // Ẩn modal
+    } else {
+        console.error('Không tìm thấy modal girlImageModal');
+    }
+}
+
+// Gắn sự kiện khi DOM đã tải xong
+document.addEventListener('DOMContentLoaded', () => {
+    // Gắn sự kiện đóng "girlContent" khi nhấn nút menu
+    const menuButton = document.getElementById('menuButton'); // ID nút menu
+    if (menuButton) {
+        menuButton.addEventListener('click', hideGirlContent);
+    }
+
+    // Gắn sự kiện cho các nút khác
+    const otherButtons = document.querySelectorAll('.other-button'); // Thay class bằng class các nút khác
+    otherButtons.forEach((button) => {
+        button.addEventListener('click', hideGirlContent);
+    });
+
+    // Gắn sự kiện cho nút đóng "girlContent"
+    const closeButton = document.querySelector('.close-library-button'); // Nút đóng "girlContent"
+    if (closeButton) {
+        closeButton.addEventListener('click', hideGirlContent);
+    }
+
+    // Gắn sự kiện cho nút đóng modal "girlImageModal"
+    const closeModalButton = document.querySelector('.girl-close-button'); // Nút đóng modal ảnh lớn
+    if (closeModalButton) {
+        closeModalButton.addEventListener('click', closeGirlModal);
+    }
+});
+
+    
+    // Hàm làm mới thư viện ảnh  
+    function refreshGallery(images) {  
+      const gallery = document.getElementById('gallery');  
+      if (!gallery) {  
+        console.warn('Gallery element not found.');  
+        return;  
+      }  
+
+      gallery.innerHTML = ''; // Làm trống thư viện  
+
+      images.forEach(imageUrl => {  
+        const img = document.createElement('img');  
+        img.src = imageUrl;  
+        img.alt = 'Girl Xinh Image';  
+        img.onclick = () => openGirlModal(imageUrl);  
+        gallery.appendChild(img);  
+      });  
+    }  
+    
+    function openGirlModal(imageUrl) {  
+      const modal = document.getElementById('girlImageModal');  
+      const modalImage = document.getElementById('girlModalImage');  
+
+      if (modal && modalImage) {  
+        modal.style.display = 'flex';  
+        modalImage.src = imageUrl;  
+      } else {  
+        console.warn('Girl Image Modal or Image Element not found.');  
+      }  
+    }  
+    
+    function closeGirlModal() {  
+      const modal = document.getElementById('girlImageModal');  
+      if (modal) {  
+        modal.style.display = 'none';  
+      }  
+    }  
+
+    // Đóng modal khi nhấn vào vùng ngoài ảnh  
+    window.addEventListener('click', function(event) {  
+      const modal = document.getElementById('girlImageModal');  
+      if (event.target === modal) {  
+        closeGirlModal();  
+      }  
+    });  
 
     // Tạo thư viện ban đầu
     document.addEventListener('DOMContentLoaded', () => {
@@ -5368,16 +5680,11 @@ function showPhotoGallery18Plus() {
   const gallery = document.getElementById('photoGallery18Plus');
   if (gallery) {
     gallery.style.display = 'block';
-
-    // Nếu thư viện chưa được làm mới, tải ảnh
-    if (!gallery.hasChildNodes()) {
-      refreshGallery18Plus(images18Plus);
-    }
+    refreshGallery18Plus(images18Plus); // Tải ảnh khi mở thư viện
   } else {
     console.error('Không tìm thấy phần tử thư viện ảnh 18+');
   }
 }
-
 
 
 // Hàm đóng thư viện ảnh
@@ -5440,31 +5747,11 @@ function refreshGallery18Plus(images) {
 
   images.forEach(imageUrl => {
     const img = document.createElement('img');
-    img.classList.add('lazy'); // Thêm lớp lazy
-    img.setAttribute('data-src', imageUrl); // Sử dụng data-src để Lazy Loading
+    img.src = imageUrl;
     img.alt = 'Thư viện 18+';
     img.onclick = () => openModal18Plus(imageUrl); // Gắn sự kiện mở modal
     gallery.appendChild(img);
   });
-
-  // Kích hoạt Lazy Loading sau khi ảnh được thêm
-  setupLazyLoading();
-}
-
-function setupLazyLoading() {
-  const lazyImages = document.querySelectorAll('img.lazy');
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src; // Gán src thực tế
-        img.classList.remove('lazy');
-        observer.unobserve(img); // Ngừng quan sát
-      }
-    });
-  });
-
-  lazyImages.forEach(img => observer.observe(img));
 }
 
 function openModal18Plus(imageUrl) {
@@ -6407,7 +6694,8 @@ function populatePartnerList() {
 
 
 const mainCharacters = [  
-{
+
+  {
     name: "Yumi",
     age: 24,
     measurements: "90-56-90",
@@ -6415,7 +6703,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/SrYrBHQ/415274242-1816989965416331-2731987041148296883-n.jpg",
     type: "main",
     joinedDate: "2024-11-01",
-    telegramLink: "https://t.me/yumixinhhh"
+    telegramLink: "https://t.me/yumidangyeu22"
   },
   {
     name: "Hà Huyền",
@@ -6425,7 +6713,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/S5cZB7m/419418603-1508797216580744-6598850606428340490-n.jpg",
     type: "main",
     joinedDate: "2024-05-20",
-    telegramLink: "https://t.me/hahuyen2k3"
+    telegramLink: "https://t.me/hahuyenvuive21"
   },
   {
     name: "Mai ly",
@@ -6435,7 +6723,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/RjHMhK2/1-HU7-K8-E2-U-7-S6-HVT.jpg",
     type: "main",
     joinedDate: "2023-10-12",
-    telegramLink: "https://t.me/mailyyeu"
+    telegramLink: "https://t.me/mailysexy23"
   },
   {
     name: "Amy",
@@ -6445,7 +6733,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/19F8c16/photo-2024-12-11-23-00-56.jpg",
     type: "main",
     joinedDate: "2024-03-18",
-    telegramLink: "https://t.me/amykute"
+    telegramLink: "https://t.me/amydangyeu22"
   },
   {
     name: "Quỳnh Nhi",
@@ -6455,7 +6743,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/bPBRMf0/taoanhdep-lam-net-anh-76370.jpg",
     type: "main",
     joinedDate: "2024-12-09",
-    telegramLink: "https://t.me/qnhi2k22"
+    telegramLink: "https://t.me/quynhnhivuive22"
   },
   {
     name: "Mẫn Nhi",
@@ -6465,7 +6753,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/pZcCsg6/photo-2024-12-22-16-12-07.jpg",
     type: "main",
     joinedDate: "2024-01-15",
-    telegramLink: "https://t.me/mannhi22t"
+    telegramLink: "https://t.me/mannhivuive22"
   },
   {
     name: "Quỳnh Anh",
@@ -6475,7 +6763,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/z67jQMC/340931419-776721337030997-2865551987934903214-n.jpg",
     type: "main",
     joinedDate: "2024-11-24",
-    telegramLink: "https://t.me/qhanh2k"
+    telegramLink: "https://t.me/quynhanhthattha23"
   },
   {
     name: "Chang",
@@ -6485,7 +6773,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/CvWcC5v/378778004-855617305910843-333745182071302791-n.jpg",
     type: "main",
     joinedDate: "2024-06-14",
-    telegramLink: "https://t.me/changdangeo"
+    telegramLink: "https://t.me/changdamdang24"
   },
   {
     name: "Yuna",
@@ -6495,7 +6783,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/9v0vWz3/Snaptik-app-74425646241191232083.jpg",
     type: "main",
     joinedDate: "2024-09-28",
-    telegramLink: "https://t.me/yuna2k0"
+    telegramLink: "https://t.me/yunadethuong24"
   },
   {
     name: "Hà My",
@@ -6505,7 +6793,7 @@ const mainCharacters = [
     img: "https://i.ibb.co/bHLbVdD/455691559-122111257202434651-6263614150393024155-n.jpg",
     type: "main",
     joinedDate: "2024-04-22",
-    telegramLink: "https://t.me/hamyne678"
+    telegramLink: "https://t.me/hamysexy23"
   }
 ];
 
@@ -7089,6 +7377,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </head>  
 
 <body>  
+
 
 <div id="pricing-table" class="pricing-table">
   <img src="https://i.ibb.co/DVYLsP9/gif3-1.gif" alt="Tiêu đề Bảng Giá" class="pricing-title-image">
