@@ -1,13 +1,18 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="vi">
 
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Chào mừng đến với LUXURY GIRL 🎀</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-   <body>
+  <body>
   <div class="snowflakes" aria-hidden="true">
     <div class="snowflake">❄</div>
     <div class="snowflake">❄</div>
@@ -16,11 +21,33 @@
     <div class="snowflake">❄</div>
     <div class="snowflake">❄</div>
   </div>
+  <audio id="background-music" autoplay loop>
+    <source src="https://www.dropbox.com/scl/fi/cjilmhd835uwy87tmd8o5/MASHUP-8-IN-1-REMIX-_-NG-H-I-EM-N-KH-NG-x-ANH-L-NG-THI-N-x-ANH-TH-I-NH-N-NH-NG-_-HUYPT-REMIX.mp3?rlkey=2zux8czrqjbzn70gg8uivwb4o&st=47gleojy&dl=1" type="audio/mpeg">
+    Trình duyệt của bạn không hỗ trợ phát nhạc.
+  </audio>
+</body>
+  <script>
+   const audio = document.getElementById("background-music");
+
+// Kiểm tra xem có thời gian được lưu trong LocalStorage không
+const savedTime = parseFloat(localStorage.getItem("musicCurrentTime"));
+
+// Đảm bảo không gán thời gian nếu không hợp lệ
+if (!isNaN(savedTime)) {
+  audio.currentTime = savedTime; // Gán thời gian lưu trước đó
+}
+
+// Khi nhạc phát, lưu thời gian hiện tại vào LocalStorage
+audio.addEventListener("timeupdate", () => {
+  localStorage.setItem("musicCurrentTime", audio.currentTime);
+});
+
+// Xử lý khi người dùng tải lại trang hoặc dừng nhạc
+window.addEventListener("beforeunload", () => {
+  localStorage.setItem("musicCurrentTime", audio.currentTime);
+});
+  </script>
   
-<audio id="background-music" autoplay loop>
-  <source src="https://www.dropbox.com/scl/fi/cjilmhd835uwy87tmd8o5/MASHUP-8-IN-1-REMIX-_-NG-H-I-EM-N-KH-NG-x-ANH-L-NG-THI-N-x-ANH-TH-I-NH-N-NH-NG-_-HUYPT-REMIX.mp3?rlkey=2zux8czrqjbzn70gg8uivwb4o&st=47gleojy&dl=1" type="audio/mpeg">
-  Trình duyệt của bạn không hỗ trợ phát nhạc.
-</audio>
 
 </body>
   <style>
@@ -545,6 +572,13 @@ checkLocation();
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
+      <audio autoplay loop>
+        <source src="https://www.dropbox.com/s/example/your-music-file.mp3?dl=1" type="audio/mpeg">
+        Trình duyệt không hỗ trợ phát nhạc.
+      </audio>
+      
+      
+    
       <script>
   const banner = document.querySelector('.banner');
   const images = document.querySelectorAll('.banner-image');
@@ -592,7 +626,17 @@ checkLocation();
   
   // Tiếp tục tự động lướt khi rời chuột khỏi banner
   banner.addEventListener('mouseleave', () => slideInterval = setInterval(nextSlide, 3000));
-      </script>
+  const audio = document.getElementById('background-music');
+  
+  const audio = document.getElementById("background-music");
+  const playButton = document.getElementById("play-button");
+
+  playButton.addEventListener("click", () => {
+    audio.play(); // Bắt đầu phát nhạc
+    playButton.style.display = "none"; // Ẩn nút sau khi nhạc phát
+  });
+  
+  </script>
   </body>
   </html>
 
@@ -698,27 +742,27 @@ checkLocation();
       <div class="stat-item">
         <i class="fas fa-user-circle"></i>
         <span>Online</span>
-        <strong id="online">204</strong>
+        <strong id="online"></strong>
       </div>
       <div class="stat-item">
         <i class="fas fa-check-circle"></i>
         <span>Đã dùng dịch vụ</span>
-        <strong id="vipMembers">4197</strong>
+        <strong id="vipMembers"></strong>
       </div>
       <div class="stat-item">
         <i class="fas fa-chart-line"></i>
         <span>Tổng lượt truy cập</span>
-        <strong id="visitCount">218483</strong>
+        <strong id="visitCount"></strong>
       </div>
       <div class="stat-item time-box">
         <i class="fas fa-clock"></i>
         <span>Thời gian còn lại:</span>
-        <strong id="userTime">60:00</strong>
+        <strong id="userTime"></strong>
       </div>
     </div>
     
     <script>
-   const MAX_TIME = 60 * 60; // 60 phút = 3600 giây
+const MAX_TIME = 60 * 60; // 60 phút = 3600 giây
 let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
 let online = parseInt(localStorage.getItem("online")) || 204;
 let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 4197;
@@ -753,8 +797,9 @@ function updateRemainingTime() {
 }
 
 function updateOnline() {
-  const change = Math.floor(Math.random() * 41) - 20; // Dao động từ -20 đến +20
-  online = Math.max(200, online + change); // Không cho online < 200
+  const change = Math.floor(Math.random() * 11) + 10; // Dao động từ 10 đến 20
+  const increaseOrDecrease = Math.random() < 0.5 ? -1 : 1; // Ngẫu nhiên tăng hoặc giảm
+  online = Math.max(100, Math.min(250, online + (change * increaseOrDecrease))); // Giới hạn từ 100 đến 250
   document.getElementById("online").innerText = online.toLocaleString();
   localStorage.setItem("online", online);
 }
@@ -797,6 +842,7 @@ function formatTime(seconds) {
   const remainingSeconds = seconds % 60;
   return `${minutes.toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
 }
+
 
     </script>
     
