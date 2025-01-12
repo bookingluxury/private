@@ -353,7 +353,210 @@ checkLocation();
 
 
 
+<!DOCTYPE html>
+  <html lang="vi">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Thống Kê Người Dùng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+  /* Widget thống kê tổng thể */
+  .statistics-widget {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 12px;
+    max-width: 100%;
+    margin: 0px auto;
+    font-family: 'Poppins', sans-serif;
+   
+    padding: 15px;
+  }
+  
+  /* Mỗi mục thống kê */
+  .stat-item {
+    padding: 5px 9px; /* Khoảng đệm cho khung */
+    border-radius: 10px; /* Bo tròn góc */
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: #ffffff; /* Màu chữ trắng */
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+  border: 2px solid #000000; /* Viền neon hồng */
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  gap: 12px; /* Khoảng cách giữa các phần tử bên trong */
+  }
+  
+  /* Icon trong mỗi mục */
+  .stat-item i {
+    font-size: 18px;
+    color: #ffa502; /* Màu cam nổi bật cho icon */
+  }
+  
+  /* Số liệu */
+  .stat-item strong {
+    font-size: 16px;
+
+    color: #00ff0d; /* Màu xanh lá nổi bật cho số liệu */
+  }
+  
+  /* Hiệu ứng hover */
+  .stat-item:hover {
+    transform: translateY(-3px); /* Di chuyển nhẹ lên */
+    box-shadow: 0 6px 12px rgba(74, 105, 189, 0.6); /* Đổ bóng nổi khi hover */
+  }
+  
+  /* Khung thời gian (time-box) */
+  .time-box {
+    color: #ffffff; /* Màu chữ trắng */
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+  border: 2px solid #000000; /* Viền neon hồng */
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  gap: 12px; /* Khoảng cách giữa các phần tử bên trong */
+  }
+  
+  /* Responsive cho màn hình nhỏ */
+  @media (max-width: 480px) {
+    .statistics-widget {
+      padding: 8px;
+    }
+  
+    .stat-item {
+      flex: 1 1 calc(50% - 5px); /* Chia 2 cột cho màn hình nhỏ */
+      font-size: 10px;
+      padding: 4px 6px;
+    }
+  
+    .stat-item i {
+      font-size: 14px;
+    }
+  
+    .stat-item strong {
+      font-size: 12px;
+    }
+  }
+    </style>
+  </head>
+
+  <body>
+    <div class="statistics-widget">
+      <div class="stat-item">
+        <i class="fas fa-user-circle"></i>
+        <span>Online</span>
+        <strong id="online">204</strong>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-check-circle"></i>
+        <span>Đã dùng dịch vụ</span>
+        <strong id="vipMembers">4197</strong>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-chart-line"></i>
+        <span>Tổng lượt truy cập</span>
+        <strong id="visitCount">218483</strong>
+      </div>
+      <div class="stat-item time-box">
+        <i class="fas fa-clock"></i>
+        <span>Thời gian còn lại:</span>
+        <strong id="userTime">60:00</strong>
+      </div>
+    </div>
+    
+    <script>
+   const MAX_TIME = 60 * 60; // 60 phút = 3600 giây
+let remainingTime = parseInt(localStorage.getItem("remainingTime")) || MAX_TIME;
+let online = parseInt(localStorage.getItem("online")) || 204;
+let vipMembers = parseInt(localStorage.getItem("vipMembers")) || 4197;
+let visitCount = parseInt(localStorage.getItem("visitCount")) || 218483;
+
+function resetDailyTime() {
+  const lastVisit = localStorage.getItem("lastVisitDate");
+  const today = new Date().toLocaleDateString();
+
+  if (lastVisit !== today) {
+    localStorage.setItem("lastVisitDate", today);
+    remainingTime = MAX_TIME;
+    localStorage.setItem("remainingTime", remainingTime);
+  }
+}
+
+function updateRemainingTime() {
+  if (remainingTime > 0) {
+    remainingTime--;
+    localStorage.setItem("remainingTime", remainingTime);
+
+    const minutes = Math.floor(remainingTime / 60);
+    const seconds = remainingTime % 60;
+    document.getElementById("userTime").innerText =
+      `${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  } else {
+    clearInterval(timerInterval);
+    document.body.innerHTML =
+      "<h1 style='text-align:center;color:red;'>Bạn đã hết thời gian truy cập trong ngày. Quay lại vào ngày mai!</h1>";
+    alert("Bạn đã hết thời gian truy cập trong ngày.");
+  }
+}
+
+function updateOnline() {
+  const change = Math.floor(Math.random() * 41) - 20; // Dao động từ -20 đến +20
+  online = Math.max(200, online + change); // Không cho online < 200
+  document.getElementById("online").innerText = online.toLocaleString();
+  localStorage.setItem("online", online);
+}
+
+function updateVipMembers() {
+  vipMembers++;
+  document.getElementById("vipMembers").innerText = vipMembers.toLocaleString();
+  localStorage.setItem("vipMembers", vipMembers);
+}
+
+function updateVisitCount() {
+  const increment = Math.floor(Math.random() * 50) + 1; // Tăng ngẫu nhiên từ 1-50
+  visitCount += increment;
+  document.getElementById("visitCount").innerText = visitCount.toLocaleString();
+  localStorage.setItem("visitCount", visitCount);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Khởi tạo lại dữ liệu từ localStorage khi tải trang
+  resetDailyTime();
+
+  // Hiển thị các giá trị được lưu trong localStorage
+  document.getElementById("userTime").innerText = formatTime(remainingTime);
+  document.getElementById("online").innerText = online.toLocaleString();
+  document.getElementById("vipMembers").innerText = vipMembers.toLocaleString();
+  document.getElementById("visitCount").innerText = visitCount.toLocaleString();
+
+  // Cập nhật thời gian mỗi giây
+  timerInterval = setInterval(updateRemainingTime, 1000);
+
+  // Cập nhật các thông số khác theo chu kỳ
+  setInterval(updateOnline, 5000);
+  setInterval(updateVipMembers, 600000);
+  setInterval(updateVisitCount, 10000);
+});
+
+// Hàm định dạng thời gian (phút:giây)
+function formatTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = seconds % 60;
+  return `${minutes.toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
+}
+
+    </script>
+    
+  </body>
+  
+  </html>
 
 
 
